@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://b13u8pj87qp32"]
+
+[ext_resource type="PackedScene" uid="uid://cu6tot3y01fuw" path="res://scenes/fps_player.tscn" id="1_nko8f"]
+[ext_resource type="PackedScene" uid="uid://blds7epsrhabo" path="res://scenes/zombie.tscn" id="2_saax1"]
+[ext_resource type="Script" uid="uid://ba66jl3c00am" path="res://scripts/zombie.gd" id="3_82d15"]
+[ext_resource type="Script" uid="uid://bi25a7ojsebxx" path="res://scenes/zombie_spawner.gd" id="4_yammi"]
+
+[sub_resource type="Environment" id="Environment_o6neu"]
+background_mode = 1
+background_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+fog_enabled = true
+fog_light_color = Color(0.16470589, 0.1882353, 0.1254902, 1)
+fog_density = 0.04
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nko8f"]
+size = Vector2(16, 50)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_saax1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_o6neu"]
+size = Vector3(1, 8, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nko8f"]
+size = Vector3(1, 8, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_saax1"]
+size = Vector3(1, 8, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_82d15"]
+size = Vector3(1, 8, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yammi"]
+size = Vector3(16, 8, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p8nsc"]
+size = Vector3(16, 8, 1)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_82d15"]
+geometry_parsed_geometry_type = 1
+
+[node name="Level101" type="Node3D" unique_id=1673724623]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1611709484]
+environment = SubResource("Environment_o6neu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=272826352]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+light_energy = 0.4
+shadow_enabled = true
+
+[node name="Road" type="StaticBody3D" parent="." unique_id=2060461095]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Road" unique_id=830681943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.054181576, -4.7683716e-07, -0.011911392)
+mesh = SubResource("PlaneMesh_nko8f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Road" unique_id=849499973]
+shape = SubResource("WorldBoundaryShape3D_saax1")
+
+[node name="WallLeft" type="StaticBody3D" parent="." unique_id=277151740]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WallLeft" unique_id=983586029]
+mesh = SubResource("BoxMesh_o6neu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallLeft" unique_id=1894704290]
+shape = SubResource("BoxShape3D_nko8f")
+
+[node name="WallRight" type="StaticBody3D" parent="." unique_id=1629908904]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WallRight" unique_id=1268615516]
+mesh = SubResource("BoxMesh_saax1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallRight" unique_id=2061221750]
+shape = SubResource("BoxShape3D_82d15")
+
+[node name="WallEnd" type="StaticBody3D" parent="." unique_id=1002854915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -25)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WallEnd" unique_id=2096723853]
+mesh = SubResource("BoxMesh_yammi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallEnd" unique_id=1786693598]
+shape = SubResource("BoxShape3D_p8nsc")
+
+[node name="zombie" parent="." unique_id=1503563501 instance=ExtResource("2_saax1")]
+script = ExtResource("3_82d15")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1791710904]
+navigation_mesh = SubResource("NavigationMesh_82d15")
+navigation_layers = 3
+
+[node name="FPSplayer" parent="." unique_id=153141157 instance=ExtResource("1_nko8f")]
+
+[node name="ZombieSpawner" type="Node3D" parent="." unique_id=1065152586]
+script = ExtResource("4_yammi")
+zombie_scene = ExtResource("2_saax1")
+spawn_count = null
+spawn_radius = null
+respawn = null
+respawn_delay = null
