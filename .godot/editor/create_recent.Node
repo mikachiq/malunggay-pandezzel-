@@ -1,0 +1,5 @@
+SpringArm3D
+AnimationPlayer
+CollisionShape3D
+StaticBody3D
+Node3D

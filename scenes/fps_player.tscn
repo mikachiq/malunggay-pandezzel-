@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://cu6tot3y01fuw"]
+
+[ext_resource type="Script" uid="uid://bp342ly445qfs" path="res://scripts/fps_player.gd" id="1_gp8bh"]
+[ext_resource type="PackedScene" uid="uid://dqens5er66e8o" path="res://assets/animations/mcrunning.glb" id="2_2368b"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mopl5"]
+
+[node name="FPSplayer" type="CharacterBody3D" unique_id=153141157 groups=["player"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 2.0846186, 0)
+script = ExtResource("1_gp8bh")
+
+[node name="mcrunning" parent="." unique_id=1794952504 instance=ExtResource("2_2368b")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="Skeleton3D" parent="mcrunning/Armature" parent_id_path=PackedInt32Array(1794952504, 1473933092) index="0" unique_id=1316139771]
+bones/3/position = Vector3(-2.0884909e-07, 4.819387, -1.0840595e-06)
+bones/7/position = Vector3(1.9504923, 4.5878882, -0.015753444)
+bones/18/position = Vector3(-1.7959857e-06, 8.634532, 1.4776426e-06)
+bones/19/position = Vector3(-1.2214773e-06, 2.6126194, -6.821199e-08)
+bones/22/position = Vector3(0.57002574, 0.78079236, 0.22327079)
+bones/28/position = Vector3(-3.2181482, -2.0074334, 0.13260159)
+bones/31/position = Vector3(-1.1875022e-07, 5.463151, 2.0608977e-06)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=563349522]
+transform = Transform3D(0.99999905, 0.0012540482, 0.00052969664, -0.0012540529, 0.9999992, 8.374419e-06, -0.0005296854, -9.058053e-06, 0.9999999, 0, 0.2060849, 0)
+shape = SubResource("CapsuleShape3D_mopl5")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1483626316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.5, 0)
+spring_length = 3.0
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=261646857]
+transform = Transform3D(0.33333334, 0, 0, 0, 0.33333334, 0, 0, 0, 0.33333334, 0, -0.7554884, -1.3928322)
+visible = false
+
+[node name="RayCast3D" type="RayCast3D" parent="SpringArm3D/Camera3D" unique_id=172982063]
+visible = false
+target_position = Vector3(0, 0, -10)
+collision_mask = 3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=458609898]
+
+[node name="HUD" type="Control" parent="CanvasLayer" unique_id=1056055377]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Crosshair" type="Label" parent="CanvasLayer/HUD" unique_id=737058165]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = -10.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "+"
+metadata/_edit_use_anchors_ = true
+
+[node name="AmmoLabel" type="Label" parent="CanvasLayer/HUD" unique_id=47368546]
+custom_minimum_size = Vector2(-150, -40)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "AMMO: 15"
+
+[node name="BreadLabel" type="Label" parent="CanvasLayer/HUD" unique_id=877873467]
+custom_minimum_size = Vector2(20, -40)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 44.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "🍞🍞"
+
+[editable path="mcrunning"]

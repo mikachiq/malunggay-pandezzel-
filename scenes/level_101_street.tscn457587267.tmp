@@ -1,0 +1,563 @@
+[gd_scene format=4 uid="uid://b13u8pj87qp32"]
+
+[ext_resource type="PackedScene" uid="uid://cu6tot3y01fuw" path="res://scenes/fps_player.tscn" id="1_nko8f"]
+[ext_resource type="PackedScene" uid="uid://blds7epsrhabo" path="res://scenes/zombie.tscn" id="2_saax1"]
+[ext_resource type="PackedScene" uid="uid://cjr2vrgvbut2f" path="res://scenes/road_modular.tscn" id="4_p8nsc"]
+[ext_resource type="Script" uid="uid://bi25a7ojsebxx" path="res://scenes/zombie_spawner.gd" id="4_yammi"]
+[ext_resource type="Texture2D" uid="uid://bhovmvf1f7jnb" path="res://assets/roads/road_modular_0.png" id="5_p8nsc"]
+[ext_resource type="PackedScene" uid="uid://dgvuwltmchl32" path="res://assets/buildings/psx_groceries_store.glb" id="6_x3165"]
+[ext_resource type="PackedScene" uid="uid://cc4hm736gifvm" path="res://assets/environment/trash.glb" id="7_cachd"]
+[ext_resource type="PackedScene" uid="uid://c4gv5m8lsh6tc" path="res://assets/cars/retro_higen3d_car.glb" id="7_s4fv4"]
+[ext_resource type="PackedScene" uid="uid://civ37h8mtf1ec" path="res://assets/environment/tree.glb" id="8_a6tl3"]
+[ext_resource type="PackedScene" uid="uid://dfa67g4mhsnjg" path="res://assets/cars/destroyed_car_07_raw_scan.glb" id="9_dsjbd"]
+[ext_resource type="PackedScene" uid="uid://m4qoogxwwtrd" path="res://assets/environment/grass_with_autumn_leaves.glb" id="9_jk0sv"]
+[ext_resource type="PackedScene" uid="uid://f8db1fpg2igi" path="res://assets/buildings/gas_station.glb" id="10_lbfdt"]
+[ext_resource type="PackedScene" uid="uid://dwl2012m0nqx7" path="res://assets/buildings/hospital.glb" id="11_lbfdt"]
+[ext_resource type="PackedScene" uid="uid://d16myvspg67u4" path="res://assets/buildings/psx_japanese_apartment.glb" id="13_dsjbd"]
+[ext_resource type="PackedScene" uid="uid://cha04835mholg" path="res://assets/buildings/city_apartment_building.glb" id="14_i4sau"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yammi"]
+sky_top_color = Color(0.16470589, 0.16470589, 0.18039216, 1)
+sky_horizon_color = Color(0.23921569, 0.23921569, 0.2509804, 1)
+sky_energy_multiplier = 0.3
+ground_bottom_color = Color(0.101960786, 0.101960786, 0.11764706, 1)
+ground_horizon_color = Color(0.23921569, 0.23921569, 0.2509804, 1)
+energy_multiplier = 0.0
+
+[sub_resource type="Sky" id="Sky_yammi"]
+sky_material = SubResource("ProceduralSkyMaterial_yammi")
+
+[sub_resource type="Environment" id="Environment_o6neu"]
+background_mode = 2
+background_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+sky = SubResource("Sky_yammi")
+ambient_light_source = 2
+ambient_light_color = Color(0.2901961, 0.2901961, 0.3137255, 1)
+ambient_light_energy = 0.0
+tonemap_mode = 3
+fog_enabled = true
+fog_light_color = Color(0.22745098, 0.22745098, 0.24313726, 1)
+fog_density = 0.03
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_82d15"]
+geometry_parsed_geometry_type = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5lesl"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("5_p8nsc")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sevlt"]
+_surfaces = [{
+"aabb": AABB(-3.0868, -0.751062, -11.1577, 4.173547, 0.4679012, 13.853317),
+"format": 34359742465,
+"index_count": 180,
+"index_data": PackedByteArray("AAAUAAIAAAAIABQACQAIAAAAAgAUABUABgACABUACAAEABQAFQAFAAYABgAFAAoAFAABABUAFAAEAAEAAQADABUAFQADAAUABwABAAQAAwABAAcACAAHAAQABwAFAAMACAAFAAcABQANAAoACwAFAAgACQALAAgADQAFAAsADAALAAkACgANAA4ADAAWAAsAEAAWAAwAFwAQAA4AFgAQABcADQAXAA4AFgASAAsAFwANABEAFwAPABYAFgAPABIAEQAPABcAEgATAAsACwATAA0AEgAPABMAEQANABMAEwAPABEAGAAZABoAGAAbABkAHAAbABgAGgAZAB0AGwAdABkAHQAeABoAGwAcAB8AHwAdABsAHwAcACAAIQAeAB0AHwAhAB0AIQAiAB4AHwAgACMAIwAhAB8AIwAgACQAJQAiACEAIwAlACEAJQAmACIAIwAkACcAJwAlACMAJwAkACYAJwAmACUA"),
+"lods": [4.906944, PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAgADAAUAAgAFAAYAAwABAAcABwABAAQABwAFAAMACAAEAAAACAAHAAQACAAFAAcACQAIAAAABgAFAAoACQALAAgACwAFAAgADAALAAkABQANAAoADQAFAAsACgANAA4ADAAPAAsAEAAPAAwAEQAQAA4ADwAQABEADQARAA4ADwASAAsAEQANABMAEwAPABEACwATAA0AEgAPABMAEgATAAsA")],
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("Io5FwJlFQL/whTLBIo5FwHP6kL4ChSxAIo5FwJlFQL8ChSxAVdo0wHP6kL4ChSxAIo5FwHP6kL7whTLBVdo0wMotJb8ChSxAVdo0wJlFQL8ChSxAVdo0wHP6kL7whTLBVdo0wMotJb/whTLBVdo0wJlFQL/whTLB0WVTP5lFQL8ChSxA0WVTP8otJb/whTLB0WVTP5lFQL/whTLB0WVTP8otJb8ChSxAghqLP5lFQL8ChSxAghqLP3P6kL7whTLBghqLP5lFQL/whTLBghqLP3P6kL4ChSxA0WVTP3P6kL7whTLB0WVTP3P6kL4ChSxAIo5FwMotJb/whTLBIo5FwMotJb8ChSxAghqLP8otJb/whTLBghqLP8otJb8ChSxAIqmMv8otJb+d2hTBIqmMvyixmr6d2hTBK2iev8otJb+cJRLB021gvyixmr4soxTB021gv8otJb8soxTBK2ievyixmr6cJRLBK2iev8otJb8BAZ0+2Is/vyixmr732BDB2Is/v8otJb/32BDBK2ievyixmr4BAZ0+8euMv8otJb8kofM+2Is/vyixmr4BAZ0+2Is/v8otJb8BAZ0+8euMvyixmr4kofM+TIRiv8otJb8kofM+TIRivyixmr4kofM+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qtyvj"]
+resource_name = "Sketchfab_Scene_Object_3"
+_surfaces = [{
+"aabb": AABB(-3.0868, -0.751062, -11.1577, 4.173547, 0.4679012, 13.853317),
+"attribute_data": PackedByteArray("gLUmP2zoXT6AtSY/XHIkP4C1Jj9cciQ/gLUmP2zoXT5p/1E/bOhdPmn/UT9s6F0+dEpPP2zoXT50Sk8/bOhdPnRKTz9s6F0+dmopP2zoXT52aik/bOhdPoC1Jj9s6F0+gLUmP2zoXT52aik/bOhdPgl/UD9s6F0+CX9QP2zoXT4Jf1A/XHIkPwl/UD9cciQ/gLUmP1xyJD92aik/XHIkP4C1Jj9cciQ/dmopP1xyJD92aik/XHIkP3RKTz9cciQ/dEpPP1xyJD9p/1E/XHIkP2n/UT9cciQ/dEpPP1xyJD8ue08/bOhdPhrUUT9s6F0+LntPP1xyJD8a1FE/XHIkP4ZlTz9cciQ/ZE8pP1xyJD+GZU8/NNdcPmRPKT8011w+dmopP1xyJD+AtSY/XHIkP3ZqKT9s6F0+gLUmP2zoXT52aik/bOhdPnZqKT9cciQ/dmopP2zoXT52aik/XHIkP3RKTz9s6F0+dEpPP1xyJD90Sk8/bOhdPnRKTz9cciQ/gLUmP2zoXT6AtSY/XHIkP2n/UT9s6F0+gLUmP2zoXT4Jf1A/XHIkPwl/UD9s6F0+gLUmP1xyJD9p/1E/XHIkP+RTOz9IxYs+5FM7P0jFiz7C4zk/WHCOPsLjOT9YcI4+Dvc+P/GbET8O9z4/8ZsRP1WMPT958RI/VYw9P3nxEj/9oT0/7vuLPv2hPT/u+4s+Dvc+Pza4jz4O9z4/NriPPsLjOT/xmxE/wuM5P/GbET/C4zk/WHCOPsLjOT9YcI4+VYw9P3nxEj96Tjs/efESPw73Pj/xmxE/wuM5P/GbET8O9z4/NriPPsLjOT9YcI4+/aE9P+77iz7kUzs/SMWLPnpOOz958RI/ek47P3nxEj/C4zk/8ZsRP8LjOT/xmxE/VYw9P3nxEj9VjD0/efESP3pOOz958RI/ek47P3nxEj8O9z4/NriPPg73Pj82uI8+Dvc+P/GbET8O9z4/8ZsRP/2hPT/u+4s+/aE9P+77iz7kUzs/SMWLPuRTOz9IxYs+"),
+"format": 34359742487,
+"index_count": 180,
+"index_data": PackedByteArray("AAAwAAIAAgAwADEAMAABADEAMAADAAEABAAyAAYABgAyAAcABgAHAAkAMgAIAAcAMgAFAAgACQAHAAoACQAKAAsACwAKADMACgAMADMACgANAAwAEAAOADQANAAOADUANQAPADQANAAPABEAEgATADYANgATABUANgAVABYAFgAUADYAFgAVABcAFQAYABcAFwAYABkAGAA3ABkANwAYABoAGgAYABsAOAA5ADoAOgA5ADsAPAA9AD4APgA9AD8AQABBAEIAQgBBAEMARABFAEYARgBFAEcASABJAEoASgBJAEsASgBLAEwATABLAE0ATABNAE4ATgBNAE8AUABRAFIAUgBRAFMAVABVAFYAVgBVAFcAHAAdAB4AHgAdAB8AWABZAFoAWgBZAFsAIAAhACIAIgAhACMAJAAlACYAJgAlACcAKAApACoAKgApACsALAAtAC4ALgAtAC8AXABdAF4AXgBdAF8A"),
+"lods": [4.906944, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABgAFAAcABQAIAAcABgAHAAkACQAHAAoACQAKAAsACgAMAAsACgANAAwADgAPABAAEAAPABEAEgATABQAFAATABUAFAAVABYAFgAVABcAFQAYABcAFwAYABkAGAAaABkAGgAYABsAHAAdAB4AHgAdAB8AIAAhACIAIgAhACMAJAAlACYAJgAlACcAKAApACoAKgApACsALAAtAC4ALgAtAC8A")],
+"material": SubResource("StandardMaterial3D_5lesl"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 96,
+"vertex_data": PackedByteArray("Io5FwJlFQL/whTLBIo5FwHP6kL4ChSxAIo5FwJlFQL8ChSxAIo5FwHP6kL7whTLBghqLP5lFQL/whTLBghqLP3P6kL7whTLB0WVTP5lFQL/whTLB0WVTP8otJb/whTLB0WVTP3P6kL7whTLBVdo0wJlFQL/whTLBVdo0wMotJb/whTLBIo5FwJlFQL/whTLBIo5FwHP6kL7whTLBVdo0wHP6kL7whTLBghqLP3P6kL7whTLBghqLP5lFQL/whTLBghqLP3P6kL4ChSxAghqLP5lFQL8ChSxAIo5FwHP6kL4ChSxAVdo0wHP6kL4ChSxAIo5FwJlFQL8ChSxAVdo0wMotJb8ChSxAVdo0wJlFQL8ChSxA0WVTP5lFQL8ChSxA0WVTP8otJb8ChSxAghqLP5lFQL8ChSxAghqLP3P6kL4ChSxA0WVTP3P6kL4ChSxA0WVTP3P6kL7whTLBghqLP3P6kL7whTLB0WVTP3P6kL4ChSxAghqLP3P6kL4ChSxA0WVTP8otJb8ChSxAVdo0wMotJb8ChSxA0WVTP8otJb/whTLBVdo0wMotJb/whTLBVdo0wHP6kL4ChSxAIo5FwHP6kL4ChSxAVdo0wHP6kL7whTLBIo5FwHP6kL7whTLBVdo0wMotJb/whTLBVdo0wMotJb8ChSxAVdo0wHP6kL7whTLBVdo0wHP6kL4ChSxA0WVTP3P6kL7whTLB0WVTP3P6kL4ChSxA0WVTP8otJb/whTLB0WVTP8otJb8ChSxAIo5FwMotJb/whTLBIo5FwMotJb8ChSxAghqLP8otJb/whTLBIo5FwMotJb/whTLBghqLP8otJb8ChSxAghqLP8otJb/whTLBIo5FwMotJb8ChSxAghqLP8otJb8ChSxAIqmMv8otJb+d2hTBIqmMvyixmr6d2hTBK2iev8otJb+cJRLBK2ievyixmr6cJRLB2Is/vyixmr4BAZ0+2Is/v8otJb8BAZ0+TIRivyixmr4kofM+TIRiv8otJb8kofM+021gvyixmr4soxTB021gv8otJb8soxTB2Is/vyixmr732BDB2Is/v8otJb/32BDBK2ievyixmr4BAZ0+K2iev8otJb8BAZ0+K2ievyixmr6cJRLBK2iev8otJb+cJRLBTIRivyixmr4kofM+8euMvyixmr4kofM+2Is/vyixmr4BAZ0+K2ievyixmr4BAZ0+2Is/vyixmr732BDBK2ievyixmr6cJRLB021gvyixmr4soxTBIqmMvyixmr6d2hTB8euMvyixmr4kofM+8euMv8otJb8kofM+K2ievyixmr4BAZ0+K2iev8otJb8BAZ0+TIRivyixmr4kofM+TIRiv8otJb8kofM+8euMvyixmr4kofM+8euMv8otJb8kofM+2Is/vyixmr732BDB2Is/v8otJb/32BDB2Is/vyixmr4BAZ0+2Is/v8otJb8BAZ0+021gv8otJb8soxTB021gvyixmr4soxTBIqmMv8otJb+d2hTBIqmMvyixmr6d2hTBRwD/f////z9HAP9/////P0cA/3////8/RwD/f////z//////////v/////////+//////////7//////////v/////////+//////////7//////////v/////////+//////////7//////////v7f//3////8/t///f////z+3//9/////P7f//3////8//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3//f////z//f7f/////v/9/t/////+//3+3/////7//f7f/////v/9/t/////+//3+3/////7//f7f/////v/9/t/////+//3+3/////7//f7f/////v/9/t/////+//3+3/////7+3//9/////P7f//3////8/t///f////z+3//9/////P0cA/3////8/RwD/f////z9HAP9/////P0cA/3////8/RwD/f////z9HAP9/////P/////////+//////////7+3//9/////P7f//3////8//3//f////z//f/9/////PwAAwbn///+/AADBuf///78AAMG5////vwAAwbn///+/Pcb/f////z89xv9/////Pz3G/3////8/Pcb/f////z///z2t////v///Pa3///+///89rf///7///z2t////v0cA/3////8/RwD/f////z9HAP9/////P0cA/3////8//3+3/////7//f7f/////v/9/t/////+//3+3/////7//f7f//v8AwP9/t//+/wDA/3+3//7//7//f7f/////v8E5/3////8/wTn/f////z/BOf9/////P8E5/3////8//3//f////z//f/9/////P/9//3////8//3//f////z+3//9/////P7f//3////8/t///f////z+3//9/////P///Iff///+///8h9////7///yH3////v///Iff///+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_sevlt")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5qxw2"]
+_surfaces = [{
+"aabb": AABB(-1.00048, -0.139621, -3.4316332, 6.0338593, 0.14067155, 10.524084),
+"format": 34359742465,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAAEAAEAAwAFAAIABQAAAAIABgAFAAMABwAEAAAABwAGAAQABwAAAAUABQAGAAcA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("uw+Av5yyiTpb9eJAuw+Av8/4Dr5b9eJAuw+Av5yyiTrhn1vAuw+Av8/4Dr7hn1vAcRGhQM/4Dr5b9eJAcRGhQJyyiTrhn1vAcRGhQM/4Dr7hn1vAcRGhQJyyiTpb9eJA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qxt66"]
+resource_name = "Sketchfab_Scene_Object_36"
+_surfaces = [{
+"aabb": AABB(-1.00048, -0.139621, -3.4316332, 6.0338593, 0.14067155, 10.524084),
+"attribute_data": PackedByteArray("VHEjPgbx2T5UcSM+BvHZPlRxIz5ejqo+VHEjPl6Oqj56W1k+Xo6qPnpbWT5ejqo+VHEjPl6Oqj5UcSM+Xo6qPnpbWT4G8dk+VHEjPgbx2T56W1k+Xo6qPlRxIz5ejqo+eltZPgbx2T56W1k+BvHZPlRxIz4G8dk+VHEjPgbx2T56W1k+Xo6qPnpbWT5ejqo+eltZPgbx2T56W1k+BvHZPg=="),
+"format": 34359742487,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMA"),
+"material": SubResource("StandardMaterial3D_5lesl"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("uw+Av5yyiTpb9eJAuw+Av8/4Dr5b9eJAuw+Av5yyiTrhn1vAuw+Av8/4Dr7hn1vAcRGhQM/4Dr7hn1vAcRGhQJyyiTrhn1vAuw+Av8/4Dr7hn1vAuw+Av5yyiTrhn1vAcRGhQJyyiTpb9eJAuw+Av5yyiTpb9eJAcRGhQJyyiTrhn1vAuw+Av5yyiTrhn1vAcRGhQJyyiTpb9eJAcRGhQM/4Dr5b9eJAuw+Av5yyiTpb9eJAuw+Av8/4Dr5b9eJAcRGhQJyyiTrhn1vAcRGhQM/4Dr7hn1vAcRGhQJyyiTpb9eJAcRGhQM/4Dr5b9eJARwD/f////z9HAP9/////P0cA/3////8/RwD/f////z//////////v/////////+//////////7//////////v/9/t/////+//3+3/////7//f7f/////v/9/t/////+//3//f////z//f/9/////P/9//3////8//3//f////z+3//9/////P7f//3////8/t///f////z+3//9/////Pw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_5qxw2")
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_yammi"]
+
+[node name="Level101" type="Node3D" unique_id=1673724623]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1611709484]
+environment = SubResource("Environment_o6neu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=272826352]
+transform = Transform3D(1, 0, 0, 0, 0.8660253, 0.49999997, 0, -0.49999997, 0.8660253, 0, 0, 0)
+light_color = Color(0.6666667, 0.6666667, 0.8, 1)
+light_energy = 0.6
+shadow_enabled = true
+
+[node name="zombie" parent="." unique_id=1503563501 instance=ExtResource("2_saax1")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.707, 1.5, -4)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1791710904]
+navigation_mesh = SubResource("NavigationMesh_82d15")
+navigation_layers = 3
+
+[node name="FPSplayer" parent="." unique_id=153141157 instance=ExtResource("1_nko8f")]
+
+[node name="ZombieSpawner" type="Node3D" parent="." unique_id=1065152586]
+script = ExtResource("4_yammi")
+zombie_scene = ExtResource("2_saax1")
+
+[node name="roads" parent="." unique_id=1336510773 instance=ExtResource("4_p8nsc")]
+
+[node name="Bench bus stop_52_1" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="0" unique_id=304571894]
+transform = Transform3D(-0.410616, 0, -5.7682956e-07, 0, 0.0329477, 0, 1.3379547e-07, 0, -1.77028, -82.71232, 2.9971173, 61.307518)
+
+[node name="_gltfNode_105_0" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Bench bus stop_52_1" index="0" unique_id=2073479730]
+visible = false
+
+[node name="Object_6" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Bench bus stop_52_1/_gltfNode_105_0" index="0" unique_id=610787580]
+transform = Transform3D(1, 0, -3.410605e-13, 0, 1, 0, -1.4210855e-14, 0, 1.0000002, 5.154785, -93.14737, 0.009525299)
+
+[node name="Crossroad_17_3" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="1" unique_id=775950450]
+transform = Transform3D(-5.61192, 0, -1.5040309e-06, 0, 0.396574, 0, 1.8285989e-06, 0, -4.61583, -114.96193, 0.29905, 87.6774)
+
+[node name="Object_9" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Crossroad_17_3/_gltfNode_34_2" parent_id_path=PackedInt32Array(1336510773, 1242756604) index="0" unique_id=1791494469]
+transform = Transform3D(1, 0, 1.4210855e-13, 0, 0.999999, 0, 0, 0, 0.99999964, 2.5420594, 0.46097285, 0.39666557)
+visible = false
+
+[node name="Double road start_43_5" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="2" unique_id=253506732]
+transform = Transform3D(-5.61192, 0, -1.5040309e-06, 0, 0.396574, 0, 1.8285989e-06, 0, -4.61583, 18.121262, -89.71345, 61.690186)
+visible = false
+
+[node name="Object_12" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Double road start_43_5/_gltfNode_86_4" parent_id_path=PackedInt32Array(1336510773, 1586216084) index="0" unique_id=167951870]
+transform = Transform3D(1, 0, 2.842171e-14, 0, 0.99999994, 0, 0, 0, 0.99999994, 27.469267, 0, 20.272182)
+
+[node name="Double road_36_7" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="3" unique_id=838938828]
+transform = Transform3D(-5.61192, 0, -1.5040309e-06, 0, 0.396574, 0, 1.8285989e-06, 0, -4.61583, -92.81369, 35.79243, 19.844963)
+
+[node name="Object_15" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Double road_36_7/_gltfNode_72_6" parent_id_path=PackedInt32Array(1336510773, 1879515229) index="0" unique_id=1101609551]
+transform = Transform3D(1, 0, 1.4210855e-13, 0, 0.999999, 0, 0, 0, 0.99999964, 2.332862, -89.503914, 0.49391627)
+
+[node name="Object_17" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Double road_36_7/_gltfNode_72_6" parent_id_path=PackedInt32Array(1336510773, 1879515229) index="1" unique_id=943543523]
+transform = Transform3D(1, 0, 1.4210855e-13, 0, 0.999999, 0, 0, 0, 0.99999964, 2.332865, -89.50389, -10.927545)
+mesh = SubResource("ArrayMesh_qtyvj")
+
+[node name="Object_18" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Double road_36_7/_gltfNode_72_6" parent_id_path=PackedInt32Array(1336510773, 1879515229) index="2" unique_id=284546196]
+transform = Transform3D(1, 0, 1.4210855e-13, 0, 0.999999, 0, 0, 0, 0.99999964, 6.5018344, -89.503845, -10.917582)
+mesh = SubResource("ArrayMesh_qtyvj")
+
+[node name="Object_16" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Double road_36_7/_gltfNode_72_6" parent_id_path=PackedInt32Array(1336510773, 1879515229) index="3" unique_id=838240169]
+transform = Transform3D(1, 0, 1.4210855e-13, 0, 0.999999, 0, 0, 0, 0.99999964, 2.332862, -89.503914, 0.49391627)
+mesh = SubResource("ArrayMesh_qtyvj")
+
+[node name="Double road_36_9" type="Node3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="4" unique_id=1026290353]
+transform = Transform3D(-5.61192, 0, -1.5040309e-06, 0, 0.396574, 0, 1.8285989e-06, 0, -4.61583, -129.05269, 0.299047, 19.844963)
+
+[node name="_gltfNode_72_6" type="Node3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Double road_36_9" unique_id=2020971931]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1784451e-06, 0, 0)
+
+[node name="Object_15" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Double road_36_9/_gltfNode_72_6" unique_id=1063644204]
+transform = Transform3D(1, 0, 1.4210855e-13, 0, 0.9999996, 0, 0, 0, 0.99999964, 0.04221046, 0, -0.006985903)
+mesh = SubResource("ArrayMesh_qtyvj")
+
+[node name="Double road_36_8" type="Node3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="5" unique_id=144431316]
+transform = Transform3D(-5.61192, 0, -1.5040309e-06, 0, 0.396574, 0, 1.8285989e-06, 0, -4.61583, -129.09238, 0.299047, -41.34515)
+
+[node name="_gltfNode_72_6" type="Node3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Double road_36_8" unique_id=1677302943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1784451e-06, 0, 0)
+
+[node name="Object_15" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Double road_36_8/_gltfNode_72_6" unique_id=639897646]
+mesh = SubResource("ArrayMesh_qtyvj")
+
+[node name="Object_16" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Double road_36_8/_gltfNode_72_6" unique_id=1336741154]
+transform = Transform3D(1, 0, 1.4210855e-13, 0, 0.9999997, 0, 0, 0, 0.99999964, -4.148396, 0, -1.9073486e-06)
+mesh = SubResource("ArrayMesh_qtyvj")
+
+[node name="Dual light pole_000_38_9" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="6" unique_id=1004507305]
+transform = Transform3D(-0.142337, 0, -4.63793e-08, 0, 1.93037, 0, 4.63793e-08, 0, -0.142337, -126.51906, 2.29032, 40.295822)
+
+[node name="Object_18" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Dual light pole_000_38_9/_gltfNode_76_8" parent_id_path=PackedInt32Array(1336510773, 1489615927) index="0" unique_id=253075202]
+transform = Transform3D(1, 0, -8.526513e-14, 0, 1, 0, 8.526513e-14, 0, 1, -22.567398, 0, 4.714432)
+
+[node name="Dual light pole_001_39_11" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="7" unique_id=2055144849]
+visible = false
+
+[node name="Dual light pole_002_40_13" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="8" unique_id=220071398]
+visible = false
+
+[node name="Dual light pole_003_44_15" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="9" unique_id=1469308592]
+visible = false
+
+[node name="Dual light pole_013_37_17" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="10" unique_id=759513151]
+visible = false
+
+[node name="Glasses bus stop_50_19" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="11" unique_id=1135006468]
+visible = false
+
+[node name="Light pole_001_27_21" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="12" unique_id=1638007632]
+transform = Transform3D(-0.142337, 0, -4.63793e-08, 0, 1.93037, 0, 4.63793e-08, 0, -0.142337, -87.74536, 2.29032, 26.029488)
+
+[node name="Object_36" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Light pole_001_27_21/_gltfNode_54_20" parent_id_path=PackedInt32Array(1336510773, 2089531410) index="0" unique_id=1461903854]
+transform = Transform3D(1, 0, -5.400125e-13, 0, 1, 0, 5.400125e-13, 0, 1, -33.392075, -0.019088984, -244.92603)
+
+[node name="Light pole_002_29_23" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="13" unique_id=182119815]
+visible = false
+
+[node name="Light pole_003_34_25" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="14" unique_id=1788016689]
+visible = false
+
+[node name="Light pole_004_35_27" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="15" unique_id=630102944]
+visible = false
+
+[node name="Light pole_005_31_29" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="16" unique_id=1605456362]
+visible = false
+
+[node name="Light pole_006_32_31" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="17" unique_id=1538719270]
+visible = false
+
+[node name="Light pole_007_3_33" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="18" unique_id=1281166639]
+visible = false
+
+[node name="Light pole_008_4_35" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="19" unique_id=2092700671]
+visible = false
+
+[node name="Light pole_009_42_37" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="20" unique_id=1108603273]
+visible = false
+
+[node name="Light pole_010_13_39" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="21" unique_id=1368102110]
+visible = false
+
+[node name="Light pole_011_15_41" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="22" unique_id=1941431690]
+visible = false
+
+[node name="Light pole_012_16_43" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="23" unique_id=1713298313]
+visible = false
+
+[node name="Light pole_24_45" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="24" unique_id=1890578877]
+visible = false
+
+[node name="Long curve_41_47" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="25" unique_id=1081428257]
+transform = Transform3D(-3.920409e-07, 0, 8.96885, 0, 0.264159, 0, -8.96885, 0, -3.920409e-07, -126.65585, 0.046412, 77.09776)
+visible = false
+
+[node name="Object_75" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Long curve_41_47/_gltfNode_82_46" parent_id_path=PackedInt32Array(1336510773, 1221290654) index="0" unique_id=1392948441]
+transform = Transform3D(0.9999998, 0, 7.1054274e-15, 0, 0.99999976, 0, -7.1054274e-15, 0, 0.9999998, 0.069919586, 0, 0)
+
+[node name="Manhole_26_49" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="26" unique_id=1289072657]
+transform = Transform3D(-2.4530482e-07, 0, 3.8062, 0, 0.396574, 0, -5.61192, 0, -1.6637429e-07, -105.21444, 0.29905, 78.24917)
+visible = false
+
+[node name="Object_78" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Manhole_26_49/_gltfNode_52_48" parent_id_path=PackedInt32Array(1336510773, 380034433) index="0" unique_id=1076866582]
+transform = Transform3D(1, 0, -3.5527137e-15, 0, 1, 0, 0, 0, 1, 0.08565664, 1.3580843, -2.7801785)
+
+[node name="Old_28_51" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="27" unique_id=1222919121]
+visible = false
+
+[node name="Parallelepiped  crossroad_7_53" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="28" unique_id=71860707]
+visible = false
+
+[node name="Parallelepiped entrance_5_55" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="29" unique_id=445735933]
+visible = false
+
+[node name="Parallelepiped long curve_12_57" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="30" unique_id=944660736]
+visible = false
+
+[node name="Parallelepiped short curve_14_59" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="31" unique_id=876200274]
+visible = false
+
+[node name="Parallelepiped_2_61" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="32" unique_id=1370135647]
+visible = false
+
+[node name="Pedestrian crossing_25_63" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="33" unique_id=1356377640]
+transform = Transform3D(-5.61192, 0, -1.5040309e-06, 0, 0.396574, 0, 1.8285989e-06, 0, -4.61583, -95.25746, 0.29905, 63.77351)
+
+[node name="Object_99" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Pedestrian crossing_25_63/_gltfNode_50_62" parent_id_path=PackedInt32Array(1336510773, 718678769) index="0" unique_id=1409042046]
+transform = Transform3D(-4.371128e-08, 0, -0.99999964, 0, 0.999999, 0, 0.99999964, 0, -4.3711367e-08, 9.752541, 0, -3.4155831)
+
+[node name="Poster bus stop_49_65" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="34" unique_id=759954924]
+visible = false
+
+[node name="Road entrance_22_67" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="35" unique_id=1252438690]
+transform = Transform3D(-5.61192, 0, -4.0352867e-07, 0, 0.396574, 0, 4.9060964e-07, 0, -4.61583, -190.37312, 0.29905, 80.71184)
+
+[node name="Object_105" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Road entrance_22_67/_gltfNode_44_66" parent_id_path=PackedInt32Array(1336510773, 1503539290) index="0" unique_id=2118744016]
+transform = Transform3D(-1, 0, -8.742281e-08, 0, 0.999999, 0, 8.742279e-08, 0, -0.99999964, -0.31979752, 0, 1.7357006)
+
+[node name="Road_33_69" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="36" unique_id=487407263]
+transform = Transform3D(-5.61192, 0, -4.0352867e-07, 0, 0.396574, 0, 4.9060964e-07, 0, -4.61583, -169.09288, 0.299047, 76.60649)
+
+[node name="Object_108" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Road_33_69/_gltfNode_66_68" parent_id_path=PackedInt32Array(1336510773, 2030612714) index="0" unique_id=217185610]
+transform = Transform3D(-4.3711417e-08, 0, 0.99999994, 0, 0.9999997, 0, -0.9999997, 0, -4.3711374e-08, -0.24448395, 0, -0.53943634)
+
+[node name="Short curve_30_71" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="37" unique_id=1013478391]
+transform = Transform3D(-8.9763525e-08, 0, 2.05355, 0, 0.402933, 0, -2.05355, 0, -8.9763525e-08, -127.84035, -0.315594, 73.76031)
+visible = false
+
+[node name="Object_111" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Short curve_30_71/_gltfNode_60_70" parent_id_path=PackedInt32Array(1336510773, 1336426669) index="0" unique_id=2103944077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0415783, 0, 3.7110043)
+
+[node name="Sidewalk 1_0_73" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="38" unique_id=84650167]
+transform = Transform3D(-1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -81.928116, 0.185692, 65.10078)
+
+[node name="Object_114" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="0" unique_id=1536506696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.863, 0, -0.271)
+
+[node name="Object_115" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="1" unique_id=33506350]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 55.34336, 0, -4.4329586)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_118" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="2" unique_id=663377162]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 55.34337, 0, -20.040163)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_131" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="3" unique_id=144514387]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 55.34337, 0, -20.040163)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_119" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="4" unique_id=115218479]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 55.385975, 0, -26.006922)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_134" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="5" unique_id=512541536]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 55.38598, 0, -31.94895)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_135" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="6" unique_id=2111784596]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 55.385983, 0, -37.903862)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_121" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="7" unique_id=849496143]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 65.87932, 0, -20.04016)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_122" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="8" unique_id=194253411]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 65.87932, 0, -25.928843)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_120" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="9" unique_id=1646475672]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 76.25423, 0, -20.040155)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_125" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="10" unique_id=406281879]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 76.25423, 0, -20.040155)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_126" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="11" unique_id=2005383219]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 86.73221, 0, -20.040152)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_129" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="12" unique_id=305928122]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 96.97366, 0.08588411, -19.171358)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_130" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="13" unique_id=1774113121]
+transform = Transform3D(-1, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -1, 117.04283, 0.05186701, -6.7624264)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_133" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="14" unique_id=728181937]
+transform = Transform3D(-1, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -1, 117.04284, 0.05186701, -17.099028)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_132" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="15" unique_id=916430251]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 106.28161, 0.05186701, -19.196623)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_116" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="16" unique_id=1547562549]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 65.61419, 0, -4.432955)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_117" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="17" unique_id=700624043]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 76.06532, 0, -4.3970776)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_123" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="18" unique_id=1165232384]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 85.57945, 0, -4.3970737)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_124" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="19" unique_id=481230237]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 85.57945, 0, -4.3970737)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_127" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="20" unique_id=593140201]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 96.035614, 0.0692649, -5.1156483)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_128" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_73/_gltfNode_0_72" parent_id_path=PackedInt32Array(1336510773, 1848684599) index="21" unique_id=711067577]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 106.48899, 0.02818203, -5.0328465)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Sidewalk 1_0_74" type="Node3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="39" unique_id=412975723]
+transform = Transform3D(-1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -81.928116, 0.185692, 54.74528)
+
+[node name="_gltfNode_0_72" type="Node3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_74" unique_id=1428962131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.344799e-06, 0, 0)
+
+[node name="Object_114" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_74/_gltfNode_0_72" unique_id=1122553093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.863, 0, -0.271)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_115" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_74/_gltfNode_0_72" unique_id=47603262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8629951, 0, 10.404555)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_116" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_74/_gltfNode_0_72" unique_id=2107859872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8629913, 0, 20.729534)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_117" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_74/_gltfNode_0_72" unique_id=594436204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8629875, 0, 31.286697)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_118" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_74/_gltfNode_0_72" unique_id=1038295525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8629837, 0, 41.916527)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Object_119" type="MeshInstance3D" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Sidewalk 1_0_74/_gltfNode_0_72" unique_id=664808953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8629799, 0, 52.471703)
+mesh = SubResource("ArrayMesh_qxt66")
+
+[node name="Sidewalk 2_1_75" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="40" unique_id=636479814]
+transform = Transform3D(-1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -84.562065, 0.185692, 49.476906)
+visible = false
+
+[node name="Speed limit plate 100_48_77" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="41" unique_id=2101369267]
+visible = false
+
+[node name="Speed limit plate 30_46_79" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="42" unique_id=1424868965]
+visible = false
+
+[node name="Speed limit plate 80_47_81" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="43" unique_id=75748185]
+visible = false
+
+[node name="Stop sign_001_23_83" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="44" unique_id=1474844577]
+transform = Transform3D(1.802688e-08, -0.014095602, -9.273995e-08, -0.41567206, 5.667858e-10, -0.16794303, 0.16794303, 2.9158504e-09, -0.4156721, -133.82608, 2.10985, 82.502716)
+
+[node name="Object_129" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Stop sign_001_23_83/_gltfNode_46_82" parent_id_path=PackedInt32Array(1336510773, 973415353) index="0" unique_id=1155893587]
+transform = Transform3D(1.0000004, 0, 5.9604645e-08, 4.5474735e-13, 1, -1.8189894e-12, 5.9604645e-08, 0, 1.0000002, 0.66371155, 552.90393, -1.6427307)
+
+[node name="Stop sign_002_6_85" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="45" unique_id=838588499]
+visible = false
+
+[node name="Stop sign_45_87" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="46" unique_id=2025930552]
+visible = false
+
+[node name="Structure bus stop_51_90" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="47" unique_id=737459684]
+transform = Transform3D(-0.031315483, -0.0023352546, -2.1984171e-07, -0.00087471935, 0.08360327, -0.004388977, 1.5294125e-06, -0.00014591518, -2.5146961, -85.7409, 3.07368, 66.11179)
+
+[node name="Object_138" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Structure bus stop_51_90/_gltfNode_102_88" parent_id_path=PackedInt32Array(1336510773, 2112591514) index="0" unique_id=461440750]
+transform = Transform3D(1, -1.8772127e-08, -4.656613e-10, -3.9638515e-09, 1.0000006, -3.7252903e-09, -5.684342e-14, -1.8189894e-11, 1.0000004, -81.769775, 0.6021633, 0.179739)
+
+[node name="_gltfNode_103_89" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Structure bus stop_51_90" index="1" unique_id=736361003]
+visible = false
+
+[node name="Object_140" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Structure bus stop_51_90/_gltfNode_103_89" index="0" unique_id=652210374]
+transform = Transform3D(1, 0, 4.7683716e-07, -9.259771e-10, 1, -5.537303e-09, 1.7462298e-10, 0, 0.9999999, -29.797852, 0, 4.7904797)
+visible = false
+
+[node name="Traffic light_001_19_92" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="48" unique_id=1197997023]
+transform = Transform3D(0.113571, 0, 0, 0, 1.54024, 0, 0, 0, 0.113571, -93.051735, 1.86242, 1.0775146)
+
+[node name="Object_143" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Traffic light_001_19_92/_gltfNode_38_91" parent_id_path=PackedInt32Array(1336510773, 249173874) index="0" unique_id=2022565024]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 38.075653, 0, -19.362549)
+
+[node name="Traffic light_002_20_94" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="49" unique_id=1583107628]
+transform = Transform3D(0, 0, -0.113571, 0, 1.54024, 0, 0.113571, 0, 0, -135.07663, 1.86242, 74.91719)
+
+[node name="Object_146" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107/Traffic light_002_20_94/_gltfNode_40_93" parent_id_path=PackedInt32Array(1336510773, 1124353065) index="0" unique_id=677157223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5460815, 0, 0)
+
+[node name="Traffic light_003_21_96" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="50" unique_id=600377190]
+visible = false
+
+[node name="Traffic light_004_8_98" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="51" unique_id=230587593]
+visible = false
+
+[node name="Traffic light_005_9_100" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="52" unique_id=14795030]
+visible = false
+
+[node name="Traffic light_006_10_102" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="53" unique_id=1828168468]
+visible = false
+
+[node name="Traffic light_007_11_104" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="54" unique_id=1656429969]
+visible = false
+
+[node name="Traffic light_18_106" parent="roads/Sketchfab_model/root/GLTF_SceneRootNode/GLTF_SceneRootNode_107" parent_id_path=PackedInt32Array(1336510773, 1738623883) index="55" unique_id=306121732]
+visible = false
+
+[node name="floor" type="StaticBody3D" parent="." unique_id=927055391]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor" unique_id=541128434]
+shape = SubResource("WorldBoundaryShape3D_yammi")
+
+[node name="store" parent="." unique_id=2014690749 instance=ExtResource("6_x3165")]
+transform = Transform3D(-1.3530021, 0, -4.813459, 0, 5, 0, 4.813459, 0, -1.3530021, 47.491474, 0, -1.1319275)
+
+[node name="Sketchfab_Scene" parent="store" unique_id=672733679 instance=ExtResource("7_cachd")]
+transform = Transform3D(0.43301266, 0, 0.24999997, 0, 0.49999988, 0, -0.24999997, 0, 0.43301266, -2.1535678, 0.013377285, 0.83658886)
+
+[node name="car" parent="." unique_id=175503870 instance=ExtResource("7_s4fv4")]
+transform = Transform3D(1.1023719, 0, -1.0172395, 0, 1.5, 0, 1.0172395, 0, 1.1023719, 24.998163, 1.0405283, 0)
+
+[node name="car2" parent="car" unique_id=783628068 instance=ExtResource("7_s4fv4")]
+transform = Transform3D(-0.52960974, 0, -0.4049172, 0, 0.6666667, 0, 0.4049172, 0, -0.52960974, -3.3301945, 0.040981293, -25.175068)
+
+[node name="crashedcar" parent="car" unique_id=1167941574 instance=ExtResource("9_dsjbd")]
+transform = Transform3D(-0.29861888, 0, -0.028753752, 0, 0.3, 0, 0.028753752, 0, -0.29861888, 17.94457, 0.23911595, -1.6514788)
+
+[node name="tree" parent="." unique_id=1812394865 instance=ExtResource("8_a6tl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.595924, -0.03772831, 13.859595)
+
+[node name="tree2" parent="tree" unique_id=318159183 instance=ExtResource("8_a6tl3")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -72.094955, 0, -5.8285646)
+
+[node name="grass" parent="." unique_id=1067897771 instance=ExtResource("9_jk0sv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.82818, 0, 15.923925)
+
+[node name="grass2" parent="grass" unique_id=1484424458 instance=ExtResource("9_jk0sv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.635437, 0, 0)
+
+[node name="gas station" parent="." unique_id=733162422 instance=ExtResource("10_lbfdt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 60.56852, 0, -46.287834)
+
+[node name="hospital" parent="." unique_id=466312330 instance=ExtResource("11_lbfdt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.796272, 0.009659767, 27.381056)
+
+[node name="japanese apt" parent="." unique_id=65670371 instance=ExtResource("13_dsjbd")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -21.098997, 0, 56.9211)
+
+[node name="normal apt" parent="." unique_id=144332266 instance=ExtResource("14_i4sau")]
+transform = Transform3D(-300, 0, -4.529874e-05, 0, 300, 0, 4.529874e-05, 0, -300, -50.058475, 0, 47.846607)
+
+[editable path="roads"]

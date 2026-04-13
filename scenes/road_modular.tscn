@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cjr2vrgvbut2f"]
+
+[ext_resource type="PackedScene" uid="uid://bers83uthq030" path="res://assets/roads/road_modular.glb" id="1_uj3tm"]
+
+[node name="Sketchfab_Scene" unique_id=1336510773 instance=ExtResource("1_uj3tm")]

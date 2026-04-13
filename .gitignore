@@ -1,3 +1,5 @@
-# Godot 4+ specific ignores
-.godot/
-/android/
+".godot/" 
+"*.uid" 
+".import/" 
+".DS_Store" 
+"Thumbs.db" 

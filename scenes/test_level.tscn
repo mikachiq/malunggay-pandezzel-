@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://sfn7yogfnr16"]
+
+[ext_resource type="PackedScene" uid="uid://cu6tot3y01fuw" path="res://scenes/fps_player.tscn" id="1_2venv"]
+[ext_resource type="PackedScene" uid="uid://blds7epsrhabo" path="res://scenes/zombie.tscn" id="2_paw1w"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hsoxx"]
+size = Vector2(20, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gojnm"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_j6w7d"]
+vertices = PackedVector3Array(-9.5, 1, -9.5, -9.5, 1, 9.5, 9.5, 1, 9.5, 9.5, 1, -9.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="BoxMesh" id="BoxMesh_x4b8f"]
+size = Vector3(20, 1, 20)
+
+[node name="Test Level" type="Node3D" unique_id=321394997]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=22852754]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1584573537]
+mesh = SubResource("PlaneMesh_hsoxx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1329023356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2902832, 0, 0)
+shape = SubResource("BoxShape3D_gojnm")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2094495544]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+
+[node name="FPSplayer" parent="." unique_id=153141157 instance=ExtResource("1_2venv")]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=105847180]
+navigation_mesh = SubResource("NavigationMesh_j6w7d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=802492966]
+visible = false
+mesh = SubResource("BoxMesh_x4b8f")
+
+[node name="zombie" parent="." unique_id=1503563501 instance=ExtResource("2_paw1w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 5)
