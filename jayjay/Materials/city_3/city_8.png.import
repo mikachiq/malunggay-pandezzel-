@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bh8i71vaecbqh"
+path.s3tc="res://.godot/imported/city_8.png-a0ece2642800e56ba030c2d0e7832e6d.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "e6bb51d25c47a2a3ac1464ad3a137c7a"
+}
+
+[deps]
+
+source_file="res://jayjay/Materials/city_3/city_8.png"
+dest_files=["res://.godot/imported/city_8.png-a0ece2642800e56ba030c2d0e7832e6d.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

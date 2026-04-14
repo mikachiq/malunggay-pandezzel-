@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dmt31i5k733yx"]
+
+[ext_resource type="PackedScene" uid="uid://b05p1hwwt3fr1" path="res://Materials/lifewood_building/lifewoodbldg.glb" id="1_ok5oo"]
+[ext_resource type="Texture2D" uid="uid://crpthkamawd51" path="res://Images/lifewood_logo_white.png" id="2_hmi8y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0mlb"]
+albedo_texture = ExtResource("2_hmi8y")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ebgnc"]
+material = SubResource("StandardMaterial3D_a0mlb")
+
+[node name="lifewoodbldg" unique_id=450901001 instance=ExtResource("1_ok5oo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Node" parent="." index="0" unique_id=1261987270]
+visible = false
+
+[node name="Node2" parent="." index="1" unique_id=174031282]
+visible = false
+
+[node name="Node3" parent="." index="2" unique_id=842875368]
+visible = false
+
+[node name="Node4" parent="." index="3" unique_id=1787540890]
+visible = false
+
+[node name="Node5" parent="." index="4" unique_id=1203206650]
+visible = false
+
+[node name="lifewoodLogo" type="MeshInstance3D" parent="." index="6" unique_id=1165306481]
+transform = Transform3D(-0.2, 2.7873968e-09, 2.6143412e-09, -1.7595571e-08, -0.015928349, -0.029904706, -1.3904583e-09, -0.1993647, 0.0023892522, -0.06353274, -0.16519886, -0.20963655)
+mesh = SubResource("PlaneMesh_ebgnc")
