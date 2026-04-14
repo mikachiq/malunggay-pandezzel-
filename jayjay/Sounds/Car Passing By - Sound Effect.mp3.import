@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ch8wqbkexy66o"
+path="res://.godot/imported/Car Passing By - Sound Effect.mp3-b768b387560f78848b15699d9109d1f9.mp3str"
+
+[deps]
+
+source_file="res://jayjay/Sounds/Car Passing By - Sound Effect.mp3"
+dest_files=["res://.godot/imported/Car Passing By - Sound Effect.mp3-b768b387560f78848b15699d9109d1f9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
