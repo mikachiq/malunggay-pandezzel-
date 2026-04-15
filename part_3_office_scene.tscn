@@ -1,9 +1,12 @@
-[gd_scene format=4 uid="uid://cgshiyg16rpg5"]
+[gd_scene format=4 uid="uid://d31vaxrcld1j8"]
 
-[ext_resource type="PackedScene" uid="uid://b7dafc4kmphrh" path="res://Materials/office_floor/office_floor.glb" id="1_alv20"]
-[ext_resource type="Script" uid="uid://g2x2tbbkphcc" path="res://part_3_office_scene.gd" id="2_uyg4b"]
-[ext_resource type="FontFile" uid="uid://dbjo3xpso2sfm" path="res://GUI/Fonts/Excalifont-Regular.woff2" id="3_5qj2k"]
-[ext_resource type="Texture2D" uid="uid://d273k2cqwgfbf" path="res://Characters/ezzeljan_3d_0.png" id="4_fqunn"]
+[ext_resource type="PackedScene" uid="uid://b7dafc4kmphrh" path="res://jayjay/Materials/office_floor/office_floor.glb" id="1_alv20"]
+[ext_resource type="Script" path="res://part_3_office_scene.gd" id="2_uyg4b"]
+[ext_resource type="FontFile" uid="uid://dbjo3xpso2sfm" path="res://jayjay/GUI/Fonts/Excalifont-Regular.woff2" id="3_5qj2k"]
+[ext_resource type="Texture2D" uid="uid://d273k2cqwgfbf" path="res://jayjay/Characters/ezzeljan_3d_0.png" id="4_fqunn"]
+[ext_resource type="AudioStream" uid="uid://dslnie5c66wru" path="res://jayjay/Sounds/Horror Background Music(No Copyright)Scary Dark Mysterious MusicHorror Trailer Music[Royalty Free].mp3" id="5_hbrsi"]
+[ext_resource type="AudioStream" uid="uid://cuqvukwbxl6nl" path="res://jayjay/Sounds/Office Ambience - Sound Effect.mp3" id="6_tox8w"]
+[ext_resource type="AudioStream" uid="uid://bj74esj0aenmo" path="res://jayjay/Sounds/Foot Step Hallway _ Horror Film Sound Effects.mp3" id="7_rocoa"]
 
 [sub_resource type="Animation" id="Animation_alv20"]
 length = 0.001
@@ -39,7 +42,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Camera3D:position")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 5),
@@ -51,7 +54,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Camera3D:rotation")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 4.9900002),
@@ -126,7 +129,7 @@ shadow_mesh = SubResource("ArrayMesh_m1qkv")
 script = ExtResource("2_uyg4b")
 
 [node name="Camera3D" type="Camera3D" parent="." index="1" unique_id=630027882]
-transform = Transform3D(-0.9998891, 0.0018913727, 0.01477348, 0.0020954974, 0.9999023, 0.013813738, -0.014745911, 0.013843162, -0.99979544, -1.1460196, 1.1815872, 5.5634804)
+transform = Transform3D(-0.9998891, 0.0018913726, 0.01477348, 0.0020954974, 0.99990225, 0.013813738, -0.014745911, 0.013843161, -0.99979544, -1.1460196, 1.1815872, 5.5634804)
 current = true
 fov = 50.0
 
@@ -219,3 +222,15 @@ metadata/extras = {
 "name": "geometry_0",
 "processed": true
 }
+
+[node name="HorrorSound" type="AudioStreamPlayer3D" parent="." index="5" unique_id=209099887]
+stream = ExtResource("5_hbrsi")
+volume_db = 15.0
+autoplay = true
+
+[node name="OfficeSound" type="AudioStreamPlayer3D" parent="." index="6" unique_id=1450049145]
+stream = ExtResource("6_tox8w")
+autoplay = true
+
+[node name="Footstep" type="AudioStreamPlayer3D" parent="." index="7" unique_id=2133778769]
+stream = ExtResource("7_rocoa")

@@ -1,7 +1,21 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776135596
+::res://::1776143420
 icon.svg::CompressedTexture2D::8226014583952910907::1776066050::1776066050::1::::<><><>0<>0<>402b7cc5483002d2b8dbc9c572f1fd56<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+intro.gd::GDScript::-1::1775523077::0::1::::<>Node3D<><>0<>0<><>::
+Intro.tscn::PackedScene::-1::1776135729::0::1::::<><><>0<>0<><>::
+lifewoodbldg.tscn::PackedScene::-1::1776135729::0::1::::<><><>0<>0<><>::
+main_menu.gd::GDScript::-1::1775484119::0::1::::<>Control<><>0<>0<><>::
+main_menu.tscn::PackedScene::980529964406998382::1776143420::0::1::::<><><>0<>0<><>::res://main_menu.gd<>uid://bbslm6weqm8pq::::res://jayjay/Images/0402.ogv<>uid://csbmcl1o7o4hj::::res://jayjay/Sounds/schorsch1964-night-atmosphere-with-crickets-374652.mp3<>uid://b7nrhak4ocnmy::::res://jayjay/GUI/Fonts/who asks satan.ttf<>uid://c7nfdd3pbx10d::::res://jayjay/GUI/Fonts/BloodScratchPersonalUse.ttf
 mcrunning.tscn::PackedScene::3038748869906889831::1776134256::0::1::::<><><>0<>0<><>::uid://dqens5er66e8o::::res://assets/animations/mcrunning.glb
+part_1_family_warning.gd::GDScript::-1::1775541365::0::1::::<>Node3D<><>0<>0<><>::
+part_1_family_warning.tscn::PackedScene::-1::1776135729::0::1::::<><><>0<>0<><>::
+part_2_walk_to_internship.gd::GDScript::8125162095407007089::1776143420::0::1::::<>Node3D<><>0<>0<><>::
+part_2_walk_to_internship.tscn::PackedScene::-1::1776135729::0::1::::<><><>0<>0<><>::
+part_3_office_scene.gd::GDScript::-1::1775801557::0::1::::<>Node3D<><>0<>0<><>::
+part_3_office_scene.tscn::PackedScene::-1::1776135729::0::1::::<><><>0<>0<><>::
+scene.tscn::PackedScene::-1::1776135729::0::1::::<><><>0<>0<><>::
+settings.tscn::PackedScene::-1::1776135729::0::1::::<><><>0<>0<><>::
+setting_script.gd::GDScript::-1::1775446715::0::1::::<>Button<><>0<>0<><>::
 sketchfab_scene.tscn::PackedScene::899197852754044161::1776066050::0::1::::<><><>0<>0<><>::uid://jgvr7n2tir3r::::res://assets/weapons/beretta_pistol_fps_animation.glb
 ::res://assets/::1776066050
 ::res://assets/animations/::1776066043
@@ -811,10 +825,13 @@ scene.gltf::PackedScene::5317851098945344688::1772548544::1776134532::1::::<><><
 ::res://jayjay/Materials/psx_japanese_house/textures/::1776134468
 Material.008_baseColor.jpeg::CompressedTexture2D::7453748062094929137::1772548542::1776134468::1::::<><><>0<>0<>4a3895b20d452098e30093039e62a4cb<>res://.godot/imported/Material.008_baseColor.jpeg-49b7e90f961683f27067ff4c12a5c07b.s3tc.ctex::
 Texture_baseColor.jpeg::CompressedTexture2D::793217330057815847::1772548542::1776134468::1::::<><><>0<>0<>63b8bc6f6f9612f6f09bc92df9e8f8fd<>res://.godot/imported/Texture_baseColor.jpeg-7bba31c7f16cd38018ea5e8d3e67d946.s3tc.ctex::
-::res://jayjay/Sounds/::1776134461
+::res://jayjay/Sounds/::1776144584
 bg music sa dinner.mp3::AudioStreamMP3::8046942297158288497::1775479546::1776134461::1::::<><><>0<>0<>5e794aa2be8a2b6dd9dec3e54ee20add<>res://.godot/imported/bg music sa dinner.mp3-1fdc610975d69b88c2d3fac6dc4a87d8.mp3str::
 Car Passing By - Sound Effect.mp3::AudioStreamMP3::5333652153464593880::1775618706::1776134461::1::::<><><>0<>0<>c7608a7681ee92350b9097af3d568ee8<>res://.godot/imported/Car Passing By - Sound Effect.mp3-b768b387560f78848b15699d9109d1f9.mp3str::
 citybg1.mp3::AudioStreamMP3::4845042942835625072::1775483299::1776134461::1::::<><><>0<>0<>77bfa6ee6010d691c9a9658f3f2708a6<>res://.godot/imported/citybg1.mp3-c718eefa913c8fd18dd6cdbceb3e10f4.mp3str::
+Foot Step Hallway _ Horror Film Sound Effects.mp3::AudioStreamMP3::3085949260990752986::1776144434::1776144518::1::::<><><>0<>0<>dc19ff46ed38dbd87adac5fb7f00bb50<>res://.godot/imported/Foot Step Hallway _ Horror Film Sound Effects.mp3-99d5e23a3b1e6a76d060596aec36e37e.mp3str::
+Horror Background Music(No Copyright)Scary Dark Mysterious MusicHorror Trailer Music[Royalty Free].mp3::AudioStreamMP3::8446173255686821590::1776144584::1776144586::1::::<><><>0<>0<>b766e40c9ad1756a8be39599944ae3b7<>res://.godot/imported/Horror Background Music(No Copyright)Scary Dark Mysterious MusicHorror Trailer Music[Royalty Free].mp3-878b923e3b477c609543c7f307e6ed99.mp3str::
+Office Ambience - Sound Effect.mp3::AudioStreamMP3::6210959616233838249::1776144511::1776144518::1::::<><><>0<>0<>01a350ea55e9af203475b1fbceb41dd1<>res://.godot/imported/Office Ambience - Sound Effect.mp3-ee1646b3f85e1123f6a02b62e39f39f8.mp3str::
 schorsch1964-night-atmosphere-with-crickets-374652.mp3::AudioStreamMP3::6039037724727061275::1775094720::1776134461::1::::<><><>0<>0<>24028aed00f88b7fd7537abf8afa73b0<>res://.godot/imported/schorsch1964-night-atmosphere-with-crickets-374652.mp3-7885a4e6cf9aa617ad4dc3bc333e0a5c.mp3str::
 ::res://jayjay/Textures/::1776134207
 ::res://jayjay/Textures/concrete_floor_damaged_01_1k.blend/::1776134207

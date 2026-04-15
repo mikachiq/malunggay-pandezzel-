@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dslnie5c66wru"
+path="res://.godot/imported/Horror Background Music(No Copyright)Scary Dark Mysterious MusicHorror Trailer Music[Royalty Free].mp3-878b923e3b477c609543c7f307e6ed99.mp3str"
+
+[deps]
+
+source_file="res://jayjay/Sounds/Horror Background Music(No Copyright)Scary Dark Mysterious MusicHorror Trailer Music[Royalty Free].mp3"
+dest_files=["res://.godot/imported/Horror Background Music(No Copyright)Scary Dark Mysterious MusicHorror Trailer Music[Royalty Free].mp3-878b923e3b477c609543c7f307e6ed99.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://c0h5xp02e56gu"]
+[gd_scene format=3 uid="uid://n78gkflap831"]
 
-[ext_resource type="Script" uid="uid://lu8yb7j7e3mv" path="res://main_menu.gd" id="1_jix8l"]
-[ext_resource type="VideoStream" uid="uid://bbslm6weqm8pq" path="res://Images/0402.ogv" id="2_jix8l"]
-[ext_resource type="AudioStream" uid="uid://csbmcl1o7o4hj" path="res://Sounds/schorsch1964-night-atmosphere-with-crickets-374652.mp3" id="3_fu7sn"]
-[ext_resource type="FontFile" uid="uid://b7nrhak4ocnmy" path="res://GUI/Fonts/who asks satan.ttf" id="4_glbon"]
-[ext_resource type="FontFile" uid="uid://c7nfdd3pbx10d" path="res://GUI/Fonts/BloodScratchPersonalUse.ttf" id="5_glbon"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_jix8l"]
+[ext_resource type="VideoStream" uid="uid://bbslm6weqm8pq" path="res://jayjay/Images/0402.ogv" id="2_jix8l"]
+[ext_resource type="AudioStream" uid="uid://csbmcl1o7o4hj" path="res://jayjay/Sounds/schorsch1964-night-atmosphere-with-crickets-374652.mp3" id="3_fu7sn"]
+[ext_resource type="FontFile" uid="uid://b7nrhak4ocnmy" path="res://jayjay/GUI/Fonts/who asks satan.ttf" id="4_glbon"]
+[ext_resource type="FontFile" uid="uid://c7nfdd3pbx10d" path="res://jayjay/GUI/Fonts/BloodScratchPersonalUse.ttf" id="5_glbon"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glbon"]
 bg_color = Color(1, 1, 1, 1)
