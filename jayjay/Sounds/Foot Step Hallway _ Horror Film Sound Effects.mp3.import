@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bj74esj0aenmo"
+path="res://.godot/imported/Foot Step Hallway _ Horror Film Sound Effects.mp3-99d5e23a3b1e6a76d060596aec36e37e.mp3str"
+
+[deps]
+
+source_file="res://jayjay/Sounds/Foot Step Hallway _ Horror Film Sound Effects.mp3"
+dest_files=["res://.godot/imported/Foot Step Hallway _ Horror Film Sound Effects.mp3-99d5e23a3b1e6a76d060596aec36e37e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
