@@ -1,5 +1,1 @@
-res://main_menu.tscn
-res://part_2_walk_to_internship.gd
-res://part_3_office_scene.tscn
-res://part_1_family_warning.tscn
-res://part_1_family_warning.gd
+res://scenes/level_101_street.tscn
