@@ -1,6 +1,14 @@
+OmniLight3D
+Camera3D
+Node3D
+DirectionalLight3D
+SubViewport
+MeshInstance3D
+VideoStreamPlayer
+ProtonScatter
+CSGBox3D
 AudioStreamPlayer3D
 SpringArm3D
 AnimationPlayer
 CollisionShape3D
 StaticBody3D
-Node3D

@@ -1,38 +1,123 @@
 [gd_scene format=4 uid="uid://d31vaxrcld1j8"]
 
 [ext_resource type="PackedScene" uid="uid://b7dafc4kmphrh" path="res://jayjay/Materials/office_floor/office_floor.glb" id="1_alv20"]
-[ext_resource type="Script" path="res://part_3_office_scene.gd" id="2_uyg4b"]
+[ext_resource type="Script" uid="uid://g2x2tbbkphcc" path="res://part_3_office_scene.gd" id="2_uyg4b"]
 [ext_resource type="FontFile" uid="uid://dbjo3xpso2sfm" path="res://jayjay/GUI/Fonts/Excalifont-Regular.woff2" id="3_5qj2k"]
 [ext_resource type="Texture2D" uid="uid://d273k2cqwgfbf" path="res://jayjay/Characters/ezzeljan_3d_0.png" id="4_fqunn"]
 [ext_resource type="AudioStream" uid="uid://dslnie5c66wru" path="res://jayjay/Sounds/Horror Background Music(No Copyright)Scary Dark Mysterious MusicHorror Trailer Music[Royalty Free].mp3" id="5_hbrsi"]
 [ext_resource type="AudioStream" uid="uid://cuqvukwbxl6nl" path="res://jayjay/Sounds/Office Ambience - Sound Effect.mp3" id="6_tox8w"]
 [ext_resource type="AudioStream" uid="uid://bj74esj0aenmo" path="res://jayjay/Sounds/Foot Step Hallway _ Horror Film Sound Effects.mp3" id="7_rocoa"]
+[ext_resource type="Script" uid="uid://cdlp8c2kigqlu" path="res://tv_scene.gd" id="8_7d220"]
+[ext_resource type="VideoStream" uid="uid://diqbcwxypep8x" path="res://jayjay/Video/hackir_scene.ogv" id="8_w0gx1"]
+[ext_resource type="AudioStream" uid="uid://b03afycruq5ua" path="res://jayjay/Sounds/Typing Sound Effect (no copyright).mp3" id="10_rflhv"]
+
+[sub_resource type="Environment" id="Environment_rflhv"]
+ambient_light_color = Color(0.15686275, 0.3529412, 0.28235295, 1)
+ambient_light_energy = 6.63
+fog_enabled = true
+fog_light_color = Color(0.15686275, 0.3529412, 0.28235295, 1)
 
 [sub_resource type="Animation" id="Animation_alv20"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3D:position")
+tracks/0/path = NodePath("Camera3D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-1.1460196, 1.1815872, 5.5634804)]
+"values": [Vector3(-0.013814177, 3.1268172, 0.002095699)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/path = NodePath("Camera3D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-0.013814177, 3.1268172, 0.002095699)]
+"values": [Vector3(-1.1460196, 1.1815872, 5.5634804)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ezzeljan_3d/Node6/world/geometry_0:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.9750896, -0.12077469, -3.7089074)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ezzeljan_3d/Node6/world/geometry_0:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.5225915e-14, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rflhv"]
+resource_name = "hallway_scene"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ezzeljan_3d/Node6/world/geometry_0:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6.02),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.9750893, -0.12077469, -5.9241247), Vector3(1.9750896, -0.12077469, -3.7089074)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ezzeljan_3d/Node6/world/geometry_0:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6.02),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5225915e-14, 0), Vector3(0, -1.5225915e-14, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hallway_Scene/Hallway_Scene_Camera:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-18.405077, 1.1102065, 6.0150824)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hallway_Scene/Hallway_Scene_Camera:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.060288865, -1.5418962, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_uyg4b"]
@@ -41,26 +126,26 @@ length = 15.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3D:position")
+tracks/0/path = NodePath("Camera3D:rotation")
 tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
+"times": PackedFloat32Array(0, 6.0333333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(-1.1460196, 1.1815872, 5.5634804), Vector3(-0.88385725, 0.886909, 8.611275)]
+"values": [Vector3(-0.013814177, 3.1268172, 0.002095699), Vector3(-0.46607968, -1.6031367, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/path = NodePath("Camera3D:position")
 tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 4.9900002),
+"times": PackedFloat32Array(0, 6.0333333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(-0.013814177, 3.1268172, 0.002095699), Vector3(-0.46607968, -1.6031367, 0)]
+"values": [Vector3(-1.1460196, 1.1815872, 5.5634804), Vector3(-0.88385725, 0.886909, 8.611275)]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
@@ -69,17 +154,57 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(4.9666667),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(6, 10.066667),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
-"args": ["System:", ""],
+"args": ["System:", "Typing on keyboard"],
 "method": &"show_dialogue"
+}, {
+"args": [],
+"method": &"hide_dialogue"
 }]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Typing Sounds:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.7),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ezzeljan_3d/Node6/world/geometry_0:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 6.12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.70661926, -0.2675398, 1.9695733), Vector3(0.70661974, -0.2675398, 1.8251727)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ezzeljan_3d/Node6/world/geometry_0:rotation")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 6.12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5225915e-14, 0), Vector3(0, -1.5225915e-14, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5qj2k"]
 _data = {
 &"RESET": SubResource("Animation_alv20"),
+&"hallway_scene": SubResource("Animation_rflhv"),
 &"office_scene": SubResource("Animation_uyg4b")
 }
 
@@ -125,11 +250,26 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_m1qkv")
 
+[sub_resource type="BoxMesh" id="BoxMesh_w0gx1"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rflhv"]
+viewport_path = NodePath("TVScene/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dggns"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_rflhv")
+
 [node name="Part3_Office_Scene" unique_id=1765824709 instance=ExtResource("1_alv20")]
 script = ExtResource("2_uyg4b")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Sketchfab_model" parent_id_path=PackedInt32Array(150895511) index="1" unique_id=361449984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8242009, -10.340586, 1.9899986)
+light_color = Color(0.15686275, 0.3529412, 0.28235295, 1)
+shadow_enabled = true
+
 [node name="Camera3D" type="Camera3D" parent="." index="1" unique_id=630027882]
-transform = Transform3D(-0.9998891, 0.0018913726, 0.01477348, 0.0020954974, 0.99990225, 0.013813738, -0.014745911, 0.013843161, -0.99979544, -1.1460196, 1.1815872, 5.5634804)
+transform = Transform3D(-0.99988896, 0.0018913725, 0.014773478, 0.0020954972, 0.9999022, 0.013813736, -0.014745909, 0.01384316, -0.9997953, -1.1460196, 1.1815872, 5.5634804)
+environment = SubResource("Environment_rflhv")
 current = true
 fov = 50.0
 
@@ -189,8 +329,7 @@ transform = Transform3D(-1.3113416e-07, 0, 3, 0, 3, 0, -3, 0, -1.3113416e-07, -4
 
 [node name="Node2" type="DirectionalLight3D" parent="ezzeljan_3d" index="1" unique_id=1032633369]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5, 5)
-visible = false
-light_energy = 10.0
+light_energy = 0.1
 
 [node name="Node3" type="DirectionalLight3D" parent="ezzeljan_3d" index="2" unique_id=1492926879]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 5, 5)
@@ -216,7 +355,7 @@ metadata/extras = {
 }
 
 [node name="geometry_0" type="MeshInstance3D" parent="ezzeljan_3d/Node6/world" index="0" unique_id=1105280137]
-transform = Transform3D(0.7, 0, -1.0658141e-14, 0, 0.7, 0, 1.0658141e-14, 0, 0.7, 0.69051695, -0.12077469, 1.8273649)
+transform = Transform3D(0.7, 0, -1.065814e-14, 0, 0.7, 0, 1.065814e-14, 0, 0.7, 1.9750896, -0.12077469, -3.7089074)
 mesh = SubResource("ArrayMesh_hbrsi")
 metadata/extras = {
 "name": "geometry_0",
@@ -224,13 +363,51 @@ metadata/extras = {
 }
 
 [node name="HorrorSound" type="AudioStreamPlayer3D" parent="." index="5" unique_id=209099887]
+visible = false
 stream = ExtResource("5_hbrsi")
 volume_db = 15.0
 autoplay = true
 
 [node name="OfficeSound" type="AudioStreamPlayer3D" parent="." index="6" unique_id=1450049145]
+visible = false
 stream = ExtResource("6_tox8w")
 autoplay = true
 
 [node name="Footstep" type="AudioStreamPlayer3D" parent="." index="7" unique_id=2133778769]
+visible = false
 stream = ExtResource("7_rocoa")
+
+[node name="TVScene" type="Node3D" parent="." index="8" unique_id=2044861490]
+script = ExtResource("8_7d220")
+
+[node name="TVCube" type="MeshInstance3D" parent="TVScene" index="0" unique_id=1633024786]
+transform = Transform3D(0.01, 0, 0, 0, 0.3, 0, 0, 0, 0.4, -0.40487373, 0.6626867, 8.605954)
+mesh = SubResource("BoxMesh_w0gx1")
+surface_material_override/0 = SubResource("StandardMaterial3D_dggns")
+
+[node name="SubViewport" type="SubViewport" parent="TVScene" index="1" unique_id=477227538]
+size = Vector2i(1280, 720)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="TVScene/SubViewport" index="0" unique_id=55843250]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("8_w0gx1")
+autoplay = true
+expand = true
+
+[node name="Camera3D" type="Camera3D" parent="TVScene" index="2" unique_id=1420455648]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="TVScene" index="3" unique_id=707597661]
+
+[node name="Typing Sounds" type="AudioStreamPlayer3D" parent="." index="9" unique_id=1228332551]
+visible = false
+stream = ExtResource("10_rflhv")
+volume_db = 15.0
+
+[node name="Hallway_Scene" type="Node3D" parent="." index="10" unique_id=640589449]
+
+[node name="Hallway_Scene_Camera" type="Camera3D" parent="Hallway_Scene" index="0" unique_id=450333989]
+transform = Transform3D(0.02889608, 0.06022719, -0.9977664, 0, 0.9981832, 0.06025235, 0.9995824, -0.0017410568, 0.028843582, -18.405077, 1.1102065, 6.0150824)
