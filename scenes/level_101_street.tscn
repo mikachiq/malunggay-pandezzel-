@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cu6tot3y01fuw" path="res://scenes/fps_player.tscn" id="1_nko8f"]
 [ext_resource type="PackedScene" uid="uid://blds7epsrhabo" path="res://scenes/zombie.tscn" id="2_saax1"]
-[ext_resource type="Script" uid="uid://bi25a7ojsebxx" path="res://scenes/zombie_spawner.gd" id="4_yammi"]
+[ext_resource type="Script" uid="uid://bi25a7ojsebxx" path="res://scripts/zombie_spawner.gd" id="4_yammi"]
 [ext_resource type="PackedScene" uid="uid://bepk1jjqrksni" path="res://assets/environment/fire_animation.glb" id="6_4g38j"]
 [ext_resource type="PackedScene" uid="uid://ctjcgq34c6yp7" path="res://assets/environment/blood_splatter.glb" id="6_bu4l7"]
 [ext_resource type="PackedScene" uid="uid://dgvuwltmchl32" path="res://assets/buildings/psx_groceries_store.glb" id="6_x3165"]
@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bnnbv6jcvlwnp" path="res://assets/environment/foodtrash.glb" id="16_btb8j"]
 [ext_resource type="PackedScene" uid="uid://ccir0hjoy7jqv" path="res://assets/cars/crashed_helicopter.glb" id="17_4g38j"]
 [ext_resource type="PackedScene" uid="uid://do1yw62wkdw84" path="res://assets/buildings/firestation.glb" id="18_vs2sm"]
-[ext_resource type="PackedScene" uid="uid://dmt31i5k733yx" path="res://lifewoodbldg.tscn" id="21_j1kxr"]
+[ext_resource type="PackedScene" uid="uid://dmt31i5k733yx" path="res://assets/buildings/lifewoodbldg.tscn" id="21_j1kxr"]
 [ext_resource type="PackedScene" uid="uid://ojpck6uhyqvr" path="res://assets/cars/destroyed_bus_01.glb" id="24_8qatv"]
 [ext_resource type="PackedScene" uid="uid://benci8exvv2xc" path="res://assets/environment/blood_spattered.glb" id="26_07iy3"]
 [ext_resource type="PackedScene" uid="uid://dpq1jfmqdmuup" path="res://assets/models/low_poly_dead_body_covered_game_ready.glb" id="27_8kiej"]

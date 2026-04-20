@@ -1,3 +1,2 @@
-res://part_3_office_scene.tscn
-res://tv_scene.gd
-res://part_3_office_scene.gd
+res://menus/main_menu.tscn
+res://menus/settings.tscn
