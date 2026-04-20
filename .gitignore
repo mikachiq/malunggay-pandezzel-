@@ -1,5 +1,5 @@
-.godot/
-*.uid
-.import/
-.DS_Store
-Thumbs.db
+".godot/" 
+"*.uid" 
+".import/" 
+".DS_Store" 
+"Thumbs.db" 

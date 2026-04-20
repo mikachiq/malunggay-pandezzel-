@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b03afycruq5ua"
+path="res://.godot/imported/Typing Sound Effect (no copyright).mp3-d38fd654f4197a7265d3f7dcec922f0e.mp3str"
+
+[deps]
+
+source_file="res://jayjay/Sounds/Typing Sound Effect (no copyright).mp3"
+dest_files=["res://.godot/imported/Typing Sound Effect (no copyright).mp3-d38fd654f4197a7265d3f7dcec922f0e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

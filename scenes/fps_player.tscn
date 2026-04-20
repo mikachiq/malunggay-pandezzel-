@@ -22,7 +22,7 @@ bones/28/position = Vector3(-3.2181482, -2.0074334, 0.13260159)
 bones/31/position = Vector3(-1.1875022e-07, 5.463151, 2.0608977e-06)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=563349522]
-transform = Transform3D(0.99999905, 0.0012540482, 0.00052969664, -0.0012540529, 0.9999992, 8.374419e-06, -0.0005296854, -9.058053e-06, 0.9999999, 0, -0.125, 0)
+transform = Transform3D(0.99999905, 0.0012540482, 0.00052969664, -0.0012540529, 0.9999992, 8.374419e-06, -0.0005296854, -9.058053e-06, 0.9999999, 0, 0.2060849, 0)
 shape = SubResource("CapsuleShape3D_mopl5")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1483626316]
