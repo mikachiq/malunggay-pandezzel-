@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cldi4fh7jse2y"]
+
+[ext_resource type="PackedScene" uid="uid://spo0lvxaa5ey" path="res://jayjay/Animations/Female Walk.fbx" id="1_clygc"]
+[ext_resource type="AnimationLibrary" uid="uid://c0pw755wp0dug" path="res://jayjay/Animations/Ch36_nonPBR@Female Walk.fbx" id="2_ks2gi"]
+[ext_resource type="AnimationLibrary" uid="uid://rfmvu8ca7jio" path="res://jayjay/Animations/Idle.fbx" id="3_8qdan"]
+[ext_resource type="AnimationLibrary" uid="uid://bcxpucjmmxprs" path="res://jayjay/Animations/Sitting Idle.fbx" id="4_vxsy7"]
+[ext_resource type="AnimationLibrary" uid="uid://cnc2kvte6fyai" path="res://jayjay/Animations/Typing.fbx" id="5_c6y2g"]
+
+[node name="CharacterAnimations" unique_id=578874454 instance=ExtResource("1_clygc")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Skeleton3D" parent_id_path=PackedInt32Array(745086682) index="0" unique_id=432694153]
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=141151952]
+"libraries/Ch36_nonPBR@Female Walk" = ExtResource("2_ks2gi")
+libraries/Idle = ExtResource("3_8qdan")
+"libraries/Sitting Idle" = ExtResource("4_vxsy7")
+libraries/Typing = ExtResource("5_c6y2g")

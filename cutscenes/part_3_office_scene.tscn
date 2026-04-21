@@ -19,106 +19,6 @@ fog_light_color = Color(0.15686275, 0.3529412, 0.28235295, 1)
 
 [sub_resource type="Animation" id="Animation_alv20"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.013814177, 3.1268172, 0.002095699)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-1.1460196, 1.1815872, 5.5634804)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ezzeljan_3d/Node6/world/geometry_0:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(1.9750896, -0.12077469, -3.7089074)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ezzeljan_3d/Node6/world/geometry_0:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -1.5225915e-14, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_rflhv"]
-resource_name = "hallway_scene"
-length = 15.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ezzeljan_3d/Node6/world/geometry_0:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 6.02),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(1.9750893, -0.12077469, -5.9241247), Vector3(1.9750896, -0.12077469, -3.7089074)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ezzeljan_3d/Node6/world/geometry_0:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 6.02),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, -1.5225915e-14, 0), Vector3(0, -1.5225915e-14, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Hallway_Scene/Hallway_Scene_Camera:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-18.405077, 1.1102065, 6.0150824)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Hallway_Scene/Hallway_Scene_Camera:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.060288865, -1.5418962, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_uyg4b"]
 resource_name = "office_scene"
@@ -204,7 +104,6 @@ tracks/5/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5qj2k"]
 _data = {
 &"RESET": SubResource("Animation_alv20"),
-&"hallway_scene": SubResource("Animation_rflhv"),
 &"office_scene": SubResource("Animation_uyg4b")
 }
 
@@ -268,13 +167,16 @@ light_color = Color(0.15686275, 0.3529412, 0.28235295, 1)
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="." index="1" unique_id=630027882]
-transform = Transform3D(-0.99988896, 0.0018913723, 0.014773478, 0.0020954972, 0.99990207, 0.013813736, -0.014745909, 0.013843159, -0.9997953, -1.1460196, 1.1815872, 5.5634804)
+transform = Transform3D(-0.99988896, 0.001891372, 0.014773478, 0.0020954972, 0.99990195, 0.013813736, -0.014745909, 0.013843157, -0.9997953, -1.1460196, 1.1815872, 5.5634804)
 environment = SubResource("Environment_rflhv")
 current = true
 fov = 50.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2" unique_id=1107359075]
 libraries/ = SubResource("AnimationLibrary_5qj2k")
+autoplay = &"office_scene"
+next/office_scene = &"hallway_scene"
+blend_times = [&"hallway_scene", &"hallway_scene", 0.5]
 
 [node name="DialogueUI" type="CanvasLayer" parent="." index="3" unique_id=199538117]
 
@@ -355,7 +257,7 @@ metadata/extras = {
 }
 
 [node name="geometry_0" type="MeshInstance3D" parent="ezzeljan_3d/Node6/world" index="0" unique_id=1105280137]
-transform = Transform3D(0.7, 0, -1.065814e-14, 0, 0.7, 0, 1.065814e-14, 0, 0.7, 1.9750896, -0.12077469, -3.7089074)
+transform = Transform3D(0.7, 0, -1.065814e-14, 0, 0.7, 0, 1.065814e-14, 0, 0.7, 0.70661926, -0.2675398, 1.9695733)
 mesh = SubResource("ArrayMesh_hbrsi")
 metadata/extras = {
 "name": "geometry_0",
@@ -398,9 +300,7 @@ stream = ExtResource("8_w0gx1")
 autoplay = true
 expand = true
 
-[node name="Camera3D" type="Camera3D" parent="TVScene" index="2" unique_id=1420455648]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="TVScene" index="3" unique_id=707597661]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="TVScene" index="2" unique_id=707597661]
 
 [node name="Typing Sounds" type="AudioStreamPlayer3D" parent="." index="9" unique_id=1228332551]
 visible = false
