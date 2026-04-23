@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ca6nk8j73d514"
+path="res://.godot/imported/FLICKER SOUND EFFECT.mp3-fecdd64bd85e5f18a0e78e9f681ccfb4.mp3str"
+
+[deps]
+
+source_file="res://jayjay/Sounds/FLICKER SOUND EFFECT.mp3"
+dest_files=["res://.godot/imported/FLICKER SOUND EFFECT.mp3-fecdd64bd85e5f18a0e78e9f681ccfb4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
