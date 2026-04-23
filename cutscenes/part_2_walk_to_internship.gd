@@ -79,5 +79,5 @@ func _on_cutscene_finished(_anim_name: String):
 	# After fade, print done (replace with load next scene later)
 	scene_tween.tween_callback(func():
 		print("Ready to load Part 2!")
-		get_tree().change_scene_to_file("res://part_3_office_scene.tscn")
+		get_tree().change_scene_to_file("res://cutscenes/part_3_office_scene.tscn")
 	)

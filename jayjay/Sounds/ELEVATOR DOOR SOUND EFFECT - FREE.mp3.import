@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://20gm1pvken5t"
+path="res://.godot/imported/ELEVATOR DOOR SOUND EFFECT - FREE.mp3-a02934b928ad4ca7503858f70ede2add.mp3str"
+
+[deps]
+
+source_file="res://jayjay/Sounds/ELEVATOR DOOR SOUND EFFECT - FREE.mp3"
+dest_files=["res://.godot/imported/ELEVATOR DOOR SOUND EFFECT - FREE.mp3-a02934b928ad4ca7503858f70ede2add.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
