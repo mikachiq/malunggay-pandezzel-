@@ -8,8 +8,9 @@
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_uvbnd"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="6_ljerh"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_slj7f"]
-[ext_resource type="Script" uid="uid://cvf85pcs3v7jg" path="res://cutscenes/omni_light_3d.gd" id="8_ljerh"]
 [ext_resource type="AudioStream" uid="uid://soebxesc5fyh" path="res://jayjay/Sounds/Elevator Door Open, Close, Go up   Sound Effect.mp3" id="10_bqwew"]
+[ext_resource type="AudioStream" uid="uid://ca6nk8j73d514" path="res://jayjay/Sounds/FLICKER SOUND EFFECT.mp3" id="11_4b8r5"]
+[ext_resource type="AudioStream" uid="uid://cf4kvfpuq4wy2" path="res://jayjay/Sounds/Whisper - Sound Effect.mp3" id="11_a281x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ljerh"]
 bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0.75000006)
@@ -82,43 +83,43 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("InsideElevatorCamera:position")
+tracks/2/path = NodePath("HorrorSound:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-23.41228, 2.0114267, 12.120625)]
+"update": 1,
+"values": [false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("InsideElevatorCamera:rotation")
+tracks/3/path = NodePath("Sketchfab_model/��������_fbx/RootNode/d01/d01_c3487768d948b952c3af07d7072beac4_0:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-0.5926153, 0.80543786, 0)]
+"values": [Vector3(0, 0, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("HorrorSound:playing")
+tracks/4/path = NodePath("Sketchfab_model/��������_fbx/RootNode/d01/d01_c3487768d948b952c3af07d7072beac4_0:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector3(0, 0, 0)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Sketchfab_model/��������_fbx/RootNode/d01/d01_c3487768d948b952c3af07d7072beac4_0:position")
+tracks/5/path = NodePath("Sketchfab_model/��������_fbx/RootNode/do2/do2_c3487768d948b952c3af07d7072beac4_0:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -130,7 +131,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Sketchfab_model/��������_fbx/RootNode/d01/d01_c3487768d948b952c3af07d7072beac4_0:rotation")
+tracks/6/path = NodePath("Sketchfab_model/��������_fbx/RootNode/do2/do2_c3487768d948b952c3af07d7072beac4_0:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -142,67 +143,139 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Sketchfab_model/��������_fbx/RootNode/do2/do2_c3487768d948b952c3af07d7072beac4_0:rotation")
+tracks/7/path = NodePath("ElevatorSounds:playing")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
+"update": 1,
+"values": [false]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Sketchfab_model/��������_fbx/RootNode/do2/do2_c3487768d948b952c3af07d7072beac4_0:position")
+tracks/8/path = NodePath("InsideElevatorCamera:rotation")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, 0)]
+"values": [Vector3(-0.72787946, 0.77056926, 0)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("ElevatorSounds:playing")
+tracks/9/path = NodePath("InsideElevatorCamera:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector3(-23.400152, 2.0931833, 12.112957)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("OutsideElevatorCamera:priority")
+tracks/10/path = NodePath("InsideElevatorCamera:priority")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
+"values": [10]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("InsideElevatorCamera:priority")
+tracks/11/path = NodePath("OutsideElevatorCamera:priority")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [10]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CSGSphere3D/OmniLight3D:light_energy")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [5.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("FlickerSFX:playing")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("WhisperSFX:playing")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("WhisperSFX:volume_db")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [80.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("ElevatorSounds:volume_db")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [50.0]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("HorrorSound:volume_db")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
 }
 
 [sub_resource type="Animation" id="Animation_w3yt8"]
 resource_name = "hallway_scene"
-length = 31.0
+length = 20.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -210,7 +283,7 @@ tracks/0/path = NodePath("ezzeljan_3d/Node6/world/geometry_0:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3.02, 7.011072, 19.678259),
+"times": PackedFloat32Array(0, 2.06, 4.0610723, 19.678259),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(-0.5703306, -0.12300557, -8.387527), Vector3(-0.5703311, -0.12300557, -8.730892), Vector3(-0.57033205, -0.12300557, -9.184667), Vector3(-0.57033205, -0.12300557, -9.184667)]
@@ -222,7 +295,7 @@ tracks/1/path = NodePath("ezzeljan_3d/Node6/world/geometry_0:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 3.02, 7.011072, 19.678259),
+"times": PackedFloat32Array(0, 2.06, 4.0610723, 19.678259),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(0, -3.1415925, 0), Vector3(0, -3.068978, 0), Vector3(0, -1.5225915e-14, 0), Vector3(0, -1.5225915e-14, 0)]
@@ -230,122 +303,211 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("InsideElevatorCamera:position")
+tracks/2/path = NodePath("HorrorSound:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("InsideElevatorCamera:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("HorrorSound:playing")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Sketchfab_model/��������_fbx/RootNode/d01/d01_c3487768d948b952c3af07d7072beac4_0:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.98999995, 7.04),
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sketchfab_model/��������_fbx/RootNode/d01/d01_c3487768d948b952c3af07d7072beac4_0:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.98999995, 4.04),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(30.68811, 0, 0), Vector3(-0.23040771, 0, 0)]
 }
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Sketchfab_model/��������_fbx/RootNode/d01/d01_c3487768d948b952c3af07d7072beac4_0:rotation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.98999995, 7.04),
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sketchfab_model/��������_fbx/RootNode/d01/d01_c3487768d948b952c3af07d7072beac4_0:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.98999995, 4.04),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(7.866579e-23, 2.1175826e-22, 0), Vector3(7.8665784e-23, 4.2351657e-22, 0)]
 }
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Sketchfab_model/��������_fbx/RootNode/do2/do2_c3487768d948b952c3af07d7072beac4_0:rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.98999995, 7.04),
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sketchfab_model/��������_fbx/RootNode/do2/do2_c3487768d948b952c3af07d7072beac4_0:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.98999995, 4.04),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(7.866579e-23, 2.1175826e-22, 0), Vector3(7.86658e-23, 6.352749e-22, 0)]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Sketchfab_model/��������_fbx/RootNode/do2/do2_c3487768d948b952c3af07d7072beac4_0:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.98999995, 7.04),
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sketchfab_model/��������_fbx/RootNode/do2/do2_c3487768d948b952c3af07d7072beac4_0:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.98999995, 4.04),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(-30.249756, 0, 0), Vector3(-0.40856934, 0, 0)]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ElevatorSounds:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("InsideElevatorCamera:rotation")
+tracks/8/interp = 0
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 12.03335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.72787946, 0.77056926, 0), Vector3(-0.13605925, 1.6083096, 0)]
+}
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("ElevatorSounds:playing")
-tracks/9/interp = 1
+tracks/9/path = NodePath("InsideElevatorCamera:position")
+tracks/9/interp = 0
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
+"times": PackedFloat32Array(0, 12.03335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-23.400152, 2.0931833, 12.112957), Vector3(-23.599394, 1.3829607, 11.269615)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("OutsideElevatorCamera:priority")
-tracks/10/interp = 1
+tracks/10/path = NodePath("InsideElevatorCamera:priority")
+tracks/10/interp = 0
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0.0050000064, 7.0049996),
+"times": PackedFloat32Array(0, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [10, 0]
+"values": [0, 10]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("InsideElevatorCamera:priority")
-tracks/11/interp = 1
+tracks/11/path = NodePath("OutsideElevatorCamera:priority")
+tracks/11/interp = 0
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(0.015000001, 7.025),
+"times": PackedFloat32Array(0, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [0, 10]
+"values": [10, 0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CSGSphere3D/OmniLight3D:light_energy")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 9.827167, 9.96, 10.103474, 10.223351, 10.34335, 10.47335, 10.58335, 10.703227, 10.79335, 10.913227, 11.00335, 11.123227, 11.21335, 11.333227, 11.433351, 11.553227, 11.65335, 11.773227),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [5.0, 5.0, 0.0, 5.0, 0.0, 5.0, 0.0, 5.0, 0.0, 5.0, 0.0, 5.0, 0.0, 5.0, 0.0, 5.0, 0.0, 5.0, 0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("FlickerSFX:playing")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(8.72335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "method"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath(".")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(12.52835, 17.835596),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": ["Entity:", "Ayaw....... Padayon....."],
+"method": &"show_dialogue"
+}, {
+"args": [],
+"method": &"hide_dialogue"
+}]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("WhisperSFX:playing")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(12.214414),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("WhisperSFX:volume_db")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(12.214414, 17.264414),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [80.0, 15.0]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("ElevatorSounds:volume_db")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [50.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("HorrorSound:volume_db")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bqwew"]
@@ -360,6 +522,8 @@ _data = {
 
 [sub_resource type="Resource" id="Resource_uvbnd"]
 script = ExtResource("7_slj7f")
+
+[sub_resource type="GDScript" id="GDScript_bqwew"]
 
 [node name="Sketchfab_Scene" unique_id=1753636067 instance=ExtResource("1_67yq6")]
 script = ExtResource("2_slj7f")
@@ -458,8 +622,7 @@ metadata/extras = {
 
 [node name="HorrorSound" type="AudioStreamPlayer3D" parent="." index="3" unique_id=1863128186]
 stream = ExtResource("4_uvbnd")
-volume_db = 10.0
-autoplay = true
+volume_db = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4" unique_id=1411321745]
 libraries/ = SubResource("AnimationLibrary_bqwew")
@@ -480,10 +643,11 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Camera3D" index="1" unique_id=333342515]
 
 [node name="InsideElevatorCamera" type="Node3D" parent="." index="6" unique_id=1818454601]
-transform = Transform3D(0.69279546, -0.40277666, 0.5981683, 0, 0.8294828, 0.5585323, -0.721134, -0.38694867, 0.57466197, -23.41228, 2.0114267, 12.120625)
+transform = Transform3D(0.7175143, -0.4634022, 0.5200304, 0, 0.74658686, 0.6652879, -0.6965438, -0.4773536, 0.5356867, -23.400152, 2.0931833, 12.112957)
 script = ExtResource("6_ljerh")
+priority = 10
 tween_resource = SubResource("Resource_uvbnd")
-host_layers = 2
+host_layers = 3
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="." index="7" unique_id=1021787010]
@@ -492,17 +656,24 @@ radius = 0.1
 
 [node name="OmniLight3D" type="OmniLight3D" parent="CSGSphere3D" index="0" unique_id=1992404345]
 light_color = Color(0.15686275, 0.3529412, 0.28235295, 1)
-light_energy = 3.0
-script = ExtResource("8_ljerh")
+light_energy = 5.0
+script = SubResource("GDScript_bqwew")
 
 [node name="ElevatorSounds" type="AudioStreamPlayer3D" parent="." index="8" unique_id=664964081]
 stream = ExtResource("10_bqwew")
-volume_db = 15.0
-autoplay = true
+volume_db = 50.0
 
 [node name="OutsideElevatorCamera" type="Node3D" parent="." index="9" unique_id=1428369960]
 transform = Transform3D(-0.6447886, -0.06601328, 0.7615049, 0, 0.9962637, 0.08636403, -0.7643608, 0.05568654, -0.6423795, -20.086761, 1.2734295, 8.7061405)
 script = ExtResource("6_ljerh")
-priority = 1
+priority = 10
 tween_resource = SubResource("Resource_uvbnd")
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="FlickerSFX" type="AudioStreamPlayer3D" parent="." index="10" unique_id=408092990]
+stream = ExtResource("11_4b8r5")
+volume_db = 10.0
+
+[node name="WhisperSFX" type="AudioStreamPlayer3D" parent="." index="11" unique_id=1959152678]
+stream = ExtResource("11_a281x")
+volume_db = 80.0

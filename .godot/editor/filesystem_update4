@@ -1,0 +1,6 @@
+res://cutscenes/part4_hallway_scene.tscn
+res://addons/phantom_camera/themes/theme.tres
+res://cutscenes/omni_light_3d.gd
+res://cutscenes/part_3_office_scene.gd
+res://cutscenes/part_4_hallway_scene.gd
+res://cutscenes/part_5_escalation.tscn

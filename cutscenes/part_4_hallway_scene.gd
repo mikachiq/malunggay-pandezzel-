@@ -87,8 +87,12 @@ func hide_dialogue():
 
 func _on_cutscene_finished(_anim_name: String):
 	hide_dialogue()
+	
+	
 	scene_tween = create_tween()
 	scene_tween.tween_property(fade_overlay, "color:a", 1.0, 1.5)
+	
+	
 	scene_tween.tween_callback(func():
-		get_tree().change_scene_to_file("res://cutscenes/part_3_office_scene.tscn")
+		get_tree().change_scene_to_file("res://cutscenes/part_5_escalation.tscn")
 	)
