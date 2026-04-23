@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ddh8o1lesi6ss"
+path="res://.godot/imported/Typical Horror Ambience - Sound Effect for editing.mp3-57db63e73881dca4baacac19d57879c5.mp3str"
+
+[deps]
+
+source_file="res://jayjay/Sounds/Typical Horror Ambience - Sound Effect for editing.mp3"
+dest_files=["res://.godot/imported/Typical Horror Ambience - Sound Effect for editing.mp3-57db63e73881dca4baacac19d57879c5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

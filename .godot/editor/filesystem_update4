@@ -1,6 +1,2 @@
-res://cutscenes/part_3_office_scene.tscn
+res://cutscenes/part_5_escalation.tscn
 res://addons/phantom_camera/themes/theme.tres
-res://cutscenes/part4_hallway_scene.tscn
-res://menus/pause_screen.tscn
-res://menus/ui/pause_screen.tscn
-res://menus/ui/loading_screen.tscn
