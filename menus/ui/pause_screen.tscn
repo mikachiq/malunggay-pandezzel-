@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://d14oy8lks2kjn"]
+
+[ext_resource type="VideoStream" uid="uid://dmrw27h3a2ibx" path="res://ezzel/assets/bg.ogv" id="1_pjc45"]
+[ext_resource type="FontFile" uid="uid://dbuc33a72s8h8" path="res://ezzel/assets/who_asks_satan/who asks satan.ttf" id="2_cfw88"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rbgr5"]
+font = ExtResource("2_cfw88")
+font_size = 80
+
+[node name="PauseScreen" type="Control" unique_id=1954832414]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=495573232]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.1110001
+anchor_bottom = 1.1110001
+offset_right = 0.12792969
+offset_bottom = 0.07196045
+stream = ExtResource("1_pjc45")
+autoplay = true
+loop = true
+
+[node name="Label" type="Label" parent="." unique_id=1629803214]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 370.0
+offset_right = 223.0
+offset_bottom = 444.0
+text = "Pause"
+label_settings = SubResource("LabelSettings_rbgr5")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1128667504]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 478.0
+offset_right = 184.0
+offset_bottom = 544.0
+alignment = 1
+
+[node name="ContinueBtn" type="Button" parent="VBoxContainer" unique_id=73824980]
+layout_mode = 2
+text = "Continue"
+flat = true
+alignment = 0
+
+[node name="QuitBtn" type="Button" parent="VBoxContainer" unique_id=1980554217]
+layout_mode = 2
+text = "Quit"
+flat = true
+alignment = 0

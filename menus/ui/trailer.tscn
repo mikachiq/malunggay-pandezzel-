@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bvy38b178m501"]
+
+[ext_resource type="VideoStream" uid="uid://cptpsrofyaw5m" path="res://jayjay/Video/Graduation-Curse-Game-Trailer.ogv" id="1_f3pb6"]
+
+[node name="Control" type="Control" unique_id=734782745]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=2128753322]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_f3pb6")
+autoplay = true
+expand = true

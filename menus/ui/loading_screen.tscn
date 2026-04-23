@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://wuj8nv4qouku"]
+
+[ext_resource type="Script" uid="uid://bejaak44njen4" path="res://menus/scripts/loading_screen.gd" id="1_xahnp"]
+[ext_resource type="VideoStream" uid="uid://46lubo8vfxv0" path="res://ezzel/assets/candlebg.ogv" id="2_7ss0f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fgney"]
+font_size = 14
+
+[node name="LoadingScreen" type="Control" unique_id=1461498385]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xahnp")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=99196815]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_7ss0f")
+autoplay = true
+expand = true
+loop = true
+
+[node name="HintText" type="Label" parent="." unique_id=311410478]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Loading..."
+label_settings = SubResource("LabelSettings_fgney")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoadingBar" type="ProgressBar" parent="." unique_id=559920605]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -58.0
+offset_right = 2.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextTimer" type="Timer" parent="." unique_id=2003659408]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="TextTimer" to="." method="_on_text_timer_timeout"]

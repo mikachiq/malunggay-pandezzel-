@@ -1,0 +1,284 @@
+[gd_scene format=3 uid="uid://ddpnk3b24bx03"]
+
+[ext_resource type="Script" uid="uid://c6ucy1lq481pt" path="res://cutscenes/scripts/part_1_family_warning.gd" id="1_tkxr0"]
+[ext_resource type="Texture2D" uid="uid://b5e160wpiimna" path="res://jayjay/Textures/decrepit_wallpaper_1k.blend/textures/decrepit_wallpaper_diff_1k.jpg" id="2_4jf5x"]
+[ext_resource type="Texture2D" uid="uid://xcrydfrwlb5k" path="res://jayjay/Textures/worn_tile_floor_1k.blend/textures/worn_tile_floor_diff_1k.jpg" id="2_68dqj"]
+[ext_resource type="Texture2D" uid="uid://c2dgfkbtx6cjx" path="res://jayjay/Textures/wood_table_worn_1k.blend/textures/wood_table_worn_diff_1k.jpg" id="3_4jf5x"]
+[ext_resource type="AudioStream" uid="uid://dmv871lscp87v" path="res://jayjay/Sounds/bg music sa dinner.mp3" id="5_4jf5x"]
+[ext_resource type="FontFile" uid="uid://dbjo3xpso2sfm" path="res://jayjay/GUI/Fonts/Excalifont-Regular.woff2" id="5_rkcgi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2q8xx"]
+albedo_texture = ExtResource("2_4jf5x")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rkcgi"]
+albedo_texture = ExtResource("2_68dqj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7y156"]
+albedo_texture = ExtResource("3_4jf5x")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68dqj"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4jf5x"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="Environment" id="Environment_rkcgi"]
+fog_enabled = true
+
+[sub_resource type="Animation" id="Animation_8skqr"]
+length = 10.0
+
+[sub_resource type="Animation" id="Animation_68dqj"]
+resource_name = "part1_cutscenes"
+length = 26.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraCutScene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 3.4333334, 7, 7.6667, 13.990325, 14.166667, 18.206951),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 2.4036503, -2.690552), Vector3(0, 2.4036503, -0.70355606), Vector3(0, 2.4036503, -0.70355606), Vector3(0.1758945, 2.4036503, -0.70355606), Vector3(0.1758945, 2.4036503, -0.70355606), Vector3(0.1758945, 2.4036503, 0.53673244), Vector3(0.1758945, 2.4036503, -4.8841367)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CameraCutScene:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 3.4333334, 7, 7.6667, 13.990325, 14.166667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.17453295, 3.1415925, 0), Vector3(-0.17453294, 1.8325956, 1.0699259e-08), Vector3(-0.17453294, 1.8325956, 1.0699259e-08), Vector3(-0.17453298, -2.0013516, 1.0436923e-08), Vector3(-0.17453298, -2.0013516, 1.0436923e-08), Vector3(-0.17453294, 3.0867543, 1.0041872e-08)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.4, 7.6666665, 14.0333, 20, 23.766666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": ["Mother:", "Mag ingat ka palagi ezzel, Malapit na graduation mo"],
+"method": &"show_dialogue"
+}, {
+"args": ["Father:", "Ezzel, marami nang aksidente ng graduating students sa balita."],
+"method": &"show_dialogue"
+}, {
+"args": ["Ezzel:", "Wag kayo mag alala tay, Mag iingat ako."],
+"method": &"show_dialogue"
+}, {
+"args": ["Mother:", "Basta wag mo lang kalimutan bumili ka ng pandesal pag uwi mo ha."],
+"method": &"show_dialogue"
+}, {
+"args": ["Ezzel:", "Yes po nay!"],
+"method": &"show_dialogue"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("EzzelJan:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(14.033334, 18.133333, 20, 23.020365),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.9, 2), Vector3(0, 1.9, 2), Vector3(3.1664484, 1.9, 2), Vector3(3.1664484, 1.9, -5.6924086)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.4, 7.6666665, 14.033334, 20, 23.766666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": ["Mother:", "Mag ingat ka palagi ezzel, Malapit na graduation mo."],
+"method": &"queue_dialogue"
+}, {
+"args": ["Father:", "Ezzel, marami nang aksidente ng graduating students sa balita."],
+"method": &"queue_dialogue"
+}, {
+"args": ["Ezzel:", "Wag kayo mag alala tay, Mag iingat ako."],
+"method": &"queue_dialogue"
+}, {
+"args": ["Mother:", "Basta wag mo lang kalimutan bumili ka ng pandesal pag uwi mo ha."],
+"method": &"queue_dialogue"
+}, {
+"args": ["Ezzel:", "Yes po nay!"],
+"method": &"queue_dialogue"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4jf5x"]
+_data = {
+&"RESET": SubResource("Animation_8skqr"),
+&"part1_cutscenes": SubResource("Animation_68dqj")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbi74"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0.75000006)
+
+[node name="Part1_FamilyWarning" type="Node3D" unique_id=1090477378]
+script = ExtResource("1_tkxr0")
+
+[node name="Wall" type="Node3D" parent="." unique_id=687045017]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Wall" unique_id=287296988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5803747, 7.4190865)
+size = Vector3(15, 7, 0.2)
+material = SubResource("StandardMaterial3D_2q8xx")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Wall" unique_id=41877265]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.4193196, 3.5743704, -0.012080431)
+size = Vector3(15, 7, 0.2)
+material = SubResource("StandardMaterial3D_2q8xx")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Wall" unique_id=51489043]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.5351763, 3.5445004, 0.0046942234)
+size = Vector3(15, 7, 0.2)
+material = SubResource("StandardMaterial3D_2q8xx")
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=1435274684]
+size = Vector3(15, 0.2, 15)
+material = SubResource("StandardMaterial3D_rkcgi")
+
+[node name="Roof" type="CSGBox3D" parent="." unique_id=836234839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+size = Vector3(15, 0.2, 15)
+material = SubResource("StandardMaterial3D_rkcgi")
+
+[node name="DinnerTable" type="CSGBox3D" parent="." unique_id=1665453697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+size = Vector3(3, 0.1, 1.5)
+material = SubResource("StandardMaterial3D_7y156")
+
+[node name="TableFoot" type="CSGBox3D" parent="DinnerTable" unique_id=1865033071]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3961098, -0.46272874, -0.64790654)
+size = Vector3(0.2, 1, 0.2)
+material = SubResource("StandardMaterial3D_7y156")
+
+[node name="TableFoot2" type="CSGBox3D" parent="DinnerTable" unique_id=737840990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3904479, -0.4769824, 0.6574234)
+size = Vector3(0.2, 1, 0.2)
+material = SubResource("StandardMaterial3D_7y156")
+
+[node name="TableFoot3" type="CSGBox3D" parent="DinnerTable" unique_id=86179019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3997052, -0.48125434, -0.64105344)
+size = Vector3(0.2, 1, 0.2)
+material = SubResource("StandardMaterial3D_7y156")
+
+[node name="TableFoot4" type="CSGBox3D" parent="DinnerTable" unique_id=2003143091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4053671, -0.49550802, 0.64347684)
+size = Vector3(0.2, 1, 0.2)
+material = SubResource("StandardMaterial3D_7y156")
+
+[node name="Mother" type="CSGBox3D" parent="." unique_id=1134759843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.9, 0)
+size = Vector3(0.7, 1.8, 0.7)
+material = SubResource("StandardMaterial3D_68dqj")
+
+[node name="Father" type="CSGBox3D" parent="." unique_id=708333204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.9, 0)
+size = Vector3(0.7, 1.8, 0.7)
+material = SubResource("StandardMaterial3D_4jf5x")
+
+[node name="EzzelJan" type="CSGBox3D" parent="." unique_id=1408727688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 2)
+size = Vector3(0.7, 1.8, 0.7)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1062671256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, -5)
+size = Vector3(1, 2.5, 0.1)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=982659776]
+transform = Transform3D(-0.8859839, 0.4045888, -0.22658443, -0.4230321, -0.90533584, 0.03756179, -0.18993792, 0.12913163, 0.973267, -0.6187074, 4.9946356, 5.5573487)
+light_color = Color(1, 0.92947316, 0.7977378, 1)
+light_energy = 1.2
+shadow_enabled = true
+
+[node name="CameraCutScene" type="Camera3D" parent="." unique_id=1771650233]
+transform = Transform3D(-1, -2.6220148e-08, 1.487018e-07, 0, 0.98480755, 0.1736482, -1.509958e-07, 0.1736482, -0.98480755, 0, 2.4036503, -2.690552)
+environment = SubResource("Environment_rkcgi")
+current = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=9487464]
+libraries/ = SubResource("AnimationLibrary_4jf5x")
+
+[node name="DialogueUI" type="CanvasLayer" parent="." unique_id=706481482]
+
+[node name="FadeOverlay" type="ColorRect" parent="DialogueUI" unique_id=829772990]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" type="Panel" parent="DialogueUI" unique_id=1629673060]
+custom_minimum_size = Vector2(1152, 130)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -130.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gbi74")
+
+[node name="SpeakerName" type="Label" parent="DialogueUI/DialogueBox" unique_id=1217171907]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 12.0
+offset_right = 70.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_rkcgi")
+theme_override_font_sizes/font_size = 20
+text = "[Character Name]"
+
+[node name="DialogueText" type="Label" parent="DialogueUI/DialogueBox" unique_id=1318620815]
+custom_minimum_size = Vector2(1090, 75)
+layout_mode = 0
+offset_left = 30.0
+offset_top = 45.0
+offset_right = 70.0
+offset_bottom = 68.0
+theme_override_fonts/font = ExtResource("5_rkcgi")
+theme_override_font_sizes/font_size = 18
+text = "[MESSAGE]"
+autowrap_mode = 2
+
+[node name="PressSpace" type="Label" parent="DialogueUI/DialogueBox" unique_id=885845099]
+custom_minimum_size = Vector2(1090, 75)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 93.0
+offset_right = 1110.0
+offset_bottom = 168.0
+theme_override_fonts/font = ExtResource("5_rkcgi")
+theme_override_font_sizes/font_size = 18
+text = "Press enter to continue!"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2049742708]
+stream = ExtResource("5_4jf5x")
+autoplay = true
+
+[node name="TableLamp" type="OmniLight3D" parent="." unique_id=1471649653]
+transform = Transform3D(0.9044839, -0.42439368, -0.042412996, -0.38328508, -0.852414, 0.35564435, -0.18708666, -0.3054183, -0.93365854, 0.011306286, 4.194186, -0.061024666)
+light_color = Color(0.2509804, 0.5411765, 0.44313726, 1)
+light_energy = 16.0
+omni_range = 8.0
