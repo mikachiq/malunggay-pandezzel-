@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bnnbv6jcvlwnp" path="res://assets/environment/foodtrash.glb" id="16_btb8j"]
 [ext_resource type="PackedScene" uid="uid://ccir0hjoy7jqv" path="res://assets/cars/crashed_helicopter.glb" id="17_4g38j"]
 [ext_resource type="PackedScene" uid="uid://do1yw62wkdw84" path="res://assets/buildings/firestation.glb" id="18_vs2sm"]
-[ext_resource type="PackedScene" uid="uid://dmt31i5k733yx" path="res://assets/buildings/lifewoodbldg.tscn" id="21_j1kxr"]
+[ext_resource type="PackedScene" uid="uid://dmt31i5k733yx" path="res://ezzel/assets/who_asks_satan/lifewoodbldg.tscn" id="21_j1kxr"]
 [ext_resource type="PackedScene" uid="uid://ojpck6uhyqvr" path="res://assets/cars/destroyed_bus_01.glb" id="24_8qatv"]
 [ext_resource type="PackedScene" uid="uid://benci8exvv2xc" path="res://assets/environment/blood_spattered.glb" id="26_07iy3"]
 [ext_resource type="PackedScene" uid="uid://dpq1jfmqdmuup" path="res://assets/models/low_poly_dead_body_covered_game_ready.glb" id="27_8kiej"]
@@ -178,14 +178,17 @@ transform = Transform3D(-0.89371645, 0, -0.9110637, 0, 1.5, 0, 0.68329763, 0, -1
 [node name="crashedcar" parent="car" unique_id=1167941574 instance=ExtResource("9_dsjbd")]
 transform = Transform3D(-0.29861888, 0, -0.028753743, 0, 0.3, 0, 0.028753743, 0, -0.29861888, 17.94457, 0.33229256, -1.6514759)
 
+[node name="parkedcar" parent="car" unique_id=16790716 instance=ExtResource("7_s4fv4")]
+transform = Transform3D(-0.8951833, 0, 0.44569802, 0, 1, 0, -0.44569802, 0, -0.8951833, -8.960564, -0.19631553, -70.28664)
+
 [node name="tree" parent="." unique_id=1812394865 instance=ExtResource("8_a6tl3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.152176, -0.03772831, 13.859595)
 
+[node name="tree3" parent="tree" unique_id=2083097306 instance=ExtResource("8_a6tl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4405174, 0, 23.095879)
+
 [node name="tree2" parent="tree" unique_id=318159183 instance=ExtResource("8_a6tl3")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -72.094955, 0, -5.8285646)
-
-[node name="tree2" parent="." unique_id=2083097306 instance=ExtResource("8_a6tl3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.71166, -0.03772831, 36.955475)
 
 [node name="grass" parent="." unique_id=1067897771 instance=ExtResource("9_jk0sv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.515846, -0.12833953, 15.923925)
@@ -220,9 +223,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38554, -0.045614958, 28.96
 [node name="grass4" parent="grass" unique_id=1133426864 instance=ExtResource("9_jk0sv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.635437, 0, 9.851915)
 
-[node name="blood2" parent="." unique_id=293111723 instance=ExtResource("6_bu4l7")]
-transform = Transform3D(-0.001745386, -0.99999845, 1.7484555e-07, 0.8660241, -0.0015114613, 0.49999985, -0.49999908, 0.0008728442, 0.86602545, 33.28267, 28.525326, 105.16509)
-
 [node name="gas station" parent="." unique_id=733162422 instance=ExtResource("10_lbfdt")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 58.901443, -0.36027336, -46.287834)
 
@@ -253,23 +253,29 @@ transform = Transform3D(0.165, 0, 0, 0, 0.165, 0, 0, 0, 0.165, 3.825, -0.003, -6
 [node name="blood3" parent="blood" unique_id=1065522591 instance=ExtResource("6_bu4l7")]
 transform = Transform3D(7.9696975, 0, 0, 0, 7.9696975, 0, 0, 0, 7.9696975, -126.70334, 0.01818347, 735.17126)
 
-[node name="Sketchfab_Scene6" parent="blood" unique_id=1517190091 instance=ExtResource("26_07iy3")]
+[node name="blood" parent="blood" unique_id=1517190091 instance=ExtResource("26_07iy3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.43517, 1.3874643, 650.2618)
 
-[node name="Sketchfab_Scene7" parent="blood" unique_id=1897892469 instance=ExtResource("26_07iy3")]
+[node name="blood2" parent="blood" unique_id=1897892469 instance=ExtResource("26_07iy3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -113.391525, 2.722319, 726.0894)
 
-[node name="Sketchfab_Scene8" parent="blood" unique_id=92296485 instance=ExtResource("26_07iy3")]
+[node name="blood4" parent="blood" unique_id=92296485 instance=ExtResource("26_07iy3")]
 transform = Transform3D(1, 0, 3.821371e-15, 3.821371e-15, 4.3711395e-08, -1, 0, 1.0000001, 4.371139e-08, -165.28748, 12.454862, 781.12415)
 
-[node name="Sketchfab_Scene4" parent="blood" unique_id=1281940339 instance=ExtResource("26_07iy3")]
+[node name="blood5" parent="blood" unique_id=1281940339 instance=ExtResource("26_07iy3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 220.81424, 1.1854217, 675.1812)
 
-[node name="Sketchfab_Scene5" parent="blood" unique_id=220852505 instance=ExtResource("26_07iy3")]
+[node name="blood6" parent="blood" unique_id=220852505 instance=ExtResource("26_07iy3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 255.8241, -0.30788708, 675.1812)
 
-[node name="Sketchfab_Scene3" parent="blood" unique_id=1305088309 instance=ExtResource("26_07iy3")]
+[node name="blood7" parent="blood" unique_id=1305088309 instance=ExtResource("26_07iy3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115.266335, 0.86103106, 56.659164)
+
+[node name="blood8" parent="blood" unique_id=1308286313 instance=ExtResource("26_07iy3")]
+transform = Transform3D(-0.72599256, -0.043113034, 0.0012794498, 0, 0.02157351, 0.7269527, -0.043132015, 0.7256731, -0.021535536, -390.26913, -0.44380522, 586.6226)
+
+[node name="blood9" parent="blood" unique_id=293111723 instance=ExtResource("6_bu4l7")]
+transform = Transform3D(-0.010578097, -6.0605965, 1.05967e-06, 5.2486305, -0.0091603715, 3.030302, -3.0302975, 0.005289965, 5.248639, 178.53133, 172.89894, 1031.3036)
 
 [node name="ambulance" parent="." unique_id=758448012 instance=ExtResource("28_4kdxh")]
 transform = Transform3D(-1.365, 0, -2.0610928e-07, 0, 1.365, 0, 2.0610928e-07, 0, -1.365, 30.03899, 0.0023455918, 43.48471)
@@ -292,14 +298,11 @@ transform = Transform3D(0.057107434, 0, -1.9241529, 0, 1.925, 0, 1.9241529, 0, 0
 [node name="pathway2" parent="pathway" unique_id=322493874 instance=ExtResource("33_xfcca")]
 transform = Transform3D(0.99999946, 0, -1.8626451e-08, 0, 1.0000011, 0, 1.8626451e-08, 0, 0.99999946, -0.025592804, 0.012524843, 13.092663)
 
-[node name="Sketchfab_Scene" parent="." unique_id=1640294383 instance=ExtResource("34_dmrbq")]
-transform = Transform3D(6.556708e-10, 0, 0.015, 0, -0.015, 0, -0.015, 0, 6.556708e-10, -74.91025, 2.4791791, 1.5002975)
-
-[node name="Sketchfab_Scene2" parent="." unique_id=394027802 instance=ExtResource("34_dmrbq")]
+[node name="graffiti" parent="." unique_id=394027802 instance=ExtResource("34_dmrbq")]
 transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, -61.14891, 3.1826093, 31.796646)
 
-[node name="Sketchfab_Scene3" parent="." unique_id=1308286313 instance=ExtResource("26_07iy3")]
-transform = Transform3D(-0.11978877, -0.0071136504, 0.00021110922, 0, 0.0035596292, 0.11994719, -0.0071167825, 0.11973606, -0.0035533635, -60.56941, -0.076227844, 31.792732)
+[node name="graffiti" parent="graffiti" unique_id=1640294383 instance=ExtResource("34_dmrbq")]
+transform = Transform3D(1.3113416e-07, 0, 3, 0, -3, 0, -3, 0, 1.3113416e-07, -2752.2676, -140.68604, -6059.2695)
 
 [node name="boundary wall south" type="StaticBody3D" parent="." unique_id=1248342900]
 transform = Transform3D(1.2000036, 0, 0, 0, 1.6168245, 0, 0, 0, 1.3237256, -18.88535, 0.9466494, -66.764984)
@@ -417,98 +420,98 @@ transform = Transform3D(0.021132993, 0, -1.0647904, 0, 1.065, 0, 1.0647904, 0, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.776413, 1.1665192, -6.2032166)
 visible = false
 
-[node name="Sketchfab_Scene2" parent="road" unique_id=35133693 instance=ExtResource("32_dmrbq")]
-transform = Transform3D(-0.008984359, 0, 0.43990827, 0, 0.44, 0, -0.43990827, 0, -0.008984359, -97.61122, 1.251811, -6.9550705)
-
 [node name="sidewalk" parent="." unique_id=1985345673 instance=ExtResource("32_boulg")]
 transform = Transform3D(0.01646474, 0, -0.55475575, 0, 0.555, 0, 0.55475575, 0, 0.01646474, 30.223034, 0.00016239285, -76.3909)
 
-[node name="sidewalk18" parent="." unique_id=457201011 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.55330276, 0, -0.043370984, 0, 0.55500007, 0, 0.043370984, 0, -0.55330276, 42.926765, -0.5321533, -88.421524)
+[node name="sidewalk24" parent="sidewalk" unique_id=1942288753 instance=ExtResource("32_boulg")]
+transform = Transform3D(0.00043639168, 0, 0.99999994, 0, 1.0000002, 0, -0.99999994, 0, 0.00043639168, 230.43202, -0.3170284, -23.42723)
 
-[node name="sidewalk19" parent="." unique_id=1417221433 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.015748283, 0, 0.55477655, 0, 0.55500007, 0, -0.55477655, 0, -0.015748283, 62.0194, -0.49229974, -76.41142)
+[node name="sidewalk30" parent="sidewalk" unique_id=1275463615 instance=ExtResource("32_boulg")]
+transform = Transform3D(0.00043639168, 0, 0.99999994, 0, 1.0000002, 0, -0.99999994, 0, 0.00043639168, 230.4452, -0.59500986, -57.338303)
 
-[node name="sidewalk20" parent="." unique_id=850423034 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.015748283, 0, 0.55477655, 0, 0.55500007, 0, -0.55477655, 0, -0.015748283, 62.0194, -0.34346837, -67.19722)
+[node name="sidewalk18" parent="sidewalk" unique_id=457201011 instance=ExtResource("32_boulg")]
+transform = Transform3D(0.048536044, 0, -0.9988214, 0, 1.0000002, 0, 0.9988214, 0, 0.048536044, -20.988213, -0.9591274, -23.522598)
 
-[node name="sidewalk22" parent="." unique_id=1271626799 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.015748283, 0, 0.55477655, 0, 0.55500007, 0, -0.55477655, 0, -0.015748283, 68.243614, -0.09152764, -67.19722)
+[node name="sidewalk20" parent="sidewalk" unique_id=850423034 instance=ExtResource("32_boulg")]
+transform = Transform3D(-0.99999917, 0, 0.0012914613, 0, 1.0000002, 0, -0.0012914613, 0, -0.99999917, 18.2575, -0.6191546, -56.77411)
 
-[node name="sidewalk23" parent="." unique_id=64957986 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.015748283, 0, 0.55477655, 0, 0.55500007, 0, -0.55477655, 0, -0.015748283, 68.243614, -0.36968154, -76.80359)
+[node name="sidewalk19" parent="sidewalk" unique_id=1417221433 instance=ExtResource("32_boulg")]
+transform = Transform3D(-0.9999993, 0, 0.0012914706, 0, 1.0000002, 0, -0.0012914706, 0, -0.9999993, 1.6626358, -0.8873192, -57.266632)
 
-[node name="sidewalk21" parent="." unique_id=465290271 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.5541183, 0, -0.03127107, 0, 0.55500007, 0, 0.03127107, 0, -0.5541183, 49.006977, -0.18084496, -60.265163)
+[node name="sidewalk22" parent="sidewalk" unique_id=1271626799 instance=ExtResource("32_boulg")]
+transform = Transform3D(-0.99999917, 0, 0.0012914613, 0, 1.0000002, 0, -0.0012914613, 0, -0.99999917, 18.590195, -0.16520727, -67.98397)
 
-[node name="sidewalk2" parent="." unique_id=1182378537 instance=ExtResource("32_boulg")]
-transform = Transform3D(0.01646474, 0, -0.55475575, 0, 0.555, 0, 0.55475575, 0, 0.01646474, 30.740211, -0.16258165, -56.273224)
+[node name="sidewalk23" parent="sidewalk" unique_id=64957986 instance=ExtResource("32_boulg")]
+transform = Transform3D(-0.99999917, 0, 0.0012914613, 0, 1.0000002, 0, -0.0012914613, 0, -0.99999917, 1.2890396, -0.6663855, -68.49745)
 
-[node name="sidewalk7" parent="." unique_id=397762546 instance=ExtResource("32_boulg")]
-transform = Transform3D(0.01646474, 0, -0.55475575, 0, 0.555, 0, 0.55475575, 0, 0.01646474, 31.661842, -0.22253105, -13.415552)
+[node name="sidewalk21" parent="sidewalk" unique_id=465290271 instance=ExtResource("32_boulg")]
+transform = Transform3D(0.026700404, 0, -0.9996433, 0, 1.0000002, 0, 0.9996433, 0, 0.026700404, 30.046642, -0.3261394, -32.968086)
 
-[node name="sidewalk8" parent="." unique_id=1331117319 instance=ExtResource("32_boulg")]
-transform = Transform3D(0.01646474, 0, -0.55475575, 0, 0.555, 0, 0.55475575, 0, 0.01646474, 31.388863, -0.20396206, -26.660442)
+[node name="sidewalk2" parent="sidewalk" unique_id=1182378537 instance=ExtResource("32_boulg")]
+transform = Transform3D(1, 0, -3.7252903e-09, 0, 1.0000001, 0, 3.7252903e-09, 0, 1, 36.25975, -0.2932325, 0.14389801)
 
-[node name="sidewalk9" parent="." unique_id=1861005599 instance=ExtResource("32_boulg")]
-transform = Transform3D(0.01646474, 0, -0.55475575, 0, 0.555, 0, 0.55475575, 0, 0.01646474, 31.150581, -0.18722078, -39.763123)
+[node name="sidewalk7" parent="sidewalk" unique_id=397762546 instance=ExtResource("32_boulg")]
+transform = Transform3D(1, 0, -3.7252903e-09, 0, 1.0000001, 0, 3.7252903e-09, 0, 1, 113.496056, -0.40124944, 0.7748871)
 
-[node name="sidewalk3" parent="." unique_id=2058781358 instance=ExtResource("32_boulg")]
-transform = Transform3D(0.01646474, 0, -0.55475575, 0, 0.555, 0, 0.55475575, 0, 0.01646474, 32.36086, -0.25300953, 4.0869846)
+[node name="sidewalk8" parent="sidewalk" unique_id=1331117319 instance=ExtResource("32_boulg")]
+transform = Transform3D(1, 0, -3.7252903e-09, 0, 1.0000001, 0, 3.7252903e-09, 0, 1, 89.627304, -0.3677918, 0.5585518)
 
-[node name="sidewalk4" parent="." unique_id=1947828343 instance=ExtResource("32_boulg")]
-transform = Transform3D(0.01646474, 0, -0.55475575, 0, 0.555, 0, 0.55475575, 0, 0.01646474, 32.423805, -0.29558417, 18.605446)
+[node name="sidewalk9" parent="sidewalk" unique_id=1861005599 instance=ExtResource("32_boulg")]
+transform = Transform3D(1, 0, -3.7252903e-09, 0, 1.0000001, 0, 3.7252903e-09, 0, 1, 66.016525, -0.33762735, 0.28733063)
 
-[node name="sidewalk6" parent="." unique_id=1432559032 instance=ExtResource("32_boulg")]
-transform = Transform3D(0.01646474, 0, -0.55475575, 0, 0.555, 0, 0.55475575, 0, 0.01646474, 32.423805, -0.29558417, 25.194523)
+[node name="sidewalk3" parent="sidewalk" unique_id=2058781358 instance=ExtResource("32_boulg")]
+transform = Transform3D(1, 0, -3.7252903e-09, 0, 1.0000001, 0, 3.7252903e-09, 0, 1, 145.05563, -0.45616564, 0.45151138)
 
-[node name="sidewalk12" parent="." unique_id=1639799737 instance=ExtResource("32_boulg")]
-transform = Transform3D(0.5549739, 0, -0.005375946, 0, 0.55499995, 0, 0.005375946, 0, 0.5549739, -22.639954, -0.320419, 31.14814)
+[node name="sidewalk4" parent="sidewalk" unique_id=1947828343 instance=ExtResource("32_boulg")]
+transform = Transform3D(1, 0, -3.7252903e-09, 0, 1.0000001, 0, 3.7252903e-09, 0, 1, 171.20688, -0.53287673, 1.114193)
 
-[node name="sidewalk16" parent="." unique_id=1062836575 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.5549303, 0, -0.008785427, 0, 0.55499995, 0, 0.008785427, 0, -0.5549303, -61.902245, -0.18540353, 45.657143)
+[node name="sidewalk6" parent="sidewalk" unique_id=1432559032 instance=ExtResource("32_boulg")]
+transform = Transform3D(1, 0, -3.7252903e-09, 0, 1.0000001, 0, 3.7252903e-09, 0, 1, 183.07387, -0.53287673, 1.4663963)
 
-[node name="sidewalk17" parent="." unique_id=683725850 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.5549303, 0, -0.008785427, 0, 0.55499995, 0, 0.008785427, 0, -0.5549303, -46.733753, -0.3035056, 45.908012)
+[node name="sidewalk12" parent="sidewalk" unique_id=1639799737 instance=ExtResource("32_boulg")]
+transform = Transform3D(0.03934693, 0, 0.9992255, 0, 1, 0, -0.9992255, 0, 0.03934693, 190.85307, -0.5776242, 100.95494)
 
-[node name="sidewalk15" parent="." unique_id=384513282 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.0045332313, 0, -0.5549814, 0, 0.55499995, 0, 0.5549814, 0, -0.0045332313, -81.14321, -0.8434283, 33.486217)
+[node name="sidewalk16" parent="sidewalk" unique_id=1062836575 instance=ExtResource("32_boulg")]
+transform = Transform3D(-0.013839845, 0, -0.999904, 0, 1, 0, 0.999904, 0, -0.013839845, 214.88525, -0.334353, 172.44221)
 
-[node name="sidewalk13" parent="." unique_id=611026992 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.55499464, 0, -0.0024507493, 0, 0.555, 0, 0.0024507493, 0, -0.55499464, -23.980896, -0.320419, 45.605316)
+[node name="sidewalk17" parent="sidewalk" unique_id=683725850 instance=ExtResource("32_boulg")]
+transform = Transform3D(-0.013839845, 0, -0.999904, 0, 1, 0, 0.999904, 0, -0.013839845, 216.14786, -0.54714954, 145.13702)
 
-[node name="sidewalk14" parent="." unique_id=1965501779 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.0013077259, 0, 0.5549986, 0, 0.555, 0, -0.5549986, 0, -0.0013077259, -10.642321, -0.25085753, 65.753494)
+[node name="sidewalk15" parent="sidewalk" unique_id=384513282 instance=ExtResource("32_boulg")]
+transform = Transform3D(0.999284, 0, -0.037829593, 0, 1, 0, 0.037829593, 0, 0.999284, 191.93683, -1.5199833, 206.4448)
 
-[node name="sidewalk10" parent="." unique_id=9246353 instance=ExtResource("32_boulg")]
-transform = Transform3D(0.01646474, 0, -0.55475575, 0, 0.555, 0, 0.55475575, 0, 0.01646474, 32.974796, -0.33068034, 37.296085)
+[node name="sidewalk13" parent="sidewalk" unique_id=611026992 instance=ExtResource("32_boulg")]
+transform = Transform3D(-0.025252093, 0, -0.9996812, 0, 1.0000001, 0, 0.9996812, 0, -0.025252093, 216.81891, -0.5776242, 104.14276)
 
-[node name="sidewalk24" parent="." unique_id=1942288753 instance=ExtResource("32_boulg")]
-transform = Transform3D(0.5547629, 0, 0.01622265, 0, 0.55500007, 0, -0.01622265, 0, 0.5547629, 47.013428, -0.17578837, 51.05687)
+[node name="sidewalk28" parent="sidewalk" unique_id=1499185647 instance=ExtResource("32_boulg")]
+transform = Transform3D(0.0027750134, 0, -0.9999962, 0, 1.0000002, 0, 0.9999962, 0, 0.0027750134, 246.80115, -0.38800755, -22.941414)
 
-[node name="sidewalk30" parent="." unique_id=1275463615 instance=ExtResource("32_boulg")]
-transform = Transform3D(0.5547629, 0, 0.01622265, 0, 0.55500007, 0, -0.01622265, 0, 0.5547629, 65.826004, -0.33006808, 50.505844)
+[node name="sidewalk14" parent="sidewalk" unique_id=1965501779 instance=ExtResource("32_boulg")]
+transform = Transform3D(-0.9996272, 0, 0.027310899, 0, 1.0000001, 0, -0.027310899, 0, -0.9996272, 253.81892, -0.45228815, 81.196846)
 
-[node name="sidewalk28" parent="." unique_id=1499185647 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.55470794, 0, -0.018004134, 0, 0.55500007, 0, 0.018004134, 0, -0.55470794, 47.013428, -0.2151818, 60.145744)
+[node name="sidewalk25" parent="sidewalk" unique_id=811721077 instance=ExtResource("32_boulg")]
+transform = Transform3D(0.99953425, 0, -0.030521076, 0, 1.0000002, 0, 0.030521076, 0, 0.99953425, 269.7937, -0.12839675, 4.722065)
 
-[node name="sidewalk29" parent="." unique_id=2036653044 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.55470794, 0, -0.018004134, 0, 0.55500007, 0, 0.018004134, 0, -0.55470794, 67.63982, -0.17578837, 59.459267)
+[node name="sidewalk29" parent="sidewalk" unique_id=2036653044 instance=ExtResource("32_boulg")]
+transform = Transform3D(0.0027750134, 0, -0.9999962, 0, 1.0000002, 0, 0.9999962, 0, 0.0027750134, 246.66736, -0.3170284, -60.12641)
 
-[node name="sidewalk25" parent="." unique_id=811721077 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.0004746709, 0, -0.5549998, 0, 0.55500007, 0, 0.5549998, 0, -0.0004746709, 32.045532, -0.07109782, 73.35647)
+[node name="sidewalk26" parent="sidewalk" unique_id=1668688164 instance=ExtResource("32_boulg")]
+transform = Transform3D(0.99953413, 0, -0.030521076, 0, 1.0000002, 0, 0.030521076, 0, 0.99953413, 305.59692, -0.53115493, 5.784664)
 
-[node name="sidewalk26" parent="." unique_id=1668688164 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.0004746709, 0, -0.5549998, 0, 0.55500007, 0, 0.5549998, 0, -0.0004746709, 32.045532, -0.2946286, 93.236)
+[node name="sidewalk27" parent="sidewalk" unique_id=1655639520 instance=ExtResource("32_boulg")]
+transform = Transform3D(0.99953413, 0, -0.030521076, 0, 1.0000002, 0, 0.030521076, 0, 0.99953413, 334.4894, -0.74148566, 6.222065)
 
-[node name="sidewalk27" parent="." unique_id=1655639520 instance=ExtResource("32_boulg")]
-transform = Transform3D(-0.0004746709, 0, -0.5549998, 0, 0.55500007, 0, 0.5549998, 0, -0.0004746709, 32.278587, -0.41136214, 109.27147)
+[node name="sidewalk5" parent="sidewalk" unique_id=299818867 instance=ExtResource("32_boulg")]
+transform = Transform3D(1, 0, -3.7252903e-09, 0, 1.0000001, 0, 3.7252903e-09, 0, 1, 171.20688, -0.53287673, 1.114193)
 
-[node name="sidewalk5" parent="." unique_id=299818867 instance=ExtResource("32_boulg")]
-transform = Transform3D(0.01646474, 0, -0.55475575, 0, 0.555, 0, 0.55475575, 0, 0.01646474, 32.423805, -0.29558417, 18.605446)
+[node name="sidewalk10" parent="sidewalk" unique_id=9246353 instance=ExtResource("32_boulg")]
+transform = Transform3D(1, 0, -3.7252903e-09, 0, 1.0000001, 0, 3.7252903e-09, 0, 1, 204.89835, -0.5961131, 1.1209183)
 
-[node name="Sketchfab_Scene4" parent="." unique_id=1639285041 instance=ExtResource("33_rccts")]
+[node name="mc" parent="." unique_id=1639285041 instance=ExtResource("33_rccts")]
 transform = Transform3D(1.2000036, 0, 0, 0, 1.6168245, 0, 0, 0, 1.3237256, 28.75874, 0.9466494, -70.26492)
+
+[node name="parkinglot" parent="." unique_id=250360970 instance=ExtResource("35_6xy58")]
+transform = Transform3D(0.034444034, 0, -1.3295547, 0, 1.33, 0, 1.3295547, 0, 0.034444034, 80.31211, 0.0832566, -66.049805)
 
 [node name="streetlight" parent="." unique_id=1574350998 instance=ExtResource("34_5ubxd")]
 transform = Transform3D(0.059332397, 0, -1.9991198, 0, 2, 0, 1.9991198, 0, 0.059332397, 37.84004, 0.08499998, -82.50099)
@@ -535,86 +538,10 @@ spot_attenuation = 0.8
 spot_angle = 49.72
 spot_angle_attenuation = 1.2745608
 
-[node name="Sketchfab_Scene" parent="streetlight" unique_id=250360970 instance=ExtResource("35_6xy58")]
-transform = Transform3D(0.6649956, 0, -0.002506977, 0, 0.665, 0, 0.002506977, 0, 0.6649956, 8.851965, -0.0008716881, -20.982668)
+[node name="streetlight10" parent="streetlight" unique_id=1304484872 instance=ExtResource("34_5ubxd")]
+transform = Transform3D(0.25201863, -0.000802498, -0.96772206, 0.00022529329, 0.9999997, -0.00077059283, 0.96772236, -2.3817549e-05, 0.25201872, 73.56907, 0, -12.214088)
 
-[node name="streetlight3" parent="." unique_id=2114898302 instance=ExtResource("34_5ubxd")]
-transform = Transform3D(1.9291148, 0, 0.5277461, 0, 2, 0, -0.5277461, 0, 1.9291148, 39.39527, 0.08499998, -58.69274)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="streetlight3" unique_id=1687050935]
-transform = Transform3D(-0.06888045, -0.9965953, 0.045313403, -0.005579142, 0.045805383, 0.9989348, -0.9976093, 0.06855428, -0.008715242, 0.008676529, 2.455308, 0.5435734)
-light_color = Color(1, 0.6901961, 0.3647059, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 1.025
-shadow_enabled = true
-spot_range = 10.183
-spot_angle = 69.06
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="streetlight3" unique_id=7105550]
-transform = Transform3D(-0.034440205, -0.49829766, 0.022656703, -0.0027895712, 0.022902692, 0.4994674, -0.49880466, 0.03427712, -0.00435762, -2.993742, 7.020309, 5.9785976)
-light_color = Color(1, 0.6901961, 0.3647059, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 1.025
-shadow_enabled = true
-spot_range = 10.008
-spot_attenuation = 0.59
-spot_angle = 69.06
-
-[node name="streetlight8" parent="." unique_id=1099287782 instance=ExtResource("34_5ubxd")]
-transform = Transform3D(1.9291148, 0, 0.5277461, 0, 2, 0, -0.5277461, 0, 1.9291148, 40.76661, 0.08499998, 47.153)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="streetlight8" unique_id=1167141115]
-transform = Transform3D(-0.06888045, -0.9965953, 0.045313403, -0.005579142, 0.045805383, 0.9989348, -0.9976093, 0.06855428, -0.008715242, 0.008676529, 2.455308, 0.5435734)
-light_color = Color(1, 0.6901961, 0.3647059, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 1.025
-shadow_enabled = true
-spot_range = 6.859
-spot_angle = 69.06
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="streetlight8" unique_id=1541377398]
-transform = Transform3D(-0.034440205, -0.49829766, 0.022656703, -0.0027895712, 0.022902692, 0.4994674, -0.49880466, 0.03427712, -0.00435762, -2.993742, 7.020309, 5.9785976)
-light_color = Color(1, 0.6901961, 0.3647059, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 1.025
-shadow_enabled = true
-spot_range = 10.008
-spot_attenuation = 0.59
-spot_angle = 69.06
-
-[node name="streetlight9" parent="." unique_id=301417272 instance=ExtResource("34_5ubxd")]
-transform = Transform3D(-1.91964, 0, -0.56123286, 0.00045058658, 1.9999994, -0.0015411857, 0.5612327, -0.0016057028, -1.9196393, 53.106472, 0.08499998, 63.847694)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="streetlight9" unique_id=974322770]
-transform = Transform3D(-0.06888045, -0.9965953, 0.045313403, -0.005579142, 0.045805383, 0.9989348, -0.9976093, 0.06855428, -0.008715242, 0.008676529, 2.455308, 0.5435734)
-light_color = Color(1, 0.6901961, 0.3647059, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 1.025
-shadow_enabled = true
-spot_range = 9.989
-spot_attenuation = 0.86
-spot_angle = 69.06
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="streetlight9" unique_id=620718581]
-transform = Transform3D(-0.034440205, -0.49829766, 0.022656703, -0.0027895712, 0.022902692, 0.4994674, -0.49880466, 0.03427712, -0.00435762, -2.993742, 7.020309, 5.9785976)
-light_color = Color(1, 0.6901961, 0.3647059, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 1.025
-shadow_enabled = true
-spot_range = 10.008
-spot_attenuation = 0.59
-spot_angle = 69.06
-
-[node name="streetlight10" parent="." unique_id=1304484872 instance=ExtResource("34_5ubxd")]
-transform = Transform3D(-1.91964, 0, -0.56123286, 0.00045058658, 1.9999994, -0.0015411857, 0.5612327, -0.0016057028, -1.9196393, 66.62249, 0.08499998, 63.847694)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="streetlight10" unique_id=500828392]
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlight/streetlight10" unique_id=500828392]
 transform = Transform3D(-0.034440115, -0.49829766, 0.022656696, -0.0027895689, 0.022902684, 0.4994674, -0.49880466, 0.03427705, -0.0043576146, -5.094326, 4.4123116, -2.6061363)
 light_color = Color(1, 0.6901961, 0.3647059, 1)
 light_energy = 16.0
@@ -625,7 +552,7 @@ spot_range = 9.989
 spot_attenuation = 0.86
 spot_angle = 69.06
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="streetlight10" unique_id=692878268]
+[node name="SpotLight3D2" type="SpotLight3D" parent="streetlight/streetlight10" unique_id=692878268]
 transform = Transform3D(-0.03443998, -0.4982977, 0.022656683, -0.0027895677, 0.022902671, 0.4994674, -0.49880472, 0.034276903, -0.004357606, -0.07897949, 2.3654284, 0.58864594)
 light_color = Color(1, 0.6901961, 0.3647059, 1)
 light_energy = 16.0
@@ -636,10 +563,59 @@ spot_range = 9.989
 spot_attenuation = 0.86
 spot_angle = 69.06
 
-[node name="streetlight6" parent="." unique_id=1632915764 instance=ExtResource("34_5ubxd")]
-transform = Transform3D(-0.09219062, 0, -1.997874, 0, 2, 0, 1.997874, 0, -0.09219062, 40.6497, 0.08499998, 6.4669495)
+[node name="streetlight9" parent="streetlight" unique_id=301417272 instance=ExtResource("34_5ubxd")]
+transform = Transform3D(0.25201863, -0.000802498, -0.96772206, 0.00022529329, 0.9999997, -0.00077059283, 0.96772236, -2.3817549e-05, 0.25201872, 73.36859, 0, -5.459053)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="streetlight6" unique_id=1390897049]
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlight/streetlight9" unique_id=974322770]
+transform = Transform3D(-0.06888045, -0.9965953, 0.045313403, -0.005579142, 0.045805383, 0.9989348, -0.9976093, 0.06855428, -0.008715242, 0.008676529, 2.455308, 0.5435734)
+light_color = Color(1, 0.6901961, 0.3647059, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 1.025
+shadow_enabled = true
+spot_range = 9.989
+spot_attenuation = 0.86
+spot_angle = 69.06
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="streetlight/streetlight9" unique_id=620718581]
+transform = Transform3D(-0.034440205, -0.49829766, 0.022656703, -0.0027895712, 0.022902692, 0.4994674, -0.49880466, 0.03427712, -0.00435762, -2.993742, 7.020309, 5.9785976)
+light_color = Color(1, 0.6901961, 0.3647059, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 1.025
+shadow_enabled = true
+spot_range = 10.008
+spot_attenuation = 0.59
+spot_angle = 69.06
+
+[node name="streetlight8" parent="streetlight" unique_id=1099287782 instance=ExtResource("34_5ubxd")]
+transform = Transform3D(-0.23514214, 0, 0.971961, 0, 1, 0, -0.971961, 0, -0.23514214, 64.84187, 0, 0.46052933)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlight/streetlight8" unique_id=1167141115]
+transform = Transform3D(-0.06888045, -0.9965953, 0.045313403, -0.005579142, 0.045805383, 0.9989348, -0.9976093, 0.06855428, -0.008715242, 0.008676529, 2.455308, 0.5435734)
+light_color = Color(1, 0.6901961, 0.3647059, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 1.025
+shadow_enabled = true
+spot_range = 6.859
+spot_angle = 69.06
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="streetlight/streetlight8" unique_id=1541377398]
+transform = Transform3D(-0.034440205, -0.49829766, 0.022656703, -0.0027895712, 0.022902692, 0.4994674, -0.49880466, 0.03427712, -0.00435762, -2.993742, 7.020309, 5.9785976)
+light_color = Color(1, 0.6901961, 0.3647059, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 1.025
+shadow_enabled = true
+spot_range = 10.008
+spot_attenuation = 0.59
+spot_angle = 69.06
+
+[node name="streetlight7" parent="streetlight" unique_id=1022615181 instance=ExtResource("34_5ubxd")]
+transform = Transform3D(0.5047989, 0, -0.86323696, 0, 1, 0, 0.86323696, 0, 0.5047989, 36.666718, 0, -5.854801)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlight/streetlight7" unique_id=721574988]
 transform = Transform3D(-0.06888045, -0.9965953, 0.045313403, -0.005579142, 0.045805383, 0.9989348, -0.9976093, 0.06855428, -0.008715242, 0.008676529, 2.455308, 0.5435734)
 light_color = Color(1, 0.6901961, 0.3647059, 1)
 light_energy = 16.0
@@ -649,7 +625,20 @@ shadow_enabled = true
 spot_range = 10.183
 spot_angle = 69.06
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="streetlight6" unique_id=1669525585]
+[node name="streetlight6" parent="streetlight" unique_id=1632915764 instance=ExtResource("34_5ubxd")]
+transform = Transform3D(0.9971299, 0, -0.075709686, 0, 1, 0, 0.075709686, 0, 0.9971299, 44.50607, 0, -0.08454132)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlight/streetlight6" unique_id=1390897049]
+transform = Transform3D(-0.06888045, -0.9965953, 0.045313403, -0.005579142, 0.045805383, 0.9989348, -0.9976093, 0.06855428, -0.008715242, 0.008676529, 2.455308, 0.5435734)
+light_color = Color(1, 0.6901961, 0.3647059, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 1.025
+shadow_enabled = true
+spot_range = 10.183
+spot_angle = 69.06
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="streetlight/streetlight6" unique_id=1669525585]
 transform = Transform3D(-0.034440238, -0.4982977, 0.022656702, -0.0027895707, 0.022902688, 0.4994674, -0.49880472, 0.034277145, -0.004357621, -5.334675, 2.7201052, -0.58893204)
 light_color = Color(1, 0.6901961, 0.3647059, 1)
 light_energy = 16.0
@@ -659,7 +648,7 @@ shadow_enabled = true
 spot_range = 5.513
 spot_angle = 69.06
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="streetlight6" unique_id=1726057291]
+[node name="SpotLight3D3" type="SpotLight3D" parent="streetlight/streetlight6" unique_id=1726057291]
 transform = Transform3D(-0.03444026, -0.49829766, 0.02265669, -0.002789569, 0.022902675, 0.4994674, -0.4988047, 0.034277167, -0.00435762, 37.501244, 7.6329947, 3.5609207)
 light_color = Color(1, 0.6901961, 0.3647059, 1)
 light_energy = 16.0
@@ -670,7 +659,7 @@ spot_range = 31.868
 spot_attenuation = 0.79
 spot_angle = 86.57
 
-[node name="SpotLight3D4" type="SpotLight3D" parent="streetlight6" unique_id=1905108187]
+[node name="SpotLight3D4" type="SpotLight3D" parent="streetlight/streetlight6" unique_id=1905108187]
 transform = Transform3D(-0.034440264, -0.49829766, 0.022656688, -0.0027895689, 0.022902673, 0.4994674, -0.4988047, 0.03427717, -0.0043576197, 51.712242, 7.6329947, 2.6918468)
 light_color = Color(1, 0.6901961, 0.3647059, 1)
 light_energy = 16.0
@@ -681,10 +670,10 @@ spot_range = 31.868
 spot_attenuation = 0.79
 spot_angle = 86.57
 
-[node name="streetlight7" parent="." unique_id=1022615181 instance=ExtResource("34_5ubxd")]
-transform = Transform3D(-1.6957631, 0, -1.0603713, 0, 2, 0, 1.0603713, 0, -1.6957631, 51.72001, 0.08499998, -9.547216)
+[node name="streetlight5" parent="streetlight" unique_id=1911807705 instance=ExtResource("34_5ubxd")]
+transform = Transform3D(-0.99634534, 0, 0.08541692, 0, 1, 0, -0.08541692, 0, -0.99634534, 1.8579216, 0.038383007, -10.284248)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="streetlight7" unique_id=721574988]
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlight/streetlight5" unique_id=1454504522]
 transform = Transform3D(-0.06888045, -0.9965953, 0.045313403, -0.005579142, 0.045805383, 0.9989348, -0.9976093, 0.06855428, -0.008715242, 0.008676529, 2.455308, 0.5435734)
 light_color = Color(1, 0.6901961, 0.3647059, 1)
 light_energy = 16.0
@@ -694,33 +683,7 @@ shadow_enabled = true
 spot_range = 10.183
 spot_angle = 69.06
 
-[node name="streetlight4" parent="." unique_id=95911661 instance=ExtResource("34_5ubxd")]
-transform = Transform3D(0.1116431, 0, 1.9968815, 0, 2, 0, -1.9968815, 0, 0.1116431, 57.54599, 0.08499998, -60.572453)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="streetlight4" unique_id=840374182]
-transform = Transform3D(-0.06888045, -0.9965953, 0.045313403, -0.005579142, 0.045805383, 0.9989348, -0.9976093, 0.06855428, -0.008715242, 0.008676529, 2.455308, 0.5435734)
-light_color = Color(1, 0.6901961, 0.3647059, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 1.025
-shadow_enabled = true
-spot_range = 10.183
-spot_angle = 69.06
-
-[node name="streetlight5" parent="." unique_id=1911807705 instance=ExtResource("34_5ubxd")]
-transform = Transform3D(0.1116431, 0, 1.9968815, 0, 2, 0, -1.9968815, 0, 0.1116431, 58.50972, 0.161766, -79.39697)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="streetlight5" unique_id=1454504522]
-transform = Transform3D(-0.06888045, -0.9965953, 0.045313403, -0.005579142, 0.045805383, 0.9989348, -0.9976093, 0.06855428, -0.008715242, 0.008676529, 2.455308, 0.5435734)
-light_color = Color(1, 0.6901961, 0.3647059, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 1.025
-shadow_enabled = true
-spot_range = 10.183
-spot_angle = 69.06
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="streetlight5" unique_id=511065995]
+[node name="SpotLight3D2" type="SpotLight3D" parent="streetlight/streetlight5" unique_id=511065995]
 transform = Transform3D(-0.0688804, -0.9965953, 0.045313403, -0.0055791386, 0.045805383, 0.9989348, -0.9976093, 0.06855423, -0.008715237, 5.542223, 4.295921, 13.107594)
 light_color = Color(1, 0.6901961, 0.3647059, 1)
 light_energy = 16.0
@@ -730,7 +693,7 @@ shadow_enabled = true
 spot_range = 10.183
 spot_angle = 69.06
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="streetlight5" unique_id=1888280801]
+[node name="SpotLight3D3" type="SpotLight3D" parent="streetlight/streetlight5" unique_id=1888280801]
 transform = Transform3D(-0.068880334, -0.9965953, 0.045313403, -0.0055791363, 0.045805383, 0.9989348, -0.9976093, 0.06855416, -0.008715231, -5.451971, 4.114656, 14.349133)
 light_color = Color(1, 0.6901961, 0.3647059, 1)
 light_energy = 16.0
@@ -740,7 +703,7 @@ shadow_enabled = true
 spot_range = 10.183
 spot_angle = 69.06
 
-[node name="SpotLight3D4" type="SpotLight3D" parent="streetlight5" unique_id=1411861494]
+[node name="SpotLight3D4" type="SpotLight3D" parent="streetlight/streetlight5" unique_id=1411861494]
 transform = Transform3D(-0.068880364, -0.9965953, 0.045313403, -0.005579135, 0.045805383, 0.9989348, -0.9976093, 0.068554185, -0.008715231, -16.172691, 4.0747747, 15.1643715)
 light_color = Color(1, 0.6901961, 0.3647059, 1)
 light_energy = 16.0
@@ -750,7 +713,7 @@ shadow_enabled = true
 spot_range = 10.183
 spot_angle = 69.06
 
-[node name="SpotLight3D6" type="SpotLight3D" parent="streetlight5" unique_id=765450590]
+[node name="SpotLight3D6" type="SpotLight3D" parent="streetlight/streetlight5" unique_id=765450590]
 transform = Transform3D(-0.03444016, -0.4982977, 0.022656703, -0.002789566, 0.022902694, 0.4994674, -0.4988047, 0.03427707, -0.004357613, -14.39615, 1.8863246, 2.5094604)
 light_color = Color(0.8988498, 0.7066876, 0.7486464, 1)
 light_energy = 14.5
@@ -762,7 +725,7 @@ spot_attenuation = 1.36
 spot_angle = 53.14
 spot_angle_attenuation = 0.96593624
 
-[node name="SpotLight3D7" type="SpotLight3D" parent="streetlight5" unique_id=861757532]
+[node name="SpotLight3D7" type="SpotLight3D" parent="streetlight/streetlight5" unique_id=861757532]
 transform = Transform3D(-0.03444016, -0.4982977, 0.022656703, -0.002789566, 0.022902694, 0.4994674, -0.49880472, 0.03427707, -0.004357613, -14.543554, 1.8863246, -0.1271019)
 light_color = Color(0.8988498, 0.7066876, 0.7486464, 1)
 light_energy = 14.5
@@ -774,7 +737,7 @@ spot_attenuation = 1.36
 spot_angle = 53.14
 spot_angle_attenuation = 0.96593624
 
-[node name="SpotLight3D8" type="SpotLight3D" parent="streetlight5" unique_id=974608089]
+[node name="SpotLight3D8" type="SpotLight3D" parent="streetlight/streetlight5" unique_id=974608089]
 transform = Transform3D(-0.03444016, -0.4982977, 0.022656703, -0.002789566, 0.022902694, 0.4994674, -0.49880472, 0.034277067, -0.004357613, -17.57442, 1.8863246, 0.042352676)
 light_color = Color(0.8988498, 0.7066876, 0.7486464, 1)
 light_energy = 14.5
@@ -786,7 +749,7 @@ spot_attenuation = 1.36
 spot_angle = 53.14
 spot_angle_attenuation = 0.96593624
 
-[node name="SpotLight3D9" type="SpotLight3D" parent="streetlight5" unique_id=389352369]
+[node name="SpotLight3D9" type="SpotLight3D" parent="streetlight/streetlight5" unique_id=389352369]
 transform = Transform3D(-0.03444016, -0.4982977, 0.022656703, -0.002789566, 0.022902694, 0.4994674, -0.49880472, 0.034277067, -0.004357613, -17.439121, 1.8863246, 2.4623013)
 light_color = Color(0.8988498, 0.7066876, 0.7486464, 1)
 light_energy = 14.5
@@ -798,7 +761,7 @@ spot_attenuation = 1.36
 spot_angle = 53.14
 spot_angle_attenuation = 0.96593624
 
-[node name="SpotLight3D10" type="SpotLight3D" parent="streetlight5" unique_id=1631659153]
+[node name="SpotLight3D10" type="SpotLight3D" parent="streetlight/streetlight5" unique_id=1631659153]
 transform = Transform3D(-0.03444016, -0.4982977, 0.022656703, -0.002789566, 0.022902694, 0.4994674, -0.49880472, 0.034277067, -0.004357613, -20.02658, 1.8863246, 2.7512188)
 light_color = Color(0.8988498, 0.7066876, 0.7486464, 1)
 light_energy = 14.5
@@ -810,7 +773,7 @@ spot_attenuation = 1.36
 spot_angle = 53.14
 spot_angle_attenuation = 0.96593624
 
-[node name="SpotLight3D11" type="SpotLight3D" parent="streetlight5" unique_id=146773965]
+[node name="SpotLight3D11" type="SpotLight3D" parent="streetlight/streetlight5" unique_id=146773965]
 transform = Transform3D(-0.03444016, -0.4982977, 0.022656703, -0.002789566, 0.022902694, 0.4994674, -0.49880472, 0.034277067, -0.004357613, -26.617313, 2.290111, 4.0914955)
 light_color = Color(0.8988498, 0.7066876, 0.7486464, 1)
 light_energy = 14.5
@@ -822,7 +785,7 @@ spot_attenuation = 0.41
 spot_angle = 53.14
 spot_angle_attenuation = 0.96593624
 
-[node name="SpotLight3D12" type="SpotLight3D" parent="streetlight5" unique_id=719520102]
+[node name="SpotLight3D12" type="SpotLight3D" parent="streetlight/streetlight5" unique_id=719520102]
 transform = Transform3D(-0.03444016, -0.4982977, 0.022656703, -0.002789566, 0.022902694, 0.4994674, -0.49880472, 0.034277067, -0.004357613, -23.233608, 2.290111, -5.7408867)
 light_color = Color(0.95281494, 0.74190533, 0.67631733, 1)
 light_energy = 14.5
@@ -834,7 +797,7 @@ spot_attenuation = 0.41
 spot_angle = 53.14
 spot_angle_attenuation = 0.96593624
 
-[node name="SpotLight3D13" type="SpotLight3D" parent="streetlight5" unique_id=1353071676]
+[node name="SpotLight3D13" type="SpotLight3D" parent="streetlight/streetlight5" unique_id=1353071676]
 transform = Transform3D(-0.03444016, -0.4982977, 0.022656703, -0.002789566, 0.022902694, 0.4994674, -0.49880472, 0.034277067, -0.004357613, -22.644434, 2.290111, -2.2021027)
 light_color = Color(0.95281494, 0.74190533, 0.67631733, 1)
 light_energy = 14.5
@@ -846,7 +809,7 @@ spot_attenuation = 0.41
 spot_angle = 53.14
 spot_angle_attenuation = 0.96593624
 
-[node name="SpotLight3D5" type="SpotLight3D" parent="streetlight5" unique_id=318621222]
+[node name="SpotLight3D5" type="SpotLight3D" parent="streetlight/streetlight5" unique_id=318621222]
 transform = Transform3D(-0.034440164, -0.4982977, 0.022656703, -0.0027895663, 0.022902694, 0.4994674, -0.49880472, 0.034277074, -0.0043576136, -42.37953, 2.5128417, -1.2266197)
 light_color = Color(1, 0.6901961, 0.3647059, 1)
 light_energy = 16.0
@@ -856,10 +819,47 @@ shadow_enabled = true
 spot_range = 10.183
 spot_angle = 69.06
 
-[node name="streetlight2" parent="." unique_id=1843043774 instance=ExtResource("34_5ubxd")]
-transform = Transform3D(-1.9731443, 0, 0.32665187, 0, 2, 0, -0.32665187, 0, -1.9731443, 47.802418, 1.6569655, -83.32315)
+[node name="streetlight4" parent="streetlight" unique_id=95911661 instance=ExtResource("34_5ubxd")]
+transform = Transform3D(-0.99634534, 0, 0.08541692, 0, 1, 0, -0.08541692, 0, -0.99634534, 11.251745, 0, -9.523371)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="streetlight2" unique_id=2043507347]
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlight/streetlight4" unique_id=840374182]
+transform = Transform3D(-0.06888045, -0.9965953, 0.045313403, -0.005579142, 0.045805383, 0.9989348, -0.9976093, 0.06855428, -0.008715242, 0.008676529, 2.455308, 0.5435734)
+light_color = Color(1, 0.6901961, 0.3647059, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 1.025
+shadow_enabled = true
+spot_range = 10.183
+spot_angle = 69.06
+
+[node name="streetlight3" parent="streetlight" unique_id=2114898302 instance=ExtResource("34_5ubxd")]
+transform = Transform3D(-0.23514214, 0, 0.971961, 0, 1, 0, -0.971961, 0, -0.23514214, 11.921955, 0, -0.42412376)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlight/streetlight3" unique_id=1687050935]
+transform = Transform3D(-0.06888045, -0.9965953, 0.045313403, -0.005579142, 0.045805383, 0.9989348, -0.9976093, 0.06855428, -0.008715242, 0.008676529, 2.455308, 0.5435734)
+light_color = Color(1, 0.6901961, 0.3647059, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 1.025
+shadow_enabled = true
+spot_range = 10.183
+spot_angle = 69.06
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="streetlight/streetlight3" unique_id=7105550]
+transform = Transform3D(-0.034440205, -0.49829766, 0.022656703, -0.0027895712, 0.022902692, 0.4994674, -0.49880466, 0.03427712, -0.00435762, -2.993742, 7.020309, 5.9785976)
+light_color = Color(1, 0.6901961, 0.3647059, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 1.025
+shadow_enabled = true
+spot_range = 10.008
+spot_attenuation = 0.59
+spot_angle = 69.06
+
+[node name="streetlight2" parent="streetlight" unique_id=1843043774 instance=ExtResource("34_5ubxd")]
+transform = Transform3D(-0.1925219, 0, -0.98129267, 0, 1, 0, 0.98129267, 0, -0.1925219, -0.26312447, 0.7859828, -4.991192)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlight/streetlight2" unique_id=2043507347]
 transform = Transform3D(-0.06888049, -0.9965953, 0.045313403, -0.0055791405, 0.045805383, 0.9989348, -0.9976093, 0.06855432, -0.008715242, -0.014511108, 2.5077424, 0.54740906)
 light_color = Color(1, 0.6901961, 0.3647059, 1)
 light_energy = 16.0
@@ -869,14 +869,14 @@ shadow_enabled = true
 spot_range = 10.183
 spot_angle = 69.06
 
-[node name="Sketchfab_Scene5" parent="." unique_id=1024371629 instance=ExtResource("36_lfnv4")]
+[node name="concrete?" parent="." unique_id=1024371629 instance=ExtResource("36_lfnv4")]
 transform = Transform3D(10, 0, 0, 0, 0.298, 0, 0, 0, 19.85, 121.11659, 0.9762171, -17.68609)
 
-[node name="Sketchfab_Scene7" parent="." unique_id=2020911521 instance=ExtResource("36_lfnv4")]
-transform = Transform3D(10, 0, 0, 0, 0.298, 0, 0, 0, 19.85, 122.03609, 0.97621423, 13.920147)
+[node name="concrete?" parent="concrete?" unique_id=2020911521 instance=ExtResource("36_lfnv4")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0.09194946, -9.536743e-06, 1.5922534)
 
-[node name="Sketchfab_Scene6" parent="." unique_id=16790716 instance=ExtResource("7_s4fv4")]
-transform = Transform3D(-0.53344345, 0, 1.4019408, 0, 1.5, 0, -1.4019408, 0, -0.53344345, 86.61864, 0.74605507, -86.59706)
+[node name="jeepney" parent="." unique_id=35133693 instance=ExtResource("32_dmrbq")]
+transform = Transform3D(-0.43990827, 0, -0.008984379, 0, 0.44, 0, 0.008984379, 0, -0.43990827, 17.593983, 1.2518098, 27.822952)
 
-[node name="Sketchfab_Scene8" parent="." unique_id=2147127561 instance=ExtResource("38_stm75")]
+[node name="tricycle" parent="." unique_id=2147127561 instance=ExtResource("38_stm75")]
 transform = Transform3D(55.765, 0, 0, 0, 55.765, 0, 0, 0, 55.765, 32.61853, 7.748604e-07, 103.86603)

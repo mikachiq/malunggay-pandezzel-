@@ -1,2 +1,5 @@
-res://cutscenes/part_5_escalation.tscn
+res://menus/ui/loading_screen.tscn
 res://addons/phantom_camera/themes/theme.tres
+res://menus/scripts/loading_screen.gd
+res://cutscenes/scenes/Intro.tscn
+res://scenes/level_101_street.tscn

@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://djcytru18clcw"]
 
-[ext_resource type="Texture2D" path="res://assets/weapons/source/TEXTURA.png" id="1_jghcy"]
-[ext_resource type="Texture2D" path="res://assets/weapons/source/TEXTURA_NORMAL.png" id="2_m8h0h"]
-[ext_resource type="Texture2D" path="res://assets/weapons/source/berettaColor.png" id="3_i3f4q"]
-[ext_resource type="Texture2D" path="res://assets/weapons/source/berettaNormal.png" id="4_3s0mu"]
+[ext_resource type="Texture2D" uid="uid://bb8thbkwki16s" path="res://assets/weapons/beretta_pistol_fps_animation_4.png" id="1_jghcy"]
+[ext_resource type="Texture2D" uid="uid://b2d2y1oof1250" path="res://assets/weapons/beretta_pistol_fps_animation_3.png" id="2_m8h0h"]
+[ext_resource type="Texture2D" uid="uid://c2a8ythlhdcy6" path="res://assets/weapons/beretta_pistol_fps_animation_1.png" id="3_i3f4q"]
+[ext_resource type="Texture2D" uid="uid://dmetc61kf3mom" path="res://assets/weapons/beretta_pistol_fps_animation_0.png" id="4_3s0mu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvfmu"]
 resource_name = "TEXTURA"
@@ -954,6 +954,7 @@ bones/42/rotation = Quaternion(0.38885942, 2.8452783e-05, 5.8792888e-05, 0.92129
 bones/42/scale = Vector3(1.0000001, 1, 0.99999994)
 
 [node name="Ch22_Body" type="MeshInstance3D" parent="Armature/Skeleton3D" unique_id=328907331]
+transform = Transform3D(0.99907005, -0.043148614, -5.1437135e-09, 0.04314862, 0.99907005, -1.11050724e-10, 5.1437232e-09, -1.1092993e-10, 1.0000007, -0.0008974452, 0.00049861736, 0.00023797403)
 mesh = SubResource("ArrayMesh_kr371")
 skin = SubResource("Skin_odldp")
 skeleton = NodePath("..")
