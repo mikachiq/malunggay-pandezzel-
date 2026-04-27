@@ -7,25 +7,32 @@ extends Node3D
 @onready var anim_player       = $AnimationPlayer
 @onready var fade_overlay      = $DialogueUI/FadeOverlay
 @onready var press_enter_label = $DialogueUI/DialogueBox/PressEnterLabel
-@onready var camera            = $Camera3D  # NEW
+@onready var camera            = $Camera3D
+@onready var video_player      = $SubViewport/VideoStreamPlayer  # NEW
 
 var typing_tween  : Tween
 var fade_tween    : Tween
 var scene_tween   : Tween
 var blink_tween   : Tween
-var shake_tween   : Tween  # NEW
+var shake_tween   : Tween
 
 var is_waiting    := false
 var is_typing     := false
 var _full_text    := ""
 
-var _camera_origin := Vector3.ZERO  # NEW
+var _camera_origin := Vector3.ZERO
 
 func _ready():
 	fade_overlay.color.a       = 1.0
 	dialogue_box.modulate.a    = 0.0
 	dialogue_ui.visible        = true
 	press_enter_label.visible  = false
+
+	# ---- START TV VIDEO ----
+	video_player.stream = load("res://ezzel/assets/videos/news.ogv")
+	video_player.loop   = true
+	video_player.play()
+	# ------------------------
 
 	scene_tween = create_tween()
 	scene_tween.tween_property(fade_overlay, "color:a", 0.0, 1.5)
@@ -52,7 +59,6 @@ func camera_shake(duration := 0.6, strength := 0.15, speed := 25.0):
 			func(): camera.position = _camera_origin + offset
 		).set_delay(1.0 / speed)
 
-	# Snap back to original position when done
 	shake_tween.tween_callback(func(): camera.position = _camera_origin)
 
 # ---- INPUT HANDLING ----
@@ -140,6 +146,10 @@ func _on_cutscene_finished(_anim_name: String):
 		hide_dialogue()
 		_stop_blink()
 		press_enter_label.visible = false
+
+		# ---- STOP TV VIDEO ----
+		video_player.stop()
+		# -----------------------
 
 		scene_tween = create_tween()
 		scene_tween.tween_property(fade_overlay, "color:a", 1.0, 1.5)
