@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://trvgsji8gn8j" path="res://cutscenes/scripts/pandeManila_scene.gd" id="1_t7xdt"]
 [ext_resource type="PackedScene" uid="uid://b5tyb48c8ypge" path="res://ezzel/assets/map/silent_hill_bakery_shop.glb" id="2_djg57"]
+[ext_resource type="PackedScene" uid="uid://djhdsnvogu2lq" path="res://ezzel/assets/characters/cashier.fbx" id="3_vqym7"]
+[ext_resource type="PackedScene" uid="uid://cr4osraub3yxf" path="res://ezzel/assets/items/TV.fbx" id="4_pm2f6"]
+[ext_resource type="Texture2D" uid="uid://cbunt1f5xmh34" path="res://ezzel/assets/images/pan de manila.png" id="5_l16m0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f6w48"]
 bg_color = Color(0, 0, 0, 0.7490196)
@@ -164,9 +167,11 @@ size = Vector3(0.5, 1.7516601, 0.5)
 [node name="Sketchfab_Scene" parent="." unique_id=439519806 instance=ExtResource("2_djg57")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7118597, -4.636236, -0.018809319)
 
-[node name="TVScreen" type="CSGBox3D" parent="." unique_id=1158826376]
-transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -2.569104, 1.2402066, 1.9630837)
-size = Vector3(0.30361328, 0.47216797, 0.67954445)
+[node name="cashier" parent="." unique_id=1961233997 instance=ExtResource("3_vqym7")]
+transform = Transform3D(0.82046133, 0, -0.57170206, 0, 1, 0, 0.57170206, 0, 0.82046133, 1.7143378, -0.75162876, -1.9745342)
+
+[node name="TV" parent="." unique_id=1797459579 instance=ExtResource("4_pm2f6")]
+transform = Transform3D(0.64932865, 0, -0.760508, 0, 1, 0, 0.760508, 0, 0.64932865, -4.2031226, 2.012247, -0.05020106)
 
 [node name="BakeryFIll" type="OmniLight3D" parent="." unique_id=1981637804]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010222554, 2.093339, -0.0027307272)
@@ -242,3 +247,9 @@ autoplay = &"panDeManila_scene"
 [node name="BGM_Ambient" type="AudioStreamPlayer" parent="." unique_id=476391035]
 
 [node name="BGM_Dramatic" type="AudioStreamPlayer" parent="." unique_id=418315200]
+
+[node name="sign" type="Sprite3D" parent="." unique_id=1321777865]
+transform = Transform3D(-0.013124332, 0, 0.999914, 0, 1, 0, -0.999914, 0, -0.013124332, -2.974919, 2.4102583, -0.3947581)
+modulate = Color(0.5729883, 0.5729883, 0.5729883, 1)
+pixel_size = 0.005
+texture = ExtResource("5_l16m0")

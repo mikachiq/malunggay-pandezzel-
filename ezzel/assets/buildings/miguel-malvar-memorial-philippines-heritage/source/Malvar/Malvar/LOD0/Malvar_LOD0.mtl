@@ -1,0 +1,15 @@
+# Blender MTL File: 'Malvar.blend'
+# Material Count: 1
+
+newmtl Material.001
+Ns 358.700659
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Bump Malvar_LOD0_u0_v0_normal.jpeg
+map_Kd Malvar_LOD0_u0_v0_diffuse2.jpg
+refl Malvar_LOD0_Malvar_LOD0_Metallic.jpg
