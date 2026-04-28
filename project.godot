@@ -10,8 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Malunggay Pandezzel"
-run/main_scene="uid://n78gkflap831"
+config/name="Malunggay Pandezzel (Copy)"
+config/tags=PackedStringArray("sdsdf")
+run/main_scene="uid://di2tft7gjvsne"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

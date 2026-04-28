@@ -94,5 +94,5 @@ func _on_cutscene_finished(_anim_name: String):
 	
 	
 	scene_tween.tween_callback(func():
-		get_tree().change_scene_to_file("res://cutscenes/part_5_escalation.tscn")
+		get_tree().change_scene_to_file("res://cutscenes/scenes/part_5_escalation.tscn")
 	)
