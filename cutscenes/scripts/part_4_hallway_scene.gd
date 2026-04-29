@@ -7,9 +7,6 @@ extends Node3D
 @onready var anim_player    = $AnimationPlayer
 @onready var fade_overlay   = $DialogueUI/FadeOverlay
 
-# --- PhantomCameras ---
-@onready var pcam_wide     = $OutsideElevatorCamera      # priority starts at 10
-@onready var pcam_closeup  = $InsideElevatorCamera   # priority starts at 0
 
 var typing_tween : Tween
 var fade_tween   : Tween
@@ -20,36 +17,11 @@ func _ready():
 	dialogue_box.modulate.a = 0.0
 	dialogue_ui.visible     = true
 
-	# Set initial priorities
-	pcam_wide.priority    = 10
-	pcam_closeup.priority = 0
 
 	scene_tween = create_tween()
 	scene_tween.tween_property(fade_overlay, "color:a", 0.0, 1.5)
 	scene_tween.tween_callback(func(): anim_player.play("hallway_scene"))
 	anim_player.animation_finished.connect(_on_cutscene_finished)
-
-
-# ---- CAMERA SWITCH FUNCTIONS ----
-# Call these via AnimationPlayer's Call Method track
-
-func switch_to_wide():
-	pcam_closeup.priority = 0
-	pcam_wide.priority    = 10
-
-func switch_to_closeup():
-	pcam_wide.priority    = 0
-	pcam_closeup.priority = 20   # higher = takes over
-
-func switch_to_closeup_instant():
-	# 0.0 duration = hard cut, no tween
-	pcam_closeup.set_tween_duration(0.0)
-	pcam_wide.priority    = 0
-	pcam_closeup.priority = 20
-	# Restore tween duration for future smooth transitions
-	await get_tree().create_timer(0.05).timeout
-	pcam_closeup.set_tween_duration(0.6)
-
 
 # ---- DIALOGUE FUNCTIONS (unchanged) ----
 
@@ -93,6 +65,7 @@ func _on_cutscene_finished(_anim_name: String):
 	scene_tween.tween_property(fade_overlay, "color:a", 1.0, 1.5)
 	
 	
-	scene_tween.tween_callback(func():
-		get_tree().change_scene_to_file("res://cutscenes/scenes/part_5_escalation.tscn")
-	)
+	#scene_tween.tween_callback(func():
+		#get_tree().change_scene_to_file("")
+		# sunod ani kay ang bakery na scene ni ezzel jan francisco
+	#)
