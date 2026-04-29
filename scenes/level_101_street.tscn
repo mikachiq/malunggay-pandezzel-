@@ -31,7 +31,6 @@
 [ext_resource type="PackedScene" uid="uid://bwp8qp8seigii" path="res://assets/cars/jeepney.glb" id="32_dmrbq"]
 [ext_resource type="PackedScene" uid="uid://bhi2qxek4tu60" path="res://assets/environment/trash_can.glb" id="32_lfnv4"]
 [ext_resource type="PackedScene" uid="uid://ds47sknjboi2d" path="res://assets/cars/abandoned_car__vehicle_multicab_3d_scan.glb" id="33_rccts"]
-[ext_resource type="PackedScene" uid="uid://cofggsw6vw54g" path="res://assets/environment/lowpoly_pavement_walkway.glb" id="33_xfcca"]
 [ext_resource type="PackedScene" uid="uid://c4bt0qfqwfp0l" path="res://assets/environment/stylized_street_light.glb" id="34_5ubxd"]
 [ext_resource type="PackedScene" uid="uid://ds44ky2acdx4n" path="res://assets/roads/parking_lot.glb" id="35_6xy58"]
 [ext_resource type="PackedScene" uid="uid://o3u7tv7vk1n3" path="res://assets/roads/asphalt road.glb" id="36_lfnv4"]
@@ -40,8 +39,11 @@
 [ext_resource type="PackedScene" uid="uid://ckvb0e47we7u6" path="res://assets/roads/motor.glb" id="40_fji5r"]
 [ext_resource type="PackedScene" uid="uid://c2cpo4wqrw3wa" path="res://assets/roads/trafficlight.glb" id="41_gb5h3"]
 [ext_resource type="PackedScene" uid="uid://b54kyjn7uwgc7" path="res://assets/cars/trisikad.glb" id="45_4c5d2"]
+[ext_resource type="PackedScene" uid="uid://l5t0qhotgrd2" path="res://ezzel/assets/buildings/psx_style_chain_fence.glb" id="46_xesq8"]
 [ext_resource type="PackedScene" uid="uid://dwko7qxpvm4on" path="res://assets/environment/water_animation.glb" id="46_ypsaa"]
+[ext_resource type="Texture2D" uid="uid://dol3vpbjovw1y" path="res://ezzel/assets/buildings/psx_style_chain_fence_1.png" id="47_6yfqg"]
 [ext_resource type="PackedScene" uid="uid://y8dn8mjg06f4" path="res://assets/environment/post.glb" id="48_4c5d2"]
+[ext_resource type="Texture2D" uid="uid://crdvio1bg5jo5" path="res://ezzel/assets/buildings/psx_style_chain_fence_0.png" id="48_d50re"]
 [ext_resource type="PackedScene" uid="uid://bevbv44fooy52" path="res://assets/cars/firetruck.glb" id="49_4c5d2"]
 [ext_resource type="PackedScene" uid="uid://dvvyc3gfe1yhh" path="res://assets/buildings/corner_cafe.glb" id="50_qt51k"]
 [ext_resource type="PackedScene" uid="uid://b514lnk4gjxim" path="res://assets/buildings/slum.glb" id="51_5o1n0"]
@@ -50,8 +52,32 @@
 [ext_resource type="PackedScene" uid="uid://cbh5bj7kvn0pi" path="res://assets/buildings/alley.glb" id="52_5o1n0"]
 [ext_resource type="PackedScene" uid="uid://bt6x23e7uv4p4" path="res://assets/buildings/shop.glb" id="52_8lult"]
 [ext_resource type="Texture2D" uid="uid://bhovmvf1f7jnb" path="res://assets/roads/road_modular_0.png" id="52_dnku7"]
+[ext_resource type="PackedScene" uid="uid://bkedhbsb03y0w" path="res://ezzel/assets/buildings/rusty-gate-with-graffiti-in-philippines/source/Rusty Gate with Graffiti.glb" id="52_gy51j"]
 [ext_resource type="Texture2D" uid="uid://b3mlmftqjlkk8" path="res://assets/roads/road_complete_0.png" id="52_qt51k"]
+[ext_resource type="PackedScene" uid="uid://cxkj0rwvsckew" path="res://ezzel/assets/buildings/psx-shipping-container-crate/source/psxcrate/psxcrate/redcrate.fbx" id="53_5o1n0"]
 [ext_resource type="PackedScene" uid="uid://247ertnxmaif" path="res://assets/buildings/brick_shop_building__lowpoly.glb" id="53_okg2g"]
+[ext_resource type="PackedScene" uid="uid://bfpucvqt8w2aa" path="res://ezzel/assets/buildings/post_apocalyptic_phone_booth.glb" id="58_rifki"]
+[ext_resource type="PackedScene" uid="uid://bwrayxllhfa7u" path="res://ezzel/assets/buildings/tienda_oxxo.glb" id="59_eldxj"]
+[ext_resource type="PackedScene" uid="uid://c2506mmccx27t" path="res://ezzel/assets/buildings/urban_building.glb" id="60_houjd"]
+[ext_resource type="PackedScene" uid="uid://dsxt7h72p0c6y" path="res://ezzel/assets/buildings/double_rusty_russian_garage.glb" id="61_d50re"]
+[ext_resource type="PackedScene" uid="uid://ct6j1shtkcqyp" path="res://ezzel/assets/buildings/brick_shop_building__lowpoly.glb" id="61_g2xb3"]
+[ext_resource type="PackedScene" uid="uid://cgmrq718awexx" path="res://ezzel/assets/buildings/china_grocery_store.glb" id="62_0xcw4"]
+[ext_resource type="PackedScene" uid="uid://dmkg1lcafvoyc" path="res://ezzel/assets/buildings/Bookshelf.fbx" id="63_rifki"]
+[ext_resource type="PackedScene" uid="uid://boed1hyb3bl6h" path="res://ezzel/assets/buildings/slum.glb" id="64_rifki"]
+[ext_resource type="ArrayMesh" uid="uid://d2pn635jibm7o" path="res://ezzel/assets/buildings/miguel-malvar-memorial-philippines-heritage/source/Malvar/Malvar/LOD0/Malvar_LOD0.obj" id="65_eldxj"]
+[ext_resource type="PackedScene" uid="uid://cfw3pbqjlf07r" path="res://ezzel/assets/buildings/Panelka.fbx" id="66_4j8yw"]
+[ext_resource type="PackedScene" uid="uid://5thywa0nfms6" path="res://ezzel/assets/buildings/ps1_old_warehouse.glb" id="67_mxh61"]
+[ext_resource type="PackedScene" uid="uid://bicmuukpnbblm" path="res://ezzel/assets/buildings/psx-styled_cat.glb" id="68_8svnl"]
+[ext_resource type="PackedScene" uid="uid://dxikry131k3xl" path="res://ezzel/assets/buildings/psx_japanese_house.glb" id="69_0fpc2"]
+[ext_resource type="PackedScene" uid="uid://bttgjan420u6n" path="res://ezzel/assets/buildings/japanese_bike_shop.glb" id="70_6h7vx"]
+[ext_resource type="PackedScene" uid="uid://busepkt0b813w" path="res://ezzel/assets/buildings/japanese_rural_shop_-_ps1_low_poly.glb" id="71_cde8u"]
+[ext_resource type="PackedScene" uid="uid://dl2f7r8s52pet" path="res://ezzel/assets/buildings/psx_japanese_apartment.glb" id="72_no7mt"]
+[ext_resource type="PackedScene" uid="uid://ui83moum5572" path="res://ezzel/assets/buildings/psx_japanese_food_vendor_kiosk.glb" id="73_numr6"]
+[ext_resource type="PackedScene" uid="uid://b700kxw5qfu26" path="res://ezzel/assets/buildings/psx_japanese_vending_machine_3d_model.glb" id="74_6l7bf"]
+[ext_resource type="PackedScene" uid="uid://co8081sqj3qho" path="res://ezzel/assets/buildings/ps1_style_japanese_office.glb" id="75_h67eg"]
+[ext_resource type="PackedScene" uid="uid://cwooyko5u73ty" path="res://ezzel/assets/buildings/concrete_bench_with_graffiti.glb" id="76_iccb7"]
+[ext_resource type="PackedScene" uid="uid://d3u4no8kjnj4l" path="res://ezzel/assets/buildings/old_japanese_store.glb" id="77_mxh61"]
+[ext_resource type="PackedScene" uid="uid://6tqytjodj2bv" path="res://ezzel/assets/items/low-poly_psx_style_park_benches_vol.1.glb" id="78_8svnl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yammi"]
 sky_top_color = Color(0.90382373, 0.61222285, 0, 1)
@@ -285,6 +311,85 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dqq80")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xyd6x"]
+resource_name = "TexturesCom_MetalVarious0026_1_seamless_S"
+transparency = 4
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("47_6yfqg")
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lwydm"]
+_surfaces = [{
+"aabb": AABB(-1.3383526, 0.1533925, -7.6108995e-09, 2.6767051, 1.2764738, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "TexturesCom_MetalVarious0026_1_seamless_S",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("I0+rv9wFtz8XwQIyI0+rP+wSHT4XwQKyI0+rP9wFtz8XwQIyI0+rv+wSHT4XwQKy")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qdfrk"]
+resource_name = "Sketchfab_Scene_Object_1"
+_surfaces = [{
+"aabb": AABB(-1.3383526, 0.1533925, -7.6108995e-09, 2.6767051, 1.2764738, 1e-05),
+"attribute_data": PackedByteArray("ACHCuv7//z+ZkYA/1rlyNAAVwroAAAAAlZGAPwAAAEA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_xyd6x"),
+"name": "TexturesCom_MetalVarious0026_1_seamless_S",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("I0+rv9wFtz8XwQIyI0+rP+wSHT4XwQKyI0+rP9wFtz8XwQIyI0+rv+wSHT4XwQKy//////9//n///////3/+f///////f/5///////9//n8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lwydm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hg2ff"]
+resource_name = "rusted_pipe"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("48_d50re")
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_i6sqg"]
+_surfaces = [{
+"aabb": AABB(-1.3478377, -0.123215675, -0.020449266, 2.6956754, 1.6671605, 0.04000008),
+"format": 34896613377,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIAAAAEAAEAAwACAAUABQACAAEABgADAAUABgAFAAcAAQAHAAUACAAGAAcABAAJAAEAAQAJAAcABAAKAAkACAAHAAsACgAIAAsACQALAAcACgALAAkADAANAA4ADAAPAA0AEAAPAAwADgANABEAEAASAA8ADQAPABIAEgARAA0AEwASABAADgARABQAEwAVABIAEgAVABEAFgAVABMAFAARABcAFAAXABYAFQAXABEAFgAXABUA"),
+"name": "rusted_pipe",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("Wf4AAAAAAAD//////z8AAFn+//8AAAAAtPwAAP8/AAD//wAA/z8AALT8////PwAAtPwAAP+/AAC0/P///78AAFn+AAD//wAA//////+/AAD//wAA/78AAFn+/////wAApQEAAAAAAAAAAP///z8AAAAAAAD/PwAApQH//wAAAABKAwAA/z8AAAAA////vwAASgP///8/AABKAwAA/78AAAAAAAD/vwAASgP///+/AAClAQAA//8AAKUB/////wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0ehbx"]
+resource_name = "Sketchfab_Scene_Object_0"
+_surfaces = [{
+"aabb": AABB(-1.3478377, -0.123215675, -0.020449266, 2.6956754, 1.6671605, 0.04000008),
+"attribute_data": PackedByteArray("AADpC///0hf+/+kLAADSFwAA0hf//7wj///SFwAAvCMAALwj//+lL///vCMAAKUvAAClL///jzv//6UvAACPOwAAjzv//3hH//+POwAAeEcAAAAA/v/pC/7/AAAAAOkL///pSwAA0lf//9JXAADpS///0lcAALxj//+8YwAA0lf//7xjAAClb///pW8AALxj//+lbwAAj3v//497AAClb///j3sAAHiH//94hwAAj3v///8/AADpS///6UsAAP8/3y9WqYgyS68xNVap3y9tnTE1bZ2IMniXrmyBv8Fvgb9KcTC1JWswtcFv36qubN+q"),
+"format": 34896613399,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMgAzADAAMgA0ADMANAA1ADMANgA3ADgAOAA5ADYAOAA6ADkAOgA7ADkA"),
+"material": SubResource("StandardMaterial3D_hg2ff"),
+"name": "rusted_pipe",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 60,
+"vertex_data": PackedByteArray("Wf4AAAAA/w7//////z//Dln+//8AAP8O//8AAP8//w7//wAA/z+qKv//////v6oq//////8/qir//wAA/7+qKv//AAD/v0Q9Wf7/////RD3//////79EPVn+AAD//0Q9Wf4AAP//RD20/P///79EPVn+/////0Q9tPwAAP+/RD20/AAA/7+qKrT8////P6oqtPz///+/qiq0/AAA/z+qKrT8AAD/P/8OWf7//wAA/w60/P///z//Dln+AAAAAP8OpQEAAAAA/w4AAP///z//DgAAAAD/P/8OpQH//wAA/w4AAAAA/z+qKgAA////v6oqAAAAAP+/qioAAP///z+qKgAAAAD/v0Q9pQH/////RD2lAQAA//9EPQAA////v0Q9pQEAAP//RD1KA////79EPUoDAAD/v0Q9pQH/////RD1KAwAA/7+qKkoD////P6oqSgMAAP8/qipKA////7+qKkoDAAD/P/8OpQH//wAA/w6lAQAAAAD/DkoD////P/8OtPz///8//z9Z/v//AAD/P///////P/8/tPz///+//z///////7//P1n+//////8/AAD///8/RD2lAf//AABEPUoD////P0Q9AAD///+/RD1KA////79EPaUB/////0Q9cDhwOHA4cDhwOHA4cDhwOKoqqiqqKqoqqiqqKqoqqipUFlQWVBZUFlQWVBZUFlQWqumq6arpqumq6arpqumq6VTVVNVU1VTVVNVU1VTVVNWOx47HjseOx47HjseOx47Hj0dvuI9Hb7iPR2+4j0dvuFRVqapUVamqVFWpqlRVqaqqaVSWqmlUlqppVJaqaVSWVJaqaVSWqmlUlqppVJaqaaqqVVWqqlVVqqpVVaqqVVVvuI9Hb7iPR2+4j0dvuI9H/v//f/7//3/+//9//v//f/7//3/+//9/qulWU6rpVlOq6VZTqulWU6rpVlOq6VZT")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_i6sqg")
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_th0xi"]
 _surfaces = [{
 "aabb": AABB(-4.7032, 0.786208, -1.00003, 5.703167, 0.55881876, 5.712338),
@@ -379,7 +484,10 @@ transform = Transform3D(0.99337476, 0, 0.11491981, 0, 1, 0, -0.11491981, 0, 0.99
 transform = Transform3D(1.0000002, 0, -7.450581e-09, 0, 1, 0, 7.450581e-09, 0, 1.0000002, 1.9047775, 0, -28.280598)
 
 [node name="park grass6" parent="park/park grass" unique_id=824960815 instance=ExtResource("8_lgjxa")]
-transform = Transform3D(1.0000013, 0, -4.4703484e-08, 0, 1, 0, 4.4703484e-08, 0, 1.0000013, -23.88784, -0.08437824, 36.925247)
+transform = Transform3D(1.0000013, 0, -4.4703484e-08, 0, 1, 0, 4.4703484e-08, 0, 1.0000013, -23.553497, -0.08437824, 34.035194)
+
+[node name="park grass16" parent="park/park grass" unique_id=1987321166 instance=ExtResource("8_lgjxa")]
+transform = Transform3D(1.0000013, 0, -4.4703484e-08, 0, 1, 0, 4.4703484e-08, 0, 1.0000013, -34.598473, -0.08437824, 32.75744)
 
 [node name="park grass7" parent="park/park grass" unique_id=1190368036 instance=ExtResource("8_lgjxa")]
 transform = Transform3D(1.0000005, 0, -1.4901161e-08, 0, 1, 0, 1.4901161e-08, 0, 1.0000005, -11.9850235, 0, -1.3865004)
@@ -442,7 +550,7 @@ transform = Transform3D(1.0000002, 0, -7.450581e-09, 0, 1, 0, 7.450581e-09, 0, 1
 transform = Transform3D(1.0000002, 0, -7.450581e-09, 0, 1, 0, 7.450581e-09, 0, 1.0000002, -14.941528, 0, 35.985302)
 
 [node name="park grass3" parent="park/park grass" unique_id=2050800726 instance=ExtResource("8_lgjxa")]
-transform = Transform3D(0.9999996, 0, -2.2351742e-08, 0, 1, 0, 2.2351742e-08, 0, 0.9999996, -1.8013, -0.025121212, 37.163406)
+transform = Transform3D(0.9999995, 0, -2.2351742e-08, 0, 1, 0, 2.2351742e-08, 0, 0.9999995, -3.29393, -0.025121212, 36.99073)
 
 [node name="park grass5" parent="park/park grass" unique_id=260853730 instance=ExtResource("8_lgjxa")]
 transform = Transform3D(1.0000007, 0, -2.2351742e-08, 0, 1, 0, 2.2351742e-08, 0, 1.0000007, -11.305847, -0.12171888, 26.356615)
@@ -450,8 +558,11 @@ transform = Transform3D(1.0000007, 0, -2.2351742e-08, 0, 1, 0, 2.2351742e-08, 0,
 [node name="park grass11" parent="park/park grass" unique_id=230389954 instance=ExtResource("8_lgjxa")]
 transform = Transform3D(1.0000011, 0, -3.7252903e-08, 0, 1, 0, 3.7252903e-08, 0, 1.0000011, -7.1234055, -0.20745468, 18.55355)
 
-[node name="Sketchfab_Scene" parent="park/park grass" unique_id=486236119 instance=ExtResource("8_i5pme")]
+[node name="water tower" parent="park/park grass" unique_id=486236119 instance=ExtResource("8_i5pme")]
 transform = Transform3D(0.47681987, 0, -0.055161513, 0, 0.48, 0, 0.055161513, 0, 0.47681987, -16.613281, -4.0665226, -0.69615746)
+
+[node name="water tower2" parent="park/park grass" unique_id=45490644 instance=ExtResource("8_i5pme")]
+transform = Transform3D(0.47681987, 0, -0.055161513, 0, 0.48, 0, 0.055161513, 0, 0.47681987, 41.05407, -0.11952758, -84.29247)
 
 [node name="Sketchfab_Scene2" parent="park/park grass" unique_id=255450288 instance=ExtResource("9_mdho8")]
 transform = Transform3D(-0.11812658, 0, -0.9929978, 0, 1, 0, 0.9929978, 0, -0.11812658, -27.018799, -0.56595874, 24.981543)
@@ -462,10 +573,10 @@ transform = Transform3D(0.18070477, 0, 2.0771558, 0, 2.0850003, 0, -2.0771558, 0
 [node name="Sketchfab_Scene4" parent="park/park grass" unique_id=471233608 instance=ExtResource("11_qt51k")]
 transform = Transform3D(2.8572254, 0, -0.21092452, 0, 2.8649998, 0, 0.21092452, 0, 2.8572254, -24.478539, 1.7445, 22.496939)
 
-[node name="Sketchfab_Scene5" parent="park/park grass" unique_id=747953195 instance=ExtResource("10_gy51j")]
+[node name="coconut tree" parent="park/park grass" unique_id=747953195 instance=ExtResource("10_gy51j")]
 transform = Transform3D(0.0943706, 0, -0.010917382, 0, 0.095, 0, 0.010917382, 0, 0.0943706, -41.76905, 0.36398196, 21.477455)
 
-[node name="Sketchfab_Scene6" parent="park/park grass" unique_id=1043223202 instance=ExtResource("10_gy51j")]
+[node name="coconut tree2" parent="park/park grass" unique_id=1043223202 instance=ExtResource("10_gy51j")]
 transform = Transform3D(0.0943706, 0, -0.010917382, 0, 0.095, 0, 0.010917382, 0, 0.0943706, -25.152756, 0.36398196, 12.75486)
 
 [node name="bridge" parent="park" unique_id=2007319963 instance=ExtResource("9_p47l8")]
@@ -531,8 +642,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38554, -0.045614958, 11.71
 [node name="grass4" parent="grass" unique_id=1133426864 instance=ExtResource("9_jk0sv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9973755, -0.28914893, 18.513382)
 
+[node name="grass15" parent="grass" unique_id=1211977196 instance=ExtResource("9_jk0sv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.19429, -0.28914893, 18.513382)
+
+[node name="grass16" parent="grass" unique_id=1519390491 instance=ExtResource("9_jk0sv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.847824, -0.28914893, 18.513382)
+
+[node name="grass17" parent="grass" unique_id=1985950739 instance=ExtResource("9_jk0sv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.69716, -0.28914893, 18.513382)
+
 [node name="grass12" parent="grass" unique_id=1722817527 instance=ExtResource("9_jk0sv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9973755, -0.41558814, 9.023987)
+
+[node name="grass14" parent="grass" unique_id=1566322953 instance=ExtResource("9_jk0sv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.762115, -0.41558814, 9.023987)
 
 [node name="grass13" parent="grass" unique_id=1125109592 instance=ExtResource("9_jk0sv")]
 transform = Transform3D(1, 0, 0, 0, 0.9999588, 0.009075588, 0, -0.009075588, 0.9999588, 14.9973755, -0.632117, -1.3256607)
@@ -544,7 +667,7 @@ transform = Transform3D(6.0236947e-05, -0.00015412738, 1.04, -0.0010338355, 1.03
 transform = Transform3D(0.999987, -0.00062261475, 0.005056797, 0.00064151164, 0.99999285, -0.0037345767, -0.0050544343, 0.0037377735, 0.9999802, -33.527374, -0.7252302, 26.516792)
 
 [node name="japanese apt" parent="." unique_id=65670371 instance=ExtResource("13_dsjbd")]
-transform = Transform3D(0.04040978, 0, -2.0025856, 0, 2.002993, 0, 2.0025856, 0, 0.04040978, -69.57597, -0.9167328, 88.19617)
+transform = Transform3D(0.04040978, 0, -2.0025856, 0, 2.002993, 0, 2.0025856, 0, 0.04040978, -70.9225, -0.9167328, 88.19617)
 
 [node name="fire station" parent="." unique_id=1882832901 instance=ExtResource("18_vs2sm")]
 transform = Transform3D(-0.008517268, 0, -1.9999819, 0, 2, 0, 1.9999819, 0, -0.008517268, 57.898933, -0.97344923, 100.70498)
@@ -590,21 +713,6 @@ transform = Transform3D(-0.020098494, 0, 0.17014198, 0, 0.17132504, 0, -0.170141
 
 [node name="bahay kubo" parent="bahay kubo" unique_id=1084042427 instance=ExtResource("31_mdho8")]
 transform = Transform3D(0.9971363, 0, -0.07562263, 0, 1.0000001, 0, 0.07562263, 0, 0.9971363, -59.130737, -2.3841858e-07, -12.16217)
-
-[node name="pathway" parent="." unique_id=34474822 instance=ExtResource("33_xfcca")]
-transform = Transform3D(0.057107434, 0, -1.9241529, 0, 1.925, 0, 1.9241529, 0, 0.057107434, -91.59982, 0.27382308, 43.440773)
-
-[node name="pathway2" parent="pathway" unique_id=322493874 instance=ExtResource("33_xfcca")]
-transform = Transform3D(0.9999994, 0, -2.0489097e-08, 0, 1.0000012, 0, 2.0489097e-08, 0, 0.9999994, -0.044200897, 0.012524843, 13.09211)
-
-[node name="pathway5" parent="pathway" unique_id=1974565671 instance=ExtResource("33_xfcca")]
-transform = Transform3D(-0.020680692, 0, -0.99978536, 0, 1.0000019, 0, 0.99978536, 0, -0.020680692, -8.449247, 0.012524843, 17.992916)
-
-[node name="pathway4" parent="pathway" unique_id=383231115 instance=ExtResource("33_xfcca")]
-transform = Transform3D(0.9999993, 0, -2.4214387e-08, 0, 1.0000014, 0, 2.4214387e-08, 0, 0.9999993, -0.62277603, 0.012524843, 33.213703)
-
-[node name="pathway3" parent="pathway" unique_id=620969453 instance=ExtResource("33_xfcca")]
-transform = Transform3D(0.048012882, 0, -0.9988457, 0, 1.000002, 0, 0.9988457, 0, 0.048012882, -8.271172, -0.0116048455, 8.769993)
 
 [node name="boundary wall south" type="StaticBody3D" parent="." unique_id=1248342900]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.88535, 0.9466494, -325.8677)
@@ -806,6 +914,28 @@ spot_range = 10.008
 spot_attenuation = 0.59
 spot_angle = 69.06
 
+[node name="SpotLight3D3" type="SpotLight3D" parent="streetlight/streetlight3" unique_id=455089125]
+transform = Transform3D(-0.034440182, -0.49829757, 0.02265669, -0.0027895712, 0.022902682, 0.4994674, -0.4988046, 0.03427711, -0.0043576187, -22.62363, 3.5032036, -7.690956)
+light_color = Color(1, 0.6901961, 0.3647059, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 1.025
+shadow_enabled = true
+spot_range = 10.008
+spot_attenuation = 0.59
+spot_angle = 69.06
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="streetlight/streetlight3" unique_id=1561870876]
+transform = Transform3D(-0.034440182, -0.49829757, 0.02265669, -0.0027895712, 0.022902682, 0.4994674, -0.4988046, 0.03427711, -0.0043576187, -24.081627, 2.648824, -31.309883)
+light_color = Color(1, 0.6901961, 0.3647059, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 1.025
+shadow_enabled = true
+spot_range = 10.008
+spot_attenuation = 0.59
+spot_angle = 69.06
+
 [node name="streetlight2" parent="streetlight" unique_id=1843043774 instance=ExtResource("34_5ubxd")]
 transform = Transform3D(-0.12844855, -0.00022988887, -0.99171627, -0.007711138, 0.99996996, 0.00076695567, 0.9916863, 0.007745775, -0.12844644, -0.6018295, -0.06901008, -5.4564133)
 
@@ -952,11 +1082,17 @@ shadow_enabled = true
 spot_range = 10.183
 spot_angle = 69.06
 
-[node name="Sketchfab_Scene" parent="." unique_id=825490433 instance=ExtResource("51_gy51j")]
+[node name="open bldg?" parent="." unique_id=825490433 instance=ExtResource("51_gy51j")]
 transform = Transform3D(115.64, 0, 0, 0, 111.92, 0, 0, 0, 90.99, -90.66146, 4.5895576e-06, 31.333912)
 
-[node name="Sketchfab_Scene2" parent="." unique_id=938558779 instance=ExtResource("52_5o1n0")]
-transform = Transform3D(0.033655267, 0.003575715, 1.8646929, 0.00012127454, 1.8649966, -0.0035784864, -1.8646963, 0.00018583094, 0.033654973, -94.8666, 2.1833763, 46.41738)
+[node name="slum wall" parent="open bldg?" unique_id=938558779 instance=ExtResource("52_5o1n0")]
+transform = Transform3D(0.00029103478, 3.092109e-05, 0.01612498, 1.0835822e-06, 0.016663656, -3.1973606e-05, -0.02049342, 2.0423226e-06, 0.0003698755, -0.03636408, 0.019508325, 0.16577065)
+
+[node name="red gate" parent="open bldg?" unique_id=1693945080 instance=ExtResource("52_gy51j")]
+transform = Transform3D(-0.017318038, 0, -0.00010118777, 0, 0.017869893, 0, -0.0005734773, 0, -0.021954594, 0.11442095, 0.021484457, 0.055354595)
+
+[node name="red gate2" parent="open bldg?" unique_id=1447949391 instance=ExtResource("52_gy51j")]
+transform = Transform3D(-0.017318033, 0, -0.00010118775, 0, 0.017869888, 0, -0.0005734773, 0, -0.021954592, 0.11442083, 0.02148445, -0.02764827)
 
 [node name="mcdo" parent="." unique_id=1090491580 instance=ExtResource("51_dnku7")]
 transform = Transform3D(-0.006836083, 0, 1.9199878, 0, 1.92, 0, -1.9199878, 0, -0.006836083, -38.08966, -0.82199186, 89.55034)
@@ -1042,7 +1178,7 @@ mesh = SubResource("ArrayMesh_6hdiv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1276.3986, 0.75, -1515.2969)
 
 [node name="Plane_017_RoadAtlas_0" type="MeshInstance3D" parent="road/Sketchfab_model/1c4b22fc964c422e8ac7da40298c0382_fbx/RootNode/straight road2 (left lane)" unique_id=15120282]
-transform = Transform3D(7.855, 0, 0, 0, 8.69, 0, 0, 0, 4.695, 1450.19, -174.08267, -16152.093)
+transform = Transform3D(7.8549995, 0, 0, 0, 8.69, 0, 0, 0, 4.695, 1450.19, -174.08267, -16152.092)
 mesh = SubResource("ArrayMesh_6hdiv")
 
 [node name="Plane_017_RoadAtlas_1" type="MeshInstance3D" parent="road/Sketchfab_model/1c4b22fc964c422e8ac7da40298c0382_fbx/RootNode/straight road2 (left lane)" unique_id=685692393]
@@ -1101,12 +1237,24 @@ mesh = SubResource("ArrayMesh_6hdiv")
 transform = Transform3D(1.0000001, -2.3283064e-10, -2.3283064e-10, -1.1641532e-10, 0.99999994, -3.88809e-11, 0, 6.4574124e-11, 1, -1.6494751, 0.35435653, -985.10095)
 mesh = SubResource("ArrayMesh_6hdiv")
 
+[node name="2 roads (near lifewood bldg)2" type="MeshInstance3D" parent="." unique_id=1208970018]
+transform = Transform3D(-0.00022004917, 5.785921e-05, -0.046949796, 0.0001320594, 0.08689983, 3.1038126e-05, 0.07854956, -0.00014593542, -0.00013157782, -93.78799, -0.629991, -101.144226)
+mesh = SubResource("ArrayMesh_6hdiv")
+
+[node name="Plane_017_RoadAtlas_7" type="MeshInstance3D" parent="2 roads (near lifewood bldg)2" unique_id=999491297]
+transform = Transform3D(1.0000001, -2.3283064e-10, -2.3283064e-10, -1.1641532e-10, 0.99999994, -3.88809e-11, 0, 6.4574124e-11, 1, -1.6494751, 0.35435653, -985.10095)
+mesh = SubResource("ArrayMesh_6hdiv")
+
 [node name="sidewalk 2 ( near firestation)" type="MeshInstance3D" parent="." unique_id=167101735]
 transform = Transform3D(-0.011363983, 0, -1.1642997, 0, 2.580942, 0, 0.8834746, 0, -0.014976323, 46.18245, -0.5680886, 66.10596)
 mesh = SubResource("ArrayMesh_0ry8d")
 
 [node name="keep14" type="MeshInstance3D" parent="sidewalk 2 ( near firestation)" unique_id=2093399506]
 transform = Transform3D(0.99999994, 0, 1.8626451e-09, 0, 1, 0, 0, 0, 1, -0.3148346, 1.8626451e-07, -33.767864)
+mesh = SubResource("ArrayMesh_0ry8d")
+
+[node name="keep15" type="MeshInstance3D" parent="sidewalk 2 ( near firestation)" unique_id=519171985]
+transform = Transform3D(0.9999997, 0, 1.3038516e-08, 0, 1, 0, 9.313226e-10, 0, 1, -0.25143814, 1.8626451e-07, -50.581165)
 mesh = SubResource("ArrayMesh_0ry8d")
 
 [node name="keep13" type="MeshInstance3D" parent="sidewalk 2 ( near firestation)" unique_id=840040591]
@@ -1125,6 +1273,10 @@ mesh = SubResource("ArrayMesh_0ry8d")
 transform = Transform3D(0.99998397, 0, 0.007360381, 0, 0.9999999, 0, -0.004238003, 0, 0.9999839, -0.19713593, 1.3783574e-07, -33.54657)
 mesh = SubResource("ArrayMesh_0ry8d")
 
+[node name="keep11" type="MeshInstance3D" parent="sidewalk 3 (near store)" unique_id=432436772]
+transform = Transform3D(0.9999839, 0, 0.007360381, 0, 0.9999999, 0, -0.0042380025, 0, 0.9999839, -0.4046402, 1.4156103e-07, -50.04018)
+mesh = SubResource("ArrayMesh_0ry8d")
+
 [node name="sidewalk (near hospital)" type="MeshInstance3D" parent="." unique_id=1933661567]
 transform = Transform3D(-0.88354194, 0, -0.0040451423, 0, 2.5809417, 0, 0.0030693067, 0, -1.1643888, -10.453979, -0.56808966, -82.76944)
 mesh = SubResource("ArrayMesh_0ry8d")
@@ -1136,6 +1288,112 @@ mesh = SubResource("ArrayMesh_0ry8d")
 [node name="keep10" type="MeshInstance3D" parent="sidewalk (near hospital)" unique_id=763034742]
 transform = Transform3D(0.99998397, 0, 0.007360381, 0, 0.9999999, 0, -0.004238003, 0, 0.9999839, -0.19713593, 1.3783574e-07, -33.54657)
 mesh = SubResource("ArrayMesh_0ry8d")
+
+[node name="Sketchfab_Scene" parent="sidewalk (near hospital)" unique_id=1950177929 instance=ExtResource("46_xesq8")]
+transform = Transform3D(-1.1317946, 0, 0.0039319084, 0, 0.3874555, 0, -0.002983389, 0, -0.85880935, 4.7030907, 0.07547426, -31.397125)
+
+[node name="Cylinder_30" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1950177929, 1106065204) index="0" unique_id=442648475]
+transform = Transform3D(0.051900193, 0, -1.9993265, 0, 2, 0, 1.9993265, 0, 0.051900193, -0.17166519, 0, -0.730011)
+visible = false
+
+[node name="Object_6" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cylinder_30" index="2" unique_id=1441096350]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="fence" type="Node3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1950177929, 1106065204) index="1" unique_id=943992129]
+transform = Transform3D(0.051900193, 0, -1.9993265, 0, 2, 0, 1.9993265, 0, 0.051900193, -0.17166519, 0, -0.832901)
+
+[node name="Object_4" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/fence" unique_id=646538163]
+mesh = SubResource("ArrayMesh_0ehbx")
+
+[node name="Object_5" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/fence" unique_id=891960919]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="Object_6" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/fence" unique_id=812207999]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="fence2" type="Node3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1950177929, 1106065204) index="2" unique_id=1451164538]
+transform = Transform3D(0.051900193, 0, -1.9993265, 0, 2, 0, 1.9993265, 0, 0.051900193, -0.17166519, 0, -6.226059)
+visible = false
+
+[node name="Object_4" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/fence2" unique_id=324331410]
+mesh = SubResource("ArrayMesh_0ehbx")
+
+[node name="Object_5" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/fence2" unique_id=962104269]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="Object_6" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/fence2" unique_id=661429918]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="fence3" type="Node3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1950177929, 1106065204) index="3" unique_id=1486099470]
+transform = Transform3D(0.051900193, 0, -1.9993265, 0, 2, 0, 1.9993265, 0, 0.051900193, -0.33209133, 0, -10.235672)
+
+[node name="Object_4" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/fence3" unique_id=414394597]
+mesh = SubResource("ArrayMesh_0ehbx")
+
+[node name="Object_5" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/fence3" unique_id=1269020812]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="Object_6" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/fence3" unique_id=169935736]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="Cylinder_31" type="Node3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1950177929, 1106065204) index="4" unique_id=1146384502]
+transform = Transform3D(0.051900193, 0, -1.9993265, 0, 2, 0, 1.9993265, 0, 0.051900193, -0.17166519, 0, 4.5914917)
+
+[node name="Object_4" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cylinder_31" unique_id=1110263038]
+mesh = SubResource("ArrayMesh_0ehbx")
+
+[node name="Object_5" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cylinder_31" unique_id=163150499]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="Object_6" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cylinder_31" unique_id=1611428138]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="Cylinder_33" type="Node3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1950177929, 1106065204) index="5" unique_id=278882760]
+transform = Transform3D(-1.9987509, 0, -0.07067098, 0, 2, 0, 0.07067098, 0, -1.9987509, -2.8817835, 0, 7.340271)
+
+[node name="Object_4" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cylinder_33" unique_id=1708620242]
+mesh = SubResource("ArrayMesh_0ehbx")
+
+[node name="Object_5" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cylinder_33" unique_id=355607818]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="Object_6" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cylinder_33" unique_id=1604330022]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="Cylinder_34" type="Node3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1950177929, 1106065204) index="6" unique_id=644676211]
+transform = Transform3D(-1.9987509, 0, -0.07067098, 0, 2, 0, 0.07067098, 0, -1.9987509, -8.234633, 0, 7.340271)
+
+[node name="Object_4" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cylinder_34" unique_id=410300253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002407074, 0, -0.06808472)
+mesh = SubResource("ArrayMesh_0ehbx")
+
+[node name="Object_5" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cylinder_34" unique_id=1226994509]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="Object_6" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cylinder_34" unique_id=1700704142]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="Cylinder_35" type="Node3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1950177929, 1106065204) index="7" unique_id=63711722]
+transform = Transform3D(-1.9987509, 0, -0.07067098, 0, 2, 0, 0.07067098, 0, -1.9987509, -13.573857, 0, 7.340271)
+
+[node name="Object_4" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cylinder_35" unique_id=59761120]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0056972504, 0, -0.16111755)
+mesh = SubResource("ArrayMesh_0ehbx")
+
+[node name="Object_5" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cylinder_35" unique_id=170913017]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="Object_6" type="MeshInstance3D" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cylinder_35" unique_id=1296339536]
+mesh = SubResource("ArrayMesh_qdfrk")
+
+[node name="TexturesCom_MetalVarious0026_1_seamless_S_002_31" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1950177929, 1106065204) index="8" unique_id=1673020432]
+visible = false
+
+[node name="Cylinder_001_32" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1950177929, 1106065204) index="9" unique_id=836716818]
+visible = false
+
+[node name="Cylinder_004_33" parent="sidewalk (near hospital)/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1950177929, 1106065204) index="10" unique_id=722301186]
+visible = false
 
 [node name="sidewalk (near hospital)2" type="MeshInstance3D" parent="." unique_id=1393008295]
 transform = Transform3D(-0.88351405, 0, 0.010099211, 0, 2.5809417, 0, -0.0076634735, 0, -1.1643519, -9.984178, -0.5194754, 56.514057)
@@ -1265,20 +1523,150 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.4399317e-06)
 transform = Transform3D(0.9999999, 0, -5.9604645e-08, 0, 0.9999998, 0, 5.9604645e-08, 0, 0.9999999, -27.310627, 0, -14.141373)
 mesh = SubResource("ArrayMesh_fn8gq")
 
-[node name="Sketchfab_Scene3" parent="." unique_id=144332266 instance=ExtResource("14_i4sau")]
+[node name="apartment bldg" parent="." unique_id=144332266 instance=ExtResource("14_i4sau")]
 transform = Transform3D(368.055, 0, 0, 0, 368.055, 0, 0, 0, 368.055, -87.11278, -0.7907642, 102.77298)
 
 [node name="firetruck" parent="." unique_id=1226188474 instance=ExtResource("49_4c5d2")]
 transform = Transform3D(-0.014777584, 0, 0.002573521, 0, 0.015, 0, -0.002573521, 0, -0.014777584, 27.067106, -0.5506693, 77.556526)
 
 [node name="cafe" parent="." unique_id=862195619 instance=ExtResource("50_qt51k")]
-transform = Transform3D(4.195, 0, 0, 0, 4.195, 0, 0, 0, 4.195, 45.08863, -0.6425459, -123.65076)
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 45.08863, -0.6425459, -120.678116)
 
-[node name="Sketchfab_Scene6" parent="." unique_id=749449583 instance=ExtResource("51_5o1n0")]
-transform = Transform3D(-0.0022341493, 0, -0.04995006, 0, 0.05, 0, 0.04995006, 0, -0.0022341493, -88.27767, -1.1237712, 4.163872)
+[node name="slum house" parent="." unique_id=594880687 instance=ExtResource("52_8lult")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -92.798584, 3.3585136, 54.57726)
 
-[node name="Sketchfab_Scene7" parent="." unique_id=594880687 instance=ExtResource("52_8lult")]
-transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, -98.04165, 3.3585136, 52.21806)
+[node name="house" parent="slum house" unique_id=749449583 instance=ExtResource("51_5o1n0")]
+transform = Transform3D(-0.012076483, 0, -0.27000034, 0, 0.2702703, 0, 0.27000034, 0, -0.012076483, 52.77829, -24.228567, -259.75238)
 
-[node name="Sketchfab_Scene9" parent="." unique_id=615591846 instance=ExtResource("53_okg2g")]
+[node name="brick bldg" parent="." unique_id=615591846 instance=ExtResource("53_okg2g")]
 transform = Transform3D(-16.918596, 0, -0.21793164, 0, 16.92, 0, 0.21793164, 0, -16.918596, -70.71095, -0.5410865, 60.196674)
+
+[node name="redcrate7" parent="." unique_id=1832320255 instance=ExtResource("53_5o1n0")]
+transform = Transform3D(0.014955224, 0, 0.4997763, 0, 0.5, 0, -0.4997763, 0, 0.014955224, -23.432154, 7.9172535, -49.217316)
+
+[node name="redcrate10" parent="." unique_id=935949056 instance=ExtResource("53_5o1n0")]
+transform = Transform3D(0.014955224, 0, 0.4997763, 0, 0.5, 0, -0.4997763, 0, 0.014955224, -31.780806, 7.9172535, -49.217316)
+
+[node name="redcrate3" parent="." unique_id=292773946 instance=ExtResource("53_5o1n0")]
+transform = Transform3D(-0.49996215, 0, 0.0061521623, 0, 0.5, 0, -0.0061521623, 0, -0.49996215, -26.275509, -0.61295414, -43.15187)
+
+[node name="redcrate6" parent="." unique_id=1850697407 instance=ExtResource("53_5o1n0")]
+transform = Transform3D(-0.49996215, 0, 0.0061521623, 0, 0.5, 0, -0.0061521623, 0, -0.49996215, -26.12873, -0.86177325, -55.343277)
+
+[node name="redcrate8" parent="." unique_id=1146664131 instance=ExtResource("53_5o1n0")]
+transform = Transform3D(-0.49996215, 0, 0.0061521623, 0, 0.5, 0, -0.0061521623, 0, -0.49996215, -26.12873, -0.86177325, -62.835876)
+
+[node name="redcrate9" parent="." unique_id=1365063031 instance=ExtResource("53_5o1n0")]
+transform = Transform3D(-0.49996215, 0, 0.0061521623, 0, 0.5, 0, -0.0061521623, 0, -0.49996215, -34.669792, -0.86177325, -70.86206)
+
+[node name="phone booth" parent="." unique_id=1034306785 instance=ExtResource("58_rifki")]
+transform = Transform3D(1.961761, 0, -0.389222, 0, 2, 0, 0.389222, 0, 1.961761, 55.35742, -0.44607466, -115.01982)
+
+[node name="Sketchfab_Scene5" parent="." unique_id=1818207744 instance=ExtResource("59_eldxj")]
+transform = Transform3D(0.9999843, 0, 0.0056024496, 0, 1, 0, -0.0056024496, 0, 0.9999843, -39.67556, -0.50128096, -102.91365)
+
+[node name="Sketchfab_Scene8" parent="." unique_id=1409223536 instance=ExtResource("60_houjd")]
+transform = Transform3D(-0.029073143, 0, 0.9995772, 0, 1, 0, -0.9995772, 0, -0.029073143, -11.37116, 0.49898654, -77.92555)
+
+[node name="bldg(front of lifewood)" parent="." unique_id=1740671964 instance=ExtResource("61_g2xb3")]
+transform = Transform3D(-5.68248e-07, 0, 12.999999, 0, 12.999999, 0, -12.999999, 0, -5.68248e-07, -20, -0.43763274, -84.77545)
+
+[node name="bldg(front of lifewood)2" parent="." unique_id=2037793743 instance=ExtResource("61_g2xb3")]
+transform = Transform3D(-5.68248e-07, 0, 12.999999, 0, 12.999999, 0, -12.999999, 0, -5.68248e-07, -20, -0.43763274, -73.05896)
+
+[node name="green garage" parent="." unique_id=174043563 instance=ExtResource("61_d50re")]
+transform = Transform3D(1.4965923, 0, 1.3267295, 0, 2, 0, -1.3267295, 0, 1.4965923, -77.38619, -0.3815579, 0.7680893)
+
+[node name="sari sari store" parent="." unique_id=1955404195 instance=ExtResource("62_0xcw4")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -95.78115, -0.48608702, 55.07395)
+
+[node name="store kilid sari sari" parent="." unique_id=230394001 instance=ExtResource("63_rifki")]
+transform = Transform3D(-1.6990496, 0, 0.056838263, 0, 1.7, 0, -0.056838263, 0, -1.6990496, -104.47757, 0.27027392, 59.347965)
+
+[node name="meat shop" parent="." unique_id=1865599226 instance=ExtResource("64_rifki")]
+transform = Transform3D(-0.5999085, 0, -0.010481916, 0, 0.6, 0, 0.010481916, 0, -0.5999085, -102.013756, 0.06069404, 56.59522)
+
+[node name="statue" type="MeshInstance3D" parent="." unique_id=251433180]
+transform = Transform3D(-0.005256319, 0, -0.19993092, 0, 0.2, 0, 0.19993092, 0, -0.005256319, 42.662018, 1.6274145, 17.631378)
+mesh = ExtResource("65_eldxj")
+
+[node name="apartment" parent="." unique_id=968384294 instance=ExtResource("66_4j8yw")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 79.80101, -0.43763274, 30.222229)
+
+[node name="old warehouse" parent="." unique_id=166711552 instance=ExtResource("67_mxh61")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35.279846, -0.49712574, -82.448654)
+
+[node name="meow" parent="." unique_id=1231342570 instance=ExtResource("68_8svnl")]
+transform = Transform3D(0.5641315, 0, 0.82568496, 0, 1, 0, -0.82568496, 0, 0.5641315, 35.91918, -0.5504498, -60.726776)
+
+[node name="japanese house" parent="." unique_id=1525069341 instance=ExtResource("69_0fpc2")]
+transform = Transform3D(0.0025132431, 0, 0.99999684, 0, 1, 0, -0.99999684, 0, 0.0025132431, 87.33905, 1.5636468, 73.41342)
+
+[node name="japanese bike shop" parent="japanese house" unique_id=1248153382 instance=ExtResource("70_6h7vx")]
+transform = Transform3D(0.49998066, 0, 0.00439817, 0, 0.5, 0, -0.00439817, 0, 0.49998066, 1.6835442, -2.6652672, 9.176094)
+
+[node name="japanese rural shop" parent="japanese house" unique_id=1757205539 instance=ExtResource("71_cde8u")]
+transform = Transform3D(0.19993229, 0, 0.0052039707, 0, 0.2, 0, -0.0052039707, 0, 0.19993229, 2.2366982, -1.989104, 11.94368)
+
+[node name="japanese apartment" parent="japanese house" unique_id=1942716074 instance=ExtResource("72_no7mt")]
+transform = Transform3D(0.99964213, 0, -0.026752716, 0, 1, 0, 0.026752716, 0, 0.99964213, -0.859005, -2.064929, 5.3364563)
+
+[node name="food vendor" parent="japanese house" unique_id=710389013 instance=ExtResource("73_numr6")]
+transform = Transform3D(-0.09999914, 0, 0.00042062555, 0, 0.1, 0, -0.00042062555, 0, -0.09999914, 7.9942207, -2.0649288, 9.124702)
+
+[node name="vending machine" parent="japanese house" unique_id=754878363 instance=ExtResource("74_6l7bf")]
+transform = Transform3D(0.00025132432, 0, -0.09999969, 0, 0.1, 0, 0.09999969, 0, 0.00025132432, 2.5480804, -2.0649278, 2.710678)
+
+[node name="japanese office bldg" parent="japanese house" unique_id=1451789215 instance=ExtResource("75_h67eg")]
+transform = Transform3D(0.799841, 0, 0.015958237, 0, 0.8, 0, -0.015958237, 0, 0.799841, 1.8077507, -2.2111979, 15.697296)
+
+[node name="Sketchfab_Scene2" parent="japanese house" unique_id=708945258 instance=ExtResource("77_mxh61")]
+transform = Transform3D(-0.003944325, 0, 0.99999225, 0, 1, 0, -0.99999225, 0, -0.003944325, -1.4169121, -2.0649276, 22.44281)
+
+[node name="Sketchfab_Scene" parent="japanese house" unique_id=1748109240 instance=ExtResource("76_iccb7")]
+transform = Transform3D(-0.043654677, 0, -2.1995668, 0, 2.2, 0, 2.1995668, 0, -0.043654677, 33.911663, -2.2610257, -47.76727)
+
+[node name="bench" parent="." unique_id=52014202 instance=ExtResource("78_8svnl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.88511, -0.437963, 32.852432)
+
+[node name="Park Bench_001" parent="bench/Sketchfab_model/a661c1942bd14d6c9758afb30d662486_fbx/RootNode" parent_id_path=PackedInt32Array(52014202, 1315978038) index="0" unique_id=2039685234]
+visible = false
+
+[node name="Park Bench_001_001" parent="bench/Sketchfab_model/a661c1942bd14d6c9758afb30d662486_fbx/RootNode" parent_id_path=PackedInt32Array(52014202, 1315978038) index="1" unique_id=812410520]
+transform = Transform3D(10.7357435, 99.422035, 1.6197904e-05, -24.267822, 2.6204607, 96.97528, 96.41481, -10.411022, 24.408892, 612.60986, 0.21641241, -853.51465)
+
+[node name="Park Bench_001_Deform" parent="bench/Sketchfab_model/a661c1942bd14d6c9758afb30d662486_fbx/RootNode" parent_id_path=PackedInt32Array(52014202, 1315978038) index="2" unique_id=871097877]
+transform = Transform3D(4.956451, 99.877075, 1.6272039e-05, 5.698223e-13, -1.6292064e-05, 99.999985, 99.877075, -4.956451, -8.075094e-07, 499.7871, 0.21641241, -1111.3965)
+
+[node name="Park Bench_001_Deform_Bench_Dirt_Wood_Light_0" parent="bench/Sketchfab_model/a661c1942bd14d6c9758afb30d662486_fbx/RootNode/Park Bench_001_Deform" index="0" unique_id=118799057]
+transform = Transform3D(0.98921204, 0.0005353838, -0.14648978, 0.0005353354, 0.9999734, 0.0072696325, 0.14648978, -0.0072696283, 0.9891854, 0, 0, 0)
+
+[node name="Park Bench_002" parent="bench/Sketchfab_model/a661c1942bd14d6c9758afb30d662486_fbx/RootNode" parent_id_path=PackedInt32Array(52014202, 1315978038) index="3" unique_id=396911160]
+transform = Transform3D(-99.513664, 9.850348, 1.6048252e-06, 2.1872167e-15, -1.6292066e-05, 100, 9.850348, 99.513664, 1.621283e-05, -152.03369, 0.49466714, 92.66406)
+
+[node name="Park Bench_002_001" parent="bench/Sketchfab_model/a661c1942bd14d6c9758afb30d662486_fbx/RootNode" parent_id_path=PackedInt32Array(52014202, 1315978038) index="4" unique_id=275421252]
+transform = Transform3D(-82.85883, 55.985832, 9.12125e-06, 1.2431352e-14, -1.6292066e-05, 100, 55.985832, 82.85883, 1.3499417e-05, 338.49365, 0.49466714, -211.88477)
+
+[node name="Park Bench_002_Deform" parent="bench/Sketchfab_model/a661c1942bd14d6c9758afb30d662486_fbx/RootNode" parent_id_path=PackedInt32Array(52014202, 1315978038) index="5" unique_id=1137830225]
+transform = Transform3D(93.72819, 34.857204, 5.6789586e-06, 7.739854e-15, -1.6292066e-05, 100, 34.857204, -93.72819, -1.527026e-05, -149.21729, 0.49466714, -2000.8574)
+
+[node name="Park Bench_003" parent="bench/Sketchfab_model/a661c1942bd14d6c9758afb30d662486_fbx/RootNode" parent_id_path=PackedInt32Array(52014202, 1315978038) index="6" unique_id=614844245]
+visible = false
+
+[node name="Park Bench_003_001" parent="bench/Sketchfab_model/a661c1942bd14d6c9758afb30d662486_fbx/RootNode" parent_id_path=PackedInt32Array(52014202, 1315978038) index="7" unique_id=1367626127]
+visible = false
+
+[node name="Park Bench_003_Deform" parent="bench/Sketchfab_model/a661c1942bd14d6c9758afb30d662486_fbx/RootNode" parent_id_path=PackedInt32Array(52014202, 1315978038) index="8" unique_id=1247224911]
+visible = false
+
+[node name="Park Bench_004" parent="bench/Sketchfab_model/a661c1942bd14d6c9758afb30d662486_fbx/RootNode" parent_id_path=PackedInt32Array(52014202, 1315978038) index="9" unique_id=963024364]
+visible = false
+
+[node name="Park Bench_004_001" parent="bench/Sketchfab_model/a661c1942bd14d6c9758afb30d662486_fbx/RootNode" parent_id_path=PackedInt32Array(52014202, 1315978038) index="10" unique_id=1073664750]
+visible = false
+
+[node name="Park Bench_004_Deform" parent="bench/Sketchfab_model/a661c1942bd14d6c9758afb30d662486_fbx/RootNode" parent_id_path=PackedInt32Array(52014202, 1315978038) index="11" unique_id=2131965210]
+transform = Transform3D(-98.53394, -17.060493, -2.7795072e-06, -3.7881905e-15, -1.6292066e-05, 100, -17.060493, 98.53394, 1.6053214e-05, -485.98633, 0.24067582, -300.63574)
+
+[editable path="sidewalk (near hospital)/Sketchfab_Scene"]
+[editable path="bench"]
