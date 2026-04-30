@@ -485,6 +485,46 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 script = ExtResource("4_yammi")
 zombie_scene = ExtResource("2_saax1")
 
+[node name="hospitalZombieSpawner2" type="Node3D" parent="ZombieSpawner" unique_id=48976998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.419682, 0, -21.190987)
+script = ExtResource("4_yammi")
+zombie_scene = ExtResource("2_saax1")
+
+[node name="crateZombieSpawner2" type="Node3D" parent="ZombieSpawner" unique_id=740766734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.10189, 0, -36.60797)
+script = ExtResource("4_yammi")
+zombie_scene = ExtResource("2_saax1")
+
+[node name="junkyardZombieSpawner3" type="Node3D" parent="ZombieSpawner" unique_id=1596271178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.81167, 0, -53.468834)
+script = ExtResource("4_yammi")
+zombie_scene = ExtResource("2_saax1")
+
+[node name="housesZombieSpawner4" type="Node3D" parent="ZombieSpawner" unique_id=1203855542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.69689, 0, 24.114677)
+script = ExtResource("4_yammi")
+zombie_scene = ExtResource("2_saax1")
+
+[node name="mcdoZombieSpawner5" type="Node3D" parent="ZombieSpawner" unique_id=1309969899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.488052, 0, 62.443626)
+script = ExtResource("4_yammi")
+zombie_scene = ExtResource("2_saax1")
+
+[node name="parkZombieSpawner6" type="Node3D" parent="ZombieSpawner" unique_id=279832210]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.090477, 0, 21.094559)
+script = ExtResource("4_yammi")
+zombie_scene = ExtResource("2_saax1")
+
+[node name="policeZombieSpawner7" type="Node3D" parent="ZombieSpawner" unique_id=812478920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.541718, 0, 0.7577667)
+script = ExtResource("4_yammi")
+zombie_scene = ExtResource("2_saax1")
+
+[node name="parkingZombieSpawner8" type="Node3D" parent="ZombieSpawner" unique_id=1039109853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.03524, 0, -54.01632)
+script = ExtResource("4_yammi")
+zombie_scene = ExtResource("2_saax1")
+
 [node name="lifewoodbldg" parent="." unique_id=450901001 instance=ExtResource("21_j1kxr")]
 transform = Transform3D(0.031214407, 0, 18.939972, 0, 17.91, 0, -18.064974, 0, 0.032726314, 47.095314, -2.2362168, -76.33557)
 

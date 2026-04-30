@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://yrga7cfvcnxe"
+path="res://.godot/imported/Zombie Growling sound effect.mp3-0b04ede8726bf723eb65c77ba2b59c8d.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Zombie Growling sound effect.mp3"
+dest_files=["res://.godot/imported/Zombie Growling sound effect.mp3-0b04ede8726bf723eb65c77ba2b59c8d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

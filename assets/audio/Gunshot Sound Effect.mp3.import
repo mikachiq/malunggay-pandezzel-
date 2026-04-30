@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cs4wwhyourkc2"
+path="res://.godot/imported/Gunshot Sound Effect.mp3-afebe597f5c74dac3437ca139e51025d.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Gunshot Sound Effect.mp3"
+dest_files=["res://.godot/imported/Gunshot Sound Effect.mp3-afebe597f5c74dac3437ca139e51025d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

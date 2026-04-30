@@ -21,6 +21,10 @@ const RELOAD_END = 10.82
 @onready var weapon_holder = $SpringArm3D/Camera3D/weaponholder
 @onready var fpov = $SpringArm3D/Camera3D/weaponholder/FPOV
 @onready var weapon_anim = $SpringArm3D/Camera3D/weaponholder/FPOV/AnimationPlayer
+@onready var damage_overlay = $CanvasLayer/HUD/DamageOverlay
+
+var gun_sound = null
+var tween: Tween = null
 
 var ammo = 15
 var bread = 2
@@ -35,7 +39,7 @@ var mc_mesh = null
 const TP_SPRING_LENGTH = 3.0
 const TP_SPRING_POS = Vector3(0.5, 1.5, 0)
 const FPS_SPRING_LENGTH = 0.0
-const FPS_SPRING_POS = Vector3(0, 1.6, 0)
+const FPS_SPRING_POS = Vector3(0, 1, 0)
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -59,16 +63,22 @@ func _ready():
 	light.omni_range = 3.0
 	light.position = Vector3(0, 0, -0.5)
 	weapon_holder.add_child(light)
+	# Safely get gun sound if node exists
+	if has_node("SpringArm3D/Camera3D/weaponholder/GunShotSound"):
+		gun_sound = $SpringArm3D/Camera3D/weaponholder/GunShotSound
+		gun_sound.max_polyphony = 4
+		gun_sound.bus = "Master"
+	# Make sure overlay starts invisible
+	if damage_overlay:
+		damage_overlay.color = Color(1, 0, 0, 0.0)
 
 func show_mc_for_camera():
-	# Make mc visible to player camera (third person)
 	if mc_mesh:
 		mc_mesh.set_layer_mask_value(1, true)
 		mc_mesh.set_layer_mask_value(2, false)
 	camera.set_cull_mask_value(2, true)
 
 func hide_mc_from_camera():
-	# Hide mc from player camera (FPS mode)
 	if mc_mesh:
 		mc_mesh.set_layer_mask_value(1, false)
 		mc_mesh.set_layer_mask_value(2, true)
@@ -144,15 +154,18 @@ func shoot():
 	can_shoot = false
 	ammo -= 1
 	update_hud()
+	if gun_sound:
+		gun_sound.play(0.1)
 	if weapon_anim:
 		weapon_anim.play("Scene")
 		weapon_anim.seek(SHOOT_START)
 	if ray.is_colliding():
 		var hit = ray.get_collider()
-		if hit.is_in_group("zombie"):
-			hit.take_damage(25)
-		elif hit.get_parent().is_in_group("zombie"):
-			hit.get_parent().take_damage(25)
+		if hit != null:
+			if hit.is_in_group("zombie"):
+				hit.take_damage(25)
+			elif hit.get_parent() != null and hit.get_parent().is_in_group("zombie"):
+				hit.get_parent().take_damage(25)
 	await get_tree().create_timer(SHOOT_END - SHOOT_START).timeout
 	can_shoot = true
 	play_idle()
@@ -174,8 +187,19 @@ func reload():
 
 func take_damage(amount):
 	health -= amount
+	_flash_damage()
 	if health <= 0:
 		print("You died!")
+
+func _flash_damage():
+	if damage_overlay == null:
+		return
+	if tween:
+		tween.kill()
+	damage_overlay.color = Color(1, 0, 0, 0.45)
+	tween = create_tween()
+	tween.tween_property(damage_overlay, "color", Color(1, 0, 0, 0.0), 0.6) \
+		.set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
 
 func update_hud():
 	ammo_label.text = "AMMO: " + str(ammo)
