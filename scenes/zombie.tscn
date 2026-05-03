@@ -7,6 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://yrga7cfvcnxe" path="res://assets/audio/Zombie Growling sound effect.mp3" id="5_ycv6i"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_httt1"]
+radius = 0.38671875
+height = 2.0085602
 
 [sub_resource type="Animation" id="Animation_xepks"]
 resource_name = "mixamo_com"
@@ -365,7 +367,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.80235434, 0)
 script = ExtResource("1_4gx57")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=521864938]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013505697, 0.1890769, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08240155, -0.02560532, 0.07704326)
 shape = SubResource("CapsuleShape3D_httt1")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1676823767]
@@ -389,3 +391,4 @@ autoplay = &"Zombie Running/mixamo_com"
 
 [node name="GrowlPlayer" type="AudioStreamPlayer3D" parent="." unique_id=204269103]
 stream = ExtResource("5_ycv6i")
+volume_db = -10.39
