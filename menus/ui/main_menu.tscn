@@ -82,10 +82,10 @@ flat = true
 
 [node name="CreditsBtn" type="Button" parent="." unique_id=498843542]
 layout_mode = 0
-offset_left = 110.0
-offset_top = 215.0
-offset_right = 264.0
-offset_bottom = 262.0
+offset_left = 113.0
+offset_top = 170.0
+offset_right = 267.0
+offset_bottom = 217.0
 theme_override_colors/font_pressed_color = Color(0.3529412, 0.3529412, 0.3529412, 1)
 theme_override_colors/font_hover_color = Color(0.9490196, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_vmd75")
@@ -100,9 +100,9 @@ anchors_preset = -1
 anchor_right = 0.09
 anchor_bottom = 0.063
 offset_left = 105.0
-offset_top = 256.0
+offset_top = 202.0
 offset_right = 130.32999
-offset_bottom = 261.609
+offset_bottom = 207.60901
 theme_override_colors/font_pressed_color = Color(0.3529412, 0.3529412, 0.3529412, 1)
 theme_override_colors/font_hover_color = Color(0.9490196, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_vmd75")
@@ -111,21 +111,6 @@ text = "QUIT
 "
 flat = true
 
-[node name="SettingBtn" type="Button" parent="." unique_id=1258529849]
-layout_mode = 0
-offset_left = 132.0
-offset_top = 177.0
-offset_right = 262.0
-offset_bottom = 221.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.3529412, 0.3529412, 0.3529412, 1)
-theme_override_colors/font_hover_color = Color(0.9490196, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_vmd75")
-theme_override_font_sizes/font_size = 30
-text = "SETTINGS"
-flat = true
-
 [connection signal="pressed" from="PlayBtn" to="." method="_on_play_btn_pressed"]
 [connection signal="pressed" from="CreditsBtn" to="." method="_on_credits_btn_pressed"]
 [connection signal="pressed" from="QuitBtn" to="." method="_on_quit_btn_pressed"]
-[connection signal="pressed" from="SettingBtn" to="." method="_on_setting_btn_pressed"]

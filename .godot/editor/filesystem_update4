@@ -1,4 +1,12 @@
-res://cutscenes/scenes/part_4_hallway_scene.tscn
+res://cutscenes/scenes/part_1_family_warning.tscn
 res://addons/phantom_camera/themes/theme.tres
-res://cutscenes/scripts/part_4_hallway_scene.gd
+res://cutscenes/scripts/part_1_family_warning.gd
+res://cutscenes/scenes/part_2_walk_to_internship.tscn
+res://cutscenes/scripts/part_2_walk_to_internship.gd
+res://menus/ui/main_menu.tscn
+res://menus/scripts/main_menu.gd
+res://cutscenes/scenes/Intro.tscn
+res://cutscenes/scripts/intro.gd
+res://cutscenes/scenes/part_3_office_scene.tscn
+res://cutscenes/scripts/part_3_office_scene.gd
 res://cutscenes/scenes/part_5_escalation.tscn

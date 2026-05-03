@@ -19,6 +19,30 @@ fog_light_color = Color(0.15686275, 0.3529412, 0.28235295, 1)
 
 [sub_resource type="Animation" id="Animation_alv20"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.601228, 1.0266858, 8.587138)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.021020418, 1.5995579, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_uyg4b"]
 resource_name = "office_scene"
@@ -30,10 +54,10 @@ tracks/0/path = NodePath("Camera3D:rotation")
 tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 6.0333333),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 6.0333333, 12.037794),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.013814177, 3.1268172, 0.002095699), Vector3(-0.46607968, -1.6031367, 0)]
+"values": [Vector3(-0.013814177, 3.1268172, 0.002095699), Vector3(-0.46607968, -1.6031367, 0), Vector3(-0.021020418, 1.5995579, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -42,10 +66,10 @@ tracks/1/path = NodePath("Camera3D:position")
 tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 6.0333333),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 6.0333333, 12.037794),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(-1.1460196, 1.1815872, 5.5634804), Vector3(-0.88385725, 0.886909, 8.611275)]
+"values": [Vector3(-1.1460196, 1.1815872, 5.5634804), Vector3(-0.88385725, 0.886909, 8.611275), Vector3(-0.601228, 1.0266858, 8.587138)]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
@@ -54,10 +78,16 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(6, 10.066667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(6, 10.066667, 12.1, 14.031508),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "values": [{
 "args": ["System:", "Typing on keyboard"],
+"method": &"show_dialogue"
+}, {
+"args": [],
+"method": &"hide_dialogue"
+}, {
+"args": ["Ezzel:", "Lamia na iuli ooie"],
 "method": &"show_dialogue"
 }, {
 "args": [],
@@ -161,13 +191,13 @@ albedo_texture = SubResource("ViewportTexture_rflhv")
 [node name="Part3_Office_Scene" unique_id=1765824709 instance=ExtResource("1_alv20")]
 script = ExtResource("2_uyg4b")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Sketchfab_model" parent_id_path=PackedInt32Array(150895511) index="1" unique_id=361449984]
+[node name="OmniLight3D" type="OmniLight3D" parent="Sketchfab_model" parent_id_path=PackedInt32Array(194242199) index="1" unique_id=361449984]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8242009, -10.340586, 1.9899986)
 light_color = Color(0.15686275, 0.3529412, 0.28235295, 1)
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="." index="1" unique_id=630027882]
-transform = Transform3D(-0.99988896, 0.001891372, 0.014773478, 0.0020954972, 0.99990195, 0.013813736, -0.014745909, 0.013843157, -0.9997953, -1.1460196, 1.1815872, 5.5634804)
+transform = Transform3D(-0.028757583, -0.021010168, 0.99936557, 0, 0.9997786, 0.021018868, -0.99958634, 0.00060445163, -0.028751232, -0.601228, 1.0266858, 8.587138)
 environment = SubResource("Environment_rflhv")
 current = true
 fov = 50.0
@@ -256,7 +286,7 @@ metadata/extras = {
 }
 
 [node name="geometry_0" type="MeshInstance3D" parent="ezzeljan_3d/Node6/world" index="0" unique_id=1105280137]
-transform = Transform3D(0.7, 0, -1.065814e-14, 0, 0.7, 0, 1.065814e-14, 0, 0.7, 0.70661926, -0.2675398, 1.9695733)
+transform = Transform3D(0.7, 0, -1.065814e-14, 0, 0.7, 0, 1.065814e-14, 0, 0.7, 0.70661974, -0.2675398, 1.8251727)
 mesh = SubResource("ArrayMesh_hbrsi")
 metadata/extras = {
 "name": "geometry_0",
