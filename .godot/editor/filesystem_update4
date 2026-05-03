@@ -1,6 +1,6 @@
-res://scenes/level_101_street.tscn
+res://scenes/zombie.tscn
 res://addons/phantom_camera/themes/theme.tres
 res://scripts/zombie.gd
-res://scenes/zombie.tscn
-res://scenes/fps_player.tscn
-res://scripts/fps_player.gd
+res://scenes/level_101_street.tscn
+res://scenes/home.gd
+res://scenes/objective.gd

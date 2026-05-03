@@ -18,8 +18,21 @@ var attack_cooldown = 0.0
 var is_attacking = false
 var growl_cooldown = 0.0
 
+# Resolved animation names
+var anim_idle = ""
+var anim_scratch = ""
+var anim_run = ""
+var anim_attack = ""
+var anim_die = ""
+
 @onready var anim = $"Zombie Model/AnimationPlayer2"
 @onready var growl_player = $GrowlPlayer
+
+func _find_anim(keyword: String) -> String:
+	for anim_name in anim.get_animation_list():
+		if anim_name.to_lower().contains(keyword.to_lower()):
+			return anim_name
+	return ""
 
 func _ready():
 	add_to_group("zombie")
@@ -31,70 +44,86 @@ func _ready():
 	$"Zombie Model".rotation_degrees.y = 180
 	$"Zombie Model/Skeleton3D".motion_scale = 0.01
 	idle_cooldown = randf_range(3.0, 10.0)
-	# Stagger each zombie's first growl so they don't all growl at once
 	growl_cooldown = randf_range(0.0, GROWL_COOLDOWN_MAX)
+
 	if anim:
 		print("Available animations:")
 		for anim_name in anim.get_animation_list():
 			print("  - " + anim_name)
-		var running_anim = anim.get_animation("Zombie Running/mixamo_com")
-		if running_anim:
-			running_anim.loop_mode = Animation.LOOP_LINEAR
-		var idle_anim = anim.get_animation("Zombie Scratch Idle/mixamo_com")
-		if idle_anim:
-			idle_anim.loop_mode = Animation.LOOP_LINEAR
-		var zombie_idle_anim = anim.get_animation("Zombie Idle/mixamo_com")
-		if zombie_idle_anim:
-			zombie_idle_anim.loop_mode = Animation.LOOP_LINEAR
-		var attack_anim = anim.get_animation("Zombie Attack/mixamo_com")
-		if attack_anim:
-			attack_anim.loop_mode = Animation.LOOP_NONE
-		anim.play("Zombie Idle/mixamo_com")
 
-func _physics_process(delta):
+		# Auto-resolve animation names by keyword
+		anim_idle    = _find_anim("Zombie Idle")
+		anim_scratch = _find_anim("Zombie Scratch")
+		anim_run     = _find_anim("Zombie Running")
+		anim_attack  = _find_anim("Zombie Attack")
+		anim_die     = _find_anim("Zombie Dying")
+
+		print("Resolved anims: idle=%s scratch=%s run=%s attack=%s die=%s" % [
+			anim_idle, anim_scratch, anim_run, anim_attack, anim_die
+		])
+
+		# Set loop modes
+		if anim_run != "":
+			anim.get_animation(anim_run).loop_mode = Animation.LOOP_LINEAR
+		if anim_scratch != "":
+			anim.get_animation(anim_scratch).loop_mode = Animation.LOOP_LINEAR
+		if anim_idle != "":
+			anim.get_animation(anim_idle).loop_mode = Animation.LOOP_LINEAR
+		if anim_attack != "":
+			anim.get_animation(anim_attack).loop_mode = Animation.LOOP_NONE
+
+		if anim_idle != "":
+			anim.play(anim_idle)
+
+func _physics_process(_delta):
 	if dead:
 		return
 
 	var distance_to_player = player.global_position.distance_to(global_position) if player else INF
 
-	_handle_growl(delta, distance_to_player)
+	_handle_growl(_delta, distance_to_player)
 
 	if attack_cooldown > 0.0:
-		attack_cooldown -= delta
+		attack_cooldown -= _delta
 
 	if is_attacking:
-		if not anim.is_playing() or anim.current_animation != "Zombie Attack/mixamo_com":
+		if not anim.is_playing() or anim.current_animation != anim_attack:
 			is_attacking = false
 
 	if anim and not is_attacking:
 		if distance_to_player <= ATTACK_RANGE and attack_cooldown <= 0.0:
 			is_attacking = true
 			attack_cooldown = ATTACK_COOLDOWN
-			anim.play("Zombie Attack/mixamo_com")
+			if anim_attack != "":
+				anim.play(anim_attack)
 			_deal_attack_damage()
 		elif distance_to_player <= DETECTION_RANGE:
 			idle_playing = false
 			idle_cooldown = randf_range(3.0, 10.0)
-			if not anim.is_playing() or anim.current_animation != "Zombie Running/mixamo_com":
-				anim.play("Zombie Running/mixamo_com")
-			elif anim.current_animation_position >= 0.9:
-				anim.seek(0.0)
+			if anim_run != "":
+				if not anim.is_playing() or anim.current_animation != anim_run:
+					anim.play(anim_run)
+				elif anim.current_animation_position >= 0.9:
+					anim.seek(0.0)
 		else:
 			if idle_playing:
 				if anim.current_animation_position >= 0.9:
 					idle_playing = false
 					idle_cooldown = randf_range(5.0, 12.0)
-					anim.play("Zombie Idle/mixamo_com")
+					if anim_idle != "":
+						anim.play(anim_idle)
 			else:
-				idle_cooldown -= delta
+				idle_cooldown -= _delta
 				if idle_cooldown <= 0.0:
 					idle_playing = true
-					anim.play("Zombie Scratch Idle/mixamo_com")
-				elif anim.current_animation != "Zombie Idle/mixamo_com":
-					anim.play("Zombie Idle/mixamo_com")
+					if anim_scratch != "":
+						anim.play(anim_scratch)
+				elif anim.current_animation != anim_idle:
+					if anim_idle != "":
+						anim.play(anim_idle)
 
 	if not is_on_floor():
-		velocity.y -= GRAVITY * delta
+		velocity.y -= GRAVITY * _delta
 
 	if player != null:
 		if distance_to_player <= DETECTION_RANGE and distance_to_player > ATTACK_RANGE:
@@ -125,7 +154,7 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-func _handle_growl(delta, distance_to_player):
+func _handle_growl(_delta, distance_to_player):
 	if growl_player == null:
 		return
 	if distance_to_player <= GROWL_RANGE:
@@ -147,7 +176,7 @@ func take_damage(amount):
 func die():
 	dead = true
 	velocity = Vector3.ZERO
-	if anim:
-		anim.play("Zombie Dying/mixamo_com")
+	if anim and anim_die != "":
+		anim.play(anim_die)
 	await get_tree().create_timer(2.0).timeout
 	queue_free()

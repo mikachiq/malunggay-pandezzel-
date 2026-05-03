@@ -1,5 +1,11 @@
+SpotLight3D
+CollisionShape3D
+StaticBody3D
+Area3D
+Label
+VBoxContainer
+CanvasLayer
 ColorRect
 AudioStreamPlayer3D
 AudioStreamPlayer
 Node3D
-SpotLight3D
