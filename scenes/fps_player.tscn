@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dqens5er66e8o" path="res://assets/animations/mcrunning.glb" id="2_2368b"]
 [ext_resource type="PackedScene" uid="uid://wcs7hhn8ksi8" path="res://assets/weapons/FPS pov.glb" id="3_bpn8o"]
 [ext_resource type="AudioStream" uid="uid://cs4wwhyourkc2" path="res://assets/audio/Gunshot Sound Effect.mp3" id="4_nogni"]
+[ext_resource type="AudioStream" uid="uid://igfyoy0jyja6" path="res://assets/audio/Walk On Concrete - Sound Effect for editing.mp3" id="5_8btip"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mopl5"]
 
@@ -128,10 +129,50 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 24
 text = "🍞🍞"
 
+[node name="DistanceLabel" type="Label" parent="CanvasLayer/HUD" unique_id=409725635]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.96862745)
+
 [node name="DamageOverlay" type="ColorRect" parent="CanvasLayer/HUD" unique_id=425202787]
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 655.0
 color = Color(0.99694544, 6.2329323e-06, 1.540184e-06, 0)
+
+[node name="HealthLabel" type="Label" parent="CanvasLayer/HUD" unique_id=563440180]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+
+[node name="Objective" type="Label" parent="CanvasLayer/HUD" unique_id=1374184410]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "OBJECTIVE:"
+
+[node name="GetHome" type="Label" parent="CanvasLayer/HUD" unique_id=1165852984]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 16.0
+offset_right = 40.0
+offset_bottom = 39.0
+grow_vertical = 2
+text = "Get Home!"
+
+[node name="FootstepPlayer" type="AudioStreamPlayer" parent="." unique_id=840507453]
+stream = ExtResource("5_8btip")
 
 [editable path="mcrunning"]

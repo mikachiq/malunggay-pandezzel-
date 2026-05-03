@@ -11,17 +11,22 @@ const SHOOT_END = 8.13
 const RELOAD_START = 8.30
 const RELOAD_END = 10.82
 
+const FOOTSTEP_INTERVAL = 0.38
+
 @onready var spring_arm = $SpringArm3D
 @onready var camera = $SpringArm3D/Camera3D
 @onready var ray = $SpringArm3D/Camera3D/RayCast3D
 @onready var ammo_label = $CanvasLayer/HUD/AmmoLabel
 @onready var bread_label = $CanvasLayer/HUD/BreadLabel
+@onready var distance_label = $CanvasLayer/HUD/DistanceLabel
+@onready var health_label = $CanvasLayer/HUD/HealthLabel
 @onready var mc_model = $mcrunning
 @onready var anim = $mcrunning/AnimationPlayer
 @onready var weapon_holder = $SpringArm3D/Camera3D/weaponholder
 @onready var fpov = $SpringArm3D/Camera3D/weaponholder/FPOV
 @onready var weapon_anim = $SpringArm3D/Camera3D/weaponholder/FPOV/AnimationPlayer
 @onready var damage_overlay = $CanvasLayer/HUD/DamageOverlay
+@onready var footstep_player = $FootstepPlayer
 
 var gun_sound = null
 var tween: Tween = null
@@ -35,6 +40,12 @@ var run_anim_name = ""
 var is_fps_mode = false
 var is_reloading = false
 var mc_mesh = null
+var is_dead = false
+var game_over_layer: CanvasLayer = null
+var footstep_timer = 0.0
+
+# --- Distance Tracker ---
+var mc_house: Node3D = null
 
 const TP_SPRING_LENGTH = 3.0
 const TP_SPRING_POS = Vector3(0.5, 1.5, 0)
@@ -46,7 +57,7 @@ func _ready():
 	update_hud()
 	_apply_third_person()
 	mc_model.position.y = -1.0
-	# Get run animation name
+
 	var anims = anim.get_animation_list()
 	for a in anims:
 		if "run" in a.to_lower() or "walk" in a.to_lower():
@@ -54,23 +65,28 @@ func _ready():
 			break
 	if run_anim_name == "" and anims.size() > 0:
 		run_anim_name = anims[0]
+
 	weapon_holder.visible = false
-	# Store mesh reference for layer switching
 	mc_mesh = mc_model.find_child("geometry_0", true, false)
-	# Add light to weapon
+
 	var light = OmniLight3D.new()
 	light.light_energy = 2.0
 	light.omni_range = 3.0
 	light.position = Vector3(0, 0, -0.5)
 	weapon_holder.add_child(light)
-	# Safely get gun sound if node exists
+
 	if has_node("SpringArm3D/Camera3D/weaponholder/GunShotSound"):
 		gun_sound = $SpringArm3D/Camera3D/weaponholder/GunShotSound
 		gun_sound.max_polyphony = 4
 		gun_sound.bus = "Master"
-	# Make sure overlay starts invisible
+
 	if damage_overlay:
 		damage_overlay.color = Color(1, 0, 0, 0.0)
+
+	await get_tree().process_frame
+	mc_house = get_tree().get_root().find_child("MC house", true, false)
+	if mc_house == null:
+		push_warning("Distance Tracker: 'MC house' node not found in scene!")
 
 func show_mc_for_camera():
 	if mc_mesh:
@@ -126,6 +142,9 @@ func play_section(start: float, end: float):
 	await get_tree().create_timer(duration).timeout
 
 func _input(event):
+	if is_dead:
+		return
+
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * MOUSE_SENSITIVITY)
 		camera_pitch -= event.relative.y * MOUSE_SENSITIVITY
@@ -186,10 +205,75 @@ func reload():
 	play_idle()
 
 func take_damage(amount):
+	if is_dead:
+		return
 	health -= amount
 	_flash_damage()
+	_update_health_display()
 	if health <= 0:
-		print("You died!")
+		health = 0
+		_update_health_display()
+		_show_game_over()
+
+func _show_game_over():
+	is_dead = true
+	can_shoot = false
+	is_reloading = false
+
+	if tween:
+		tween.kill()
+
+	get_tree().paused = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+	game_over_layer = CanvasLayer.new()
+	game_over_layer.process_mode = Node.PROCESS_MODE_ALWAYS
+	add_child(game_over_layer)
+
+	var bg = ColorRect.new()
+	bg.color = Color(0, 0, 0, 0.78)
+	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
+	game_over_layer.add_child(bg)
+
+	var vbox = VBoxContainer.new()
+	vbox.set_anchors_preset(Control.PRESET_CENTER)
+	vbox.offset_left = -220
+	vbox.offset_right = 220
+	vbox.offset_top = -150
+	vbox.offset_bottom = 150
+	vbox.alignment = BoxContainer.ALIGNMENT_CENTER
+	vbox.add_theme_constant_override("separation", 28)
+	game_over_layer.add_child(vbox)
+
+	var title = Label.new()
+	title.text = "YOU DIED"
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	title.add_theme_font_size_override("font_size", 72)
+	title.add_theme_color_override("font_color", Color(0.9, 0.05, 0.05))
+	vbox.add_child(title)
+
+	var sub = Label.new()
+	sub.text = "The zombies got you."
+	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	sub.add_theme_font_size_override("font_size", 22)
+	sub.add_theme_color_override("font_color", Color(0.85, 0.85, 0.85))
+	vbox.add_child(sub)
+
+	var spacer = Control.new()
+	spacer.custom_minimum_size = Vector2(0, 10)
+	vbox.add_child(spacer)
+
+	var btn = Button.new()
+	btn.text = "▶  Play Again"
+	btn.custom_minimum_size = Vector2(220, 58)
+	btn.add_theme_font_size_override("font_size", 24)
+	btn.process_mode = Node.PROCESS_MODE_ALWAYS
+	btn.pressed.connect(_on_restart_pressed)
+	vbox.add_child(btn)
+
+func _on_restart_pressed():
+	get_tree().paused = false
+	get_tree().reload_current_scene()
 
 func _flash_damage():
 	if damage_overlay == null:
@@ -204,13 +288,66 @@ func _flash_damage():
 func update_hud():
 	ammo_label.text = "AMMO: " + str(ammo)
 	bread_label.text = "🍞".repeat(bread)
+	_update_health_display()
+
+func _update_health_display():
+	if health_label == null:
+		return
+	health_label.text = "❤️ " + str(health) + " HP"
+	health_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	health_label.add_theme_font_size_override("font_size", 22)
+	var color: Color
+	if health > 60:
+		color = Color(0.2, 1.0, 0.2)
+	elif health > 30:
+		color = Color(1.0, 0.75, 0.0)
+	else:
+		color = Color(1.0, 0.15, 0.15)
+	health_label.add_theme_color_override("font_color", color)
+
+func _update_distance_display():
+	if distance_label == null:
+		return
+	if mc_house == null:
+		distance_label.text = "📡 Signal lost..."
+		distance_label.add_theme_color_override("font_color", Color(1, 0.5, 0))
+		return
+
+	var dist = global_position.distance_to(mc_house.global_position)
+
+	var color: Color
+	var hint: String
+
+	if dist < 20.0:
+		hint = "🔴 YOU'RE RIGHT THERE"
+		color = Color(1.0, 0.1, 0.1)
+	elif dist < 80.0:
+		hint = "🟠 Very close"
+		color = Color(1.0, 0.5, 0.0)
+	elif dist < 100.0:
+		hint = "🟡 Getting warmer"
+		color = Color(1.0, 0.9, 0.0)
+	elif dist < 130.0:
+		hint = "🟢 Somewhere nearby"
+		color = Color(0.3, 1.0, 0.3)
+	else:
+		hint = "🔵 Far away..."
+		color = Color(0.4, 0.7, 1.0)
+
+	distance_label.text = "%.1f m\n%s" % [dist, hint]
+	distance_label.add_theme_color_override("font_color", color)
 
 func _process(delta):
+	if is_dead:
+		return
 	if is_fps_mode and weapon_holder:
 		var sway = sin(Time.get_ticks_msec() * 0.001) * 0.002
 		weapon_holder.position.y = sway
+	_update_distance_display()
 
 func _physics_process(delta):
+	if is_dead:
+		return
 	if not is_on_floor():
 		velocity.y -= GRAVITY * delta
 
@@ -225,13 +362,25 @@ func _physics_process(delta):
 	if run_anim_name == "":
 		return
 
-	if input != Vector2.ZERO:
+	if input != Vector2.ZERO and is_on_floor():
 		if anim.current_animation != run_anim_name:
 			anim.play(run_anim_name)
 		anim.speed_scale = 0.7
 		mc_model.position = Vector3(0, -1.0, 0)
+
+		# Footsteps
+		footstep_timer -= delta
+		if footstep_timer <= 0.0:
+			footstep_timer = FOOTSTEP_INTERVAL
+			if footstep_player and not footstep_player.playing:
+				footstep_player.play()
 	else:
 		if anim.is_playing():
 			anim.stop()
 		mc_model.position = Vector3(0, -1.0, 0)
 		anim.speed_scale = 1.0
+
+		# Stop footsteps
+		footstep_timer = 0.0
+		if footstep_player and footstep_player.playing:
+			footstep_player.stop()

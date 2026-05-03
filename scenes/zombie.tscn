@@ -3,8 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://b3iqxw6xob3g2" path="res://assets/models/Zombie Idle.fbx" id="1_1vlb3"]
 [ext_resource type="Script" uid="uid://ba66jl3c00am" path="res://scripts/zombie.gd" id="1_4gx57"]
 [ext_resource type="AnimationLibrary" uid="uid://nqt4bvt5tpba" path="res://assets/models/Zombie Attack.fbx" id="2_4gx57"]
+[ext_resource type="AnimationLibrary" uid="uid://pwv4ed7jby5o" path="res://assets/models/Thriller Part 1.fbx" id="3_3fthk"]
 [ext_resource type="AnimationLibrary" uid="uid://drpmdcnlevdae" path="res://assets/models/Zombie Dying.fbx" id="3_ycv6i"]
 [ext_resource type="AudioStream" uid="uid://yrga7cfvcnxe" path="res://assets/audio/Zombie Growling sound effect.mp3" id="5_ycv6i"]
+[ext_resource type="AnimationLibrary" uid="uid://bqtouow76pqiw" path="res://assets/models/Zombie Scratch Idle.fbx" id="6_aetfh"]
+[ext_resource type="AnimationLibrary" uid="uid://c35jk6cgbdk88" path="res://assets/models/Zombie Turn.fbx" id="7_jjlcg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_httt1"]
 radius = 0.38671875
@@ -384,9 +387,12 @@ font_size = 15
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -0.8063015, 0)
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Zombie Model" unique_id=1997285373]
+"libraries/Thriller Part 1" = ExtResource("3_3fthk")
 "libraries/Zombie Attack" = ExtResource("2_4gx57")
 "libraries/Zombie Dying" = ExtResource("3_ycv6i")
 "libraries/Zombie Running" = SubResource("AnimationLibrary_4gx57")
+"libraries/Zombie Scratch Idle" = ExtResource("6_aetfh")
+"libraries/Zombie Turn" = ExtResource("7_jjlcg")
 autoplay = &"Zombie Running/mixamo_com"
 
 [node name="GrowlPlayer" type="AudioStreamPlayer3D" parent="." unique_id=204269103]

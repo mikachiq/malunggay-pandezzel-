@@ -1,10 +1,10 @@
-StaticBody3D
 AudioStreamPlayer
+Label
+StaticBody3D
 AudioStreamPlayer3D
 CollisionShape3D
 SpotLight3D
 Area3D
-Label
 VBoxContainer
 CanvasLayer
 ColorRect
