@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://wcs7hhn8ksi8" path="res://assets/weapons/FPS pov.glb" id="3_bpn8o"]
 [ext_resource type="AudioStream" uid="uid://cs4wwhyourkc2" path="res://assets/audio/Gunshot Sound Effect.mp3" id="4_nogni"]
 [ext_resource type="AudioStream" uid="uid://igfyoy0jyja6" path="res://assets/audio/Walk On Concrete - Sound Effect for editing.mp3" id="5_8btip"]
+[ext_resource type="AudioStream" uid="uid://bei0qqs14sxn5" path="res://assets/audio/zombieAttack.mp3" id="6_rlh2g"]
+[ext_resource type="AudioStream" uid="uid://duyrqachn2k0b" path="res://assets/audio/' You Died ' Sound Effect.mp3" id="7_jfvyf"]
+[ext_resource type="AudioStream" uid="uid://b6g4kt2yskflb" path="res://assets/audio/gun reload.mp3" id="8_aa1xp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mopl5"]
 
@@ -174,5 +177,14 @@ text = "Get Home!"
 
 [node name="FootstepPlayer" type="AudioStreamPlayer" parent="." unique_id=840507453]
 stream = ExtResource("5_8btip")
+
+[node name="ZombieHitSound" type="AudioStreamPlayer" parent="." unique_id=2036450366]
+stream = ExtResource("6_rlh2g")
+
+[node name="YouDiedSound" type="AudioStreamPlayer" parent="." unique_id=182569174]
+stream = ExtResource("7_jfvyf")
+
+[node name="ReloadSound" type="AudioStreamPlayer" parent="." unique_id=2041982138]
+stream = ExtResource("8_aa1xp")
 
 [editable path="mcrunning"]

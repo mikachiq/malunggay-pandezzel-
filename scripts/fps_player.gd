@@ -27,6 +27,9 @@ const FOOTSTEP_INTERVAL = 0.38
 @onready var weapon_anim = $SpringArm3D/Camera3D/weaponholder/FPOV/AnimationPlayer
 @onready var damage_overlay = $CanvasLayer/HUD/DamageOverlay
 @onready var footstep_player = $FootstepPlayer
+@onready var zombie_hit_sound = $ZombieHitSound
+@onready var you_died_sound = $YouDiedSound
+@onready var reload_sound = $ReloadSound  # ADD THIS NODE IN SCENE TREE
 
 var gun_sound = null
 var tween: Tween = null
@@ -125,6 +128,9 @@ func set_third_person():
 	can_shoot = true
 	if weapon_anim:
 		weapon_anim.stop()
+	# Stop reload sound if switching view mid-reload
+	if reload_sound and reload_sound.playing:
+		reload_sound.stop()
 	_apply_third_person()
 
 func play_idle():
@@ -194,10 +200,22 @@ func reload():
 		return
 	is_reloading = true
 	can_shoot = false
+
+	# Play reload sound at the start of reload
+	if reload_sound:
+		reload_sound.stop()
+		reload_sound.play()
+
 	if weapon_anim:
 		weapon_anim.play("Scene")
 		weapon_anim.seek(RELOAD_START)
+
 	await get_tree().create_timer(RELOAD_END - RELOAD_START).timeout
+
+	# Stop reload sound in case it's still playing
+	if reload_sound and reload_sound.playing:
+		reload_sound.stop()
+
 	ammo = 15
 	is_reloading = false
 	can_shoot = true
@@ -210,6 +228,12 @@ func take_damage(amount):
 	health -= amount
 	_flash_damage()
 	_update_health_display()
+
+	# Play zombie hit sound
+	if zombie_hit_sound:
+		zombie_hit_sound.stop()
+		zombie_hit_sound.play()
+
 	if health <= 0:
 		health = 0
 		_update_health_display()
@@ -223,6 +247,17 @@ func _show_game_over():
 	if tween:
 		tween.kill()
 
+	# Stop all other sounds and play You Died sound
+	if footstep_player and footstep_player.playing:
+		footstep_player.stop()
+	if zombie_hit_sound and zombie_hit_sound.playing:
+		zombie_hit_sound.stop()
+	if reload_sound and reload_sound.playing:
+		reload_sound.stop()
+	if you_died_sound:
+		you_died_sound.process_mode = Node.PROCESS_MODE_ALWAYS
+		you_died_sound.play()
+
 	get_tree().paused = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
@@ -230,8 +265,9 @@ func _show_game_over():
 	game_over_layer.process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(game_over_layer)
 
+	# Dark background — starts transparent, fades in
 	var bg = ColorRect.new()
-	bg.color = Color(0, 0, 0, 0.78)
+	bg.color = Color(0, 0, 0, 0.0)
 	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
 	game_over_layer.add_child(bg)
 
@@ -245,33 +281,63 @@ func _show_game_over():
 	vbox.add_theme_constant_override("separation", 28)
 	game_over_layer.add_child(vbox)
 
+	# YOU DIED title — starts fully transparent
 	var title = Label.new()
 	title.text = "YOU DIED"
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title.add_theme_font_size_override("font_size", 72)
-	title.add_theme_color_override("font_color", Color(0.9, 0.05, 0.05))
+	title.add_theme_color_override("font_color", Color(0.9, 0.05, 0.05, 0.0))
 	vbox.add_child(title)
 
+	# Subtitle — starts fully transparent
 	var sub = Label.new()
 	sub.text = "The zombies got you."
 	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	sub.add_theme_font_size_override("font_size", 22)
-	sub.add_theme_color_override("font_color", Color(0.85, 0.85, 0.85))
+	sub.add_theme_color_override("font_color", Color(0.85, 0.85, 0.85, 0.0))
 	vbox.add_child(sub)
 
 	var spacer = Control.new()
 	spacer.custom_minimum_size = Vector2(0, 10)
 	vbox.add_child(spacer)
 
+	# Play Again button — starts invisible
 	var btn = Button.new()
 	btn.text = "▶  Play Again"
 	btn.custom_minimum_size = Vector2(220, 58)
 	btn.add_theme_font_size_override("font_size", 24)
+	btn.modulate = Color(1, 1, 1, 0.0)
 	btn.process_mode = Node.PROCESS_MODE_ALWAYS
 	btn.pressed.connect(_on_restart_pressed)
 	vbox.add_child(btn)
 
+	# --- Tween fade-in sequence ---
+	var fade_tween = game_over_layer.create_tween()
+	fade_tween.set_process_mode(Tween.TWEEN_PROCESS_IDLE)
+
+	# 1) Fade in dark background over 0.6s
+	fade_tween.tween_property(bg, "color", Color(0, 0, 0, 0.78), 0.6)
+
+	# 2) Wait 0.3s then fade in YOU DIED over 1.2s
+	fade_tween.tween_interval(0.3)
+	fade_tween.tween_property(title, "theme_override_colors/font_color",
+		Color(0.9, 0.05, 0.05, 1.0), 1.2) \
+		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+	# 3) Fade in subtitle over 0.8s
+	fade_tween.tween_interval(0.1)
+	fade_tween.tween_property(sub, "theme_override_colors/font_color",
+		Color(0.85, 0.85, 0.85, 1.0), 0.8) \
+		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+	# 4) Fade in Play Again button over 0.6s
+	fade_tween.tween_interval(0.2)
+	fade_tween.tween_property(btn, "modulate", Color(1, 1, 1, 1.0), 0.6) \
+		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
 func _on_restart_pressed():
+	if you_died_sound and you_died_sound.playing:
+		you_died_sound.stop()
 	get_tree().paused = false
 	get_tree().reload_current_scene()
 

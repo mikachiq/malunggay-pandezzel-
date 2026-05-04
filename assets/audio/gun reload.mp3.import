@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6g4kt2yskflb"
+path="res://.godot/imported/gun reload.mp3-ba951ed5761a062dd318538fe981f78f.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/gun reload.mp3"
+dest_files=["res://.godot/imported/gun reload.mp3-ba951ed5761a062dd318538fe981f78f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
