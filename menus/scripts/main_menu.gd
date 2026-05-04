@@ -20,7 +20,7 @@ func _ready() -> void:
 
 
 func _on_play_btn_pressed() -> void:
-	get_tree().change_scene_to_file("res://cutscenes/Intro.tscn");
+	get_tree().change_scene_to_file("res://cutscenes/scenes/Intro.tscn");
 
 
 func _on_credits_btn_pressed() -> void:

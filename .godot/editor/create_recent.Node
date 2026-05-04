@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 AudioStreamPlayer
 Label
 StaticBody3D
@@ -9,3 +10,9 @@ VBoxContainer
 CanvasLayer
 ColorRect
 Node3D
+=======
+Label
+PhantomCamera3D
+Camera3D
+PhantomCameraHost
+>>>>>>> jayjay_branch

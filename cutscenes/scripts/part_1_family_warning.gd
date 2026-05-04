@@ -129,5 +129,5 @@ func _do_scene_end():
 	scene_tween.tween_property(fade_overlay, "color:a", 1.0, 1.5)
 	scene_tween.tween_callback(func():
 		print("Ready to load Part 2!")
-		get_tree().change_scene_to_file("res://cutscenes/part_2_walk_to_internship.tscn")
+		get_tree().change_scene_to_file("res://cutscenes/scenes/part_2_walk_to_internship.tscn")
 	)

@@ -65,7 +65,7 @@ func _on_cutscene_finished(_anim_name: String):
 	scene_tween.tween_property(fade_overlay, "color:a", 1.0, 1.5)
 	
 	
-	#scene_tween.tween_callback(func():
-		#get_tree().change_scene_to_file("")
-		# sunod ani kay ang bakery na scene ni ezzel jan francisco
-	#)
+	scene_tween.tween_callback(func():
+		get_tree().change_scene_to_file("res://cutscenes/scenes/part_5_escalation.tscn")
+		 
+	)

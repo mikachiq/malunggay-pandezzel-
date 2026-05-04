@@ -56,5 +56,5 @@ func hide_dialogue():
 
 func _on_cutscene_finished(_anim_name: String):
 	hide_dialogue()
-	get_tree().change_scene_to_file("res://cutscenes/part_1_family_warning.tscn");
+	get_tree().change_scene_to_file("res://cutscenes/scenes/part_1_family_warning.tscn");
 	print("Cutscene finished!")
