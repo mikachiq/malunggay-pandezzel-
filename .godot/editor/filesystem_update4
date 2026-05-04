@@ -1,6 +1,3 @@
+res://cutscenes/scenes/final_cutscene.tscn
 res://addons/phantom_camera/themes/theme.tres
-res://cutscenes/scripts/intro.gd
-res://cutscenes/scripts/pandeManila_scene.gd
-res://scenes/fps_player.tscn
-res://scripts/fps_player.gd
-res://scenes/level_101_street.tscn
+res://cutscenes/scripts/final_cutscene.gd
