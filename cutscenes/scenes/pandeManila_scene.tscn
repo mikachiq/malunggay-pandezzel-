@@ -2,9 +2,22 @@
 
 [ext_resource type="Script" uid="uid://trvgsji8gn8j" path="res://cutscenes/scripts/pandeManila_scene.gd" id="1_t7xdt"]
 [ext_resource type="PackedScene" uid="uid://b5tyb48c8ypge" path="res://ezzel/assets/map/silent_hill_bakery_shop.glb" id="2_djg57"]
-[ext_resource type="PackedScene" uid="uid://djhdsnvogu2lq" path="res://ezzel/assets/characters/cashier.fbx" id="3_vqym7"]
-[ext_resource type="PackedScene" uid="uid://cr4osraub3yxf" path="res://ezzel/assets/items/TV.fbx" id="4_pm2f6"]
-[ext_resource type="Texture2D" uid="uid://cbunt1f5xmh34" path="res://ezzel/assets/images/pan de manila.png" id="5_l16m0"]
+[ext_resource type="PackedScene" uid="uid://cr4osraub3yxf" path="res://ezzel/assets/items/TV.fbx" id="3_nebll"]
+[ext_resource type="PackedScene" uid="uid://djhdsnvogu2lq" path="res://ezzel/assets/characters/cashier.fbx" id="4_5ygfy"]
+[ext_resource type="Texture2D" uid="uid://cbunt1f5xmh34" path="res://ezzel/assets/images/pan de manila.png" id="5_vqym7"]
+[ext_resource type="VideoStream" uid="uid://cqk0rsy3rq0yg" path="res://ezzel/assets/videos/news.ogv" id="6_pm2f6"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_pm2f6"]
+viewport_path = NodePath("../SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_l16m0"]
+viewport_path = NodePath("../SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wy3t"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_pm2f6")
+emission_energy_multiplier = 1.5
+emission_texture = SubResource("ViewportTexture_l16m0")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f6w48"]
 bg_color = Color(0, 0, 0, 0.7490196)
@@ -88,10 +101,10 @@ tracks/0/path = NodePath("Camera3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 5, 5.366667, 7.9, 7.981274, 8.366667, 9, 10.833333, 11.368081, 11.733426, 12),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 5, 5.366667, 7.9, 7.9800005, 8.366667, 9, 10.833333, 11.368081, 11.733426, 12, 14),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.13599598, 0.67102396, 2.63948), Vector3(-0.13599598, 0.67102396, -2.3115175), Vector3(-0.13599598, 0.67102396, -2.3115175), Vector3(-0.13599598, 0.67102396, -2.3115175), Vector3(-2.1052513, 1.2317595, 1.6866255), Vector3(-1.2664306, 0.66299284, 1.2832383), Vector3(-1.872042, 1.2376677, 1.498145), Vector3(0.15936565, 0.647509, 0.5488367), Vector3(0.28300095, 1.0829884, 0.26802647), Vector3(0.28300095, 1.1728864, 0.26802647), Vector3(0.6107397, 0.88744974, -0.57637984)]
+"values": [Vector3(-0.13599598, 0.67102396, 2.63948), Vector3(-0.13599598, 0.67102396, -2.3115175), Vector3(-0.13599598, 0.67102396, -2.3115175), Vector3(-0.13599598, 0.67102396, -2.3115175), Vector3(-2.0743914, 1.3073168, 1.6239712), Vector3(-1.2664306, 0.66299284, 1.2832383), Vector3(-1.872042, 1.2376677, 1.498145), Vector3(0.15936565, 0.647509, 0.5488367), Vector3(0.28300095, 1.0829884, 0.26802647), Vector3(0.28300095, 1.1728864, 0.26802647), Vector3(0.6107397, 0.88744974, -0.57637984), Vector3(0.9302268, 0.4092061, -1.0741589)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -100,10 +113,10 @@ tracks/1/path = NodePath("Camera3D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 5, 5.366667, 7.9, 7.981274, 8.366667, 9, 10.833333, 11.368081, 11.733426, 12),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 5, 5.366667, 7.9, 7.9800005, 8.366667, 9, 10.833333, 11.368081, 11.733426, 12, 14),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0.024434613, 0.76089376, 1.568929e-09), Vector3(0.024434619, 2.0676568, 2.8435811e-09), Vector3(0.024434613, -2.572528, 2.5668878e-09), Vector3(0.024434613, -2.572528, 2.5668878e-09), Vector3(0.024434632, 2.0767426, 3.993315e-11), Vector3(0.024434622, -0.7825, -1.767831e-09), Vector3(0.02443461, 2.1824827, -3.0967626e-09), Vector3(-0.70797986, 0.83531004, -0.024635365), Vector3(-0.70797986, -0.5508305, -0.0246354), Vector3(0.073592715, -2.4916518, 0.01472705), Vector3(-0.42179644, -0.72476804, -0.014136324)]
+"values": [Vector3(0.024434613, 0.76089376, 1.568929e-09), Vector3(0.024434619, 2.0676568, 2.8435811e-09), Vector3(0.024434613, -2.572528, 2.5668878e-09), Vector3(0.024434613, -2.572528, 2.5668878e-09), Vector3(0.024434632, 2.3611012, 7.95326e-11), Vector3(0.024434622, -0.7825, -1.767831e-09), Vector3(0.02443461, 2.1824827, -3.0967626e-09), Vector3(-0.70797986, 0.83531004, -0.024635365), Vector3(-0.70797986, -0.5508305, -0.0246354), Vector3(0.073592715, -2.4916518, 0.01472705), Vector3(-0.42179644, -0.72476804, -0.014136324), Vector3(-0.9634601, -0.65234286, -0.009467692)]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
@@ -112,7 +125,7 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(5.366667, 6, 6.7, 8, 8.333333, 9, 10.833333, 11.366667, 11.733334, 11.733534, 12),
+"times": PackedFloat32Array(5.366667, 6, 6.7, 7.9700003, 8.333333, 9, 10.833333, 11.366667, 11.733334, 11.733534, 12),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
 "args": ["Cashier", "The usual, Ezzel?"],
@@ -167,12 +180,6 @@ size = Vector3(0.5, 1.7516601, 0.5)
 [node name="Sketchfab_Scene" parent="." unique_id=439519806 instance=ExtResource("2_djg57")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7118597, -4.636236, -0.018809319)
 
-[node name="cashier" parent="." unique_id=1961233997 instance=ExtResource("3_vqym7")]
-transform = Transform3D(0.82046133, 0, -0.57170206, 0, 1, 0, 0.57170206, 0, 0.82046133, 1.7143378, -0.75162876, -1.9745342)
-
-[node name="TV" parent="." unique_id=1797459579 instance=ExtResource("4_pm2f6")]
-transform = Transform3D(0.64932865, 0, -0.760508, 0, 1, 0, 0.760508, 0, 0.64932865, -4.2031226, 2.012247, -0.05020106)
-
 [node name="BakeryFIll" type="OmniLight3D" parent="." unique_id=1981637804]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010222554, 2.093339, -0.0027307272)
 light_color = Color(1, 0.92156863, 0.7490196, 1)
@@ -182,6 +189,21 @@ omni_range = 12.0
 transform = Transform3D(0.9252097, 0.009270941, 0.37934288, 0, 0.9997015, -0.024432179, -0.37945616, 0.022604888, 0.92493355, -0.161775, 0.67102396, 1.2615867)
 current = true
 fov = 74.04496
+
+[node name="TV" parent="." unique_id=1797459579 instance=ExtResource("3_nebll")]
+transform = Transform3D(0.686212, 0, -0.7274015, 0, 1, 0, 0.7274015, 0, 0.686212, -4.225477, 2.0241408, 0.14184737)
+
+[node name="TV 49Zoll" parent="TV" index="0" unique_id=791792508]
+surface_material_override/0 = SubResource("StandardMaterial3D_0wy3t")
+
+[node name="sign" type="Sprite3D" parent="." unique_id=1120480348]
+transform = Transform3D(-0.0058621503, 0.044514883, 0.9989915, 0.004736937, 0.9989986, -0.04448743, -0.99997175, 0.0044713644, -0.006067153, -2.9749384, 2.3869867, -0.19410121)
+modulate = Color(0.47788018, 0.47788012, 0.47788012, 1)
+pixel_size = 0.004
+texture = ExtResource("5_vqym7")
+
+[node name="Character_Male" parent="." unique_id=1961233997 instance=ExtResource("4_5ygfy")]
+transform = Transform3D(0.84619313, 0, -0.5328763, 0, 1, 0, 0.5328763, 0, 0.84619313, 1.4263847, -0.80188835, -1.9575485)
 
 [node name="DialogueUI" type="CanvasLayer" parent="." unique_id=667154989]
 visible = false
@@ -248,8 +270,16 @@ autoplay = &"panDeManila_scene"
 
 [node name="BGM_Dramatic" type="AudioStreamPlayer" parent="." unique_id=418315200]
 
-[node name="sign" type="Sprite3D" parent="." unique_id=1321777865]
-transform = Transform3D(-0.013124332, 0, 0.999914, 0, 1, 0, -0.999914, 0, -0.013124332, -2.974919, 2.4102583, -0.3947581)
-modulate = Color(0.5729883, 0.5729883, 0.5729883, 1)
-pixel_size = 0.005
-texture = ExtResource("5_l16m0")
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1907711956]
+size = Vector2i(1280, 720)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="SubViewport" unique_id=2106841301]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("6_pm2f6")
+autoplay = true
+
+[editable path="TV"]
