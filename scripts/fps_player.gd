@@ -29,7 +29,9 @@ const FOOTSTEP_INTERVAL = 0.38
 @onready var footstep_player = $FootstepPlayer
 @onready var zombie_hit_sound = $ZombieHitSound
 @onready var you_died_sound = $YouDiedSound
-@onready var reload_sound = $ReloadSound  # ADD THIS NODE IN SCENE TREE
+@onready var reload_sound = $ReloadSound
+@onready var grunt1 = $Grunt1
+@onready var grunt2 = $Grunt2
 
 var gun_sound = null
 var tween: Tween = null
@@ -234,6 +236,12 @@ func take_damage(amount):
 		zombie_hit_sound.stop()
 		zombie_hit_sound.play()
 
+	# Play a random grunt sound (Grunt1 or Grunt2)
+	var grunt = grunt1 if randi() % 2 == 0 else grunt2
+	if grunt:
+		grunt.stop()
+		grunt.play()
+
 	if health <= 0:
 		health = 0
 		_update_health_display()
@@ -254,6 +262,10 @@ func _show_game_over():
 		zombie_hit_sound.stop()
 	if reload_sound and reload_sound.playing:
 		reload_sound.stop()
+	if grunt1 and grunt1.playing:
+		grunt1.stop()
+	if grunt2 and grunt2.playing:
+		grunt2.stop()
 	if you_died_sound:
 		you_died_sound.process_mode = Node.PROCESS_MODE_ALWAYS
 		you_died_sound.play()

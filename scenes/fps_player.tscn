@@ -4,10 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://dqens5er66e8o" path="res://assets/animations/mcrunning.glb" id="2_2368b"]
 [ext_resource type="PackedScene" uid="uid://wcs7hhn8ksi8" path="res://assets/weapons/FPS pov.glb" id="3_bpn8o"]
 [ext_resource type="AudioStream" uid="uid://cs4wwhyourkc2" path="res://assets/audio/Gunshot Sound Effect.mp3" id="4_nogni"]
+[ext_resource type="FontFile" uid="uid://c7nfdd3pbx10d" path="res://jayjay/GUI/Fonts/BloodScratchPersonalUse.ttf" id="5_4i21b"]
 [ext_resource type="AudioStream" uid="uid://igfyoy0jyja6" path="res://assets/audio/Walk On Concrete - Sound Effect for editing.mp3" id="5_8btip"]
+[ext_resource type="FontFile" uid="uid://dbjo3xpso2sfm" path="res://jayjay/GUI/Fonts/Excalifont-Regular.woff2" id="6_pu4vv"]
 [ext_resource type="AudioStream" uid="uid://bei0qqs14sxn5" path="res://assets/audio/zombieAttack.mp3" id="6_rlh2g"]
 [ext_resource type="AudioStream" uid="uid://duyrqachn2k0b" path="res://assets/audio/' You Died ' Sound Effect.mp3" id="7_jfvyf"]
 [ext_resource type="AudioStream" uid="uid://b6g4kt2yskflb" path="res://assets/audio/gun reload.mp3" id="8_aa1xp"]
+[ext_resource type="AudioStream" uid="uid://ditewcuedlqu3" path="res://assets/audio/grunt1.mp3" id="11_uogju"]
+[ext_resource type="AudioStream" uid="uid://dftrg568qm5k" path="res://assets/audio/grunt2.mp3" id="12_wnypm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mopl5"]
 
@@ -133,10 +137,17 @@ theme_override_font_sizes/font_size = 24
 text = "🍞🍞"
 
 [node name="DistanceLabel" type="Label" parent="CanvasLayer/HUD" unique_id=409725635]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = 56.0
+offset_right = 60.0
+offset_bottom = 79.0
+grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.96862745)
+theme_override_fonts/font = ExtResource("6_pu4vv")
 
 [node name="DamageOverlay" type="ColorRect" parent="CanvasLayer/HUD" unique_id=425202787]
 layout_mode = 0
@@ -158,10 +169,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
+offset_left = 20.0
 offset_top = -11.5
-offset_right = 40.0
+offset_right = 105.0
 offset_bottom = 11.5
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_4i21b")
+theme_override_font_sizes/font_size = 25
 text = "OBJECTIVE:"
 
 [node name="GetHome" type="Label" parent="CanvasLayer/HUD" unique_id=1165852984]
@@ -169,10 +183,14 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
+offset_left = 20.0
 offset_top = 16.0
-offset_right = 40.0
+offset_right = 102.0
 offset_bottom = 39.0
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.40784314, 0.14117648, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("6_pu4vv")
+theme_override_font_sizes/font_size = 20
 text = "Get Home!"
 
 [node name="FootstepPlayer" type="AudioStreamPlayer" parent="." unique_id=840507453]
@@ -186,5 +204,11 @@ stream = ExtResource("7_jfvyf")
 
 [node name="ReloadSound" type="AudioStreamPlayer" parent="." unique_id=2041982138]
 stream = ExtResource("8_aa1xp")
+
+[node name="Grunt1" type="AudioStreamPlayer" parent="." unique_id=806783768]
+stream = ExtResource("11_uogju")
+
+[node name="Grunt2" type="AudioStreamPlayer" parent="." unique_id=119470968]
+stream = ExtResource("12_wnypm")
 
 [editable path="mcrunning"]
