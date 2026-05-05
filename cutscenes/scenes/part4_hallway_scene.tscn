@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://di2tft7gjvsne"]
+[gd_scene format=4 uid="uid://d1yhkewbctl5t"]
 
 [ext_resource type="PackedScene" uid="uid://b7dafc4kmphrh" path="res://jayjay/Materials/office_floor/office_floor.glb" id="1_67yq6"]
 [ext_resource type="FontFile" uid="uid://dbjo3xpso2sfm" path="res://jayjay/GUI/Fonts/Excalifont-Regular.woff2" id="2_fh3ij"]
@@ -8,7 +8,6 @@
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_uvbnd"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="6_ljerh"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_slj7f"]
-[ext_resource type="Script" uid="uid://cvf85pcs3v7jg" path="res://cutscenes/scripts/omni_light_3d.gd" id="8_ljerh"]
 [ext_resource type="AudioStream" uid="uid://soebxesc5fyh" path="res://jayjay/Sounds/Elevator Door Open, Close, Go up   Sound Effect.mp3" id="10_bqwew"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ljerh"]
@@ -364,10 +363,10 @@ script = ExtResource("7_slj7f")
 [node name="Sketchfab_Scene" unique_id=1753636067 instance=ExtResource("1_67yq6")]
 script = ExtResource("2_slj7f")
 
-[node name="d01_c3487768d948b952c3af07d7072beac4_0" parent="Sketchfab_model/��������_fbx/RootNode/d01" parent_id_path=PackedInt32Array(649766983) index="0" unique_id=387346988]
+[node name="d01_c3487768d948b952c3af07d7072beac4_0" parent="Sketchfab_model/��������_fbx/RootNode/d01" parent_id_path=PackedInt32Array(1126520756) index="0" unique_id=716617787]
 transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0)
 
-[node name="do2_c3487768d948b952c3af07d7072beac4_0" parent="Sketchfab_model/��������_fbx/RootNode/do2" parent_id_path=PackedInt32Array(802598138) index="0" unique_id=712696880]
+[node name="do2_c3487768d948b952c3af07d7072beac4_0" parent="Sketchfab_model/��������_fbx/RootNode/do2" parent_id_path=PackedInt32Array(26258093) index="0" unique_id=390256477]
 transform = Transform3D(0.9999997, 0, 0, 0, 0.9999997, 0, 0, 0, 0.9999997, 0, 0, 0)
 
 [node name="DialogueUI" type="CanvasLayer" parent="." index="1" unique_id=1769017432]
@@ -493,7 +492,6 @@ radius = 0.1
 [node name="OmniLight3D" type="OmniLight3D" parent="CSGSphere3D" index="0" unique_id=1992404345]
 light_color = Color(0.15686275, 0.3529412, 0.28235295, 1)
 light_energy = 3.0
-script = ExtResource("8_ljerh")
 
 [node name="ElevatorSounds" type="AudioStreamPlayer3D" parent="." index="8" unique_id=664964081]
 stream = ExtResource("10_bqwew")

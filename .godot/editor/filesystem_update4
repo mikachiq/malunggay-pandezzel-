@@ -1,3 +1,6 @@
 res://cutscenes/scenes/pandeManila_scene.tscn
 res://addons/phantom_camera/themes/theme.tres
+<<<<<<< Updated upstream
 res://cutscenes/scripts/pandeManila_scene.gd
+=======
+>>>>>>> Stashed changes
