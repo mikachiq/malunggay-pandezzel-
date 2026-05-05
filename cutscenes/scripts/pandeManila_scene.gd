@@ -8,7 +8,10 @@ extends Node3D
 @onready var fade_overlay      = $DialogueUI/FadeOverlay
 @onready var press_enter_label = $DialogueUI/DialogueBox/PressEnterLabel
 @onready var camera            = $Camera3D
-@onready var video_player      = $SubViewport/VideoStreamPlayer  # NEW
+@onready var bakery_ambience   = $BakeryAmbience
+@onready var suspense          = $Suspense
+@onready var thud              = $THUD
+@onready var radio_static      = $RadioStatic
 
 var typing_tween  : Tween
 var fade_tween    : Tween
@@ -28,11 +31,8 @@ func _ready():
 	dialogue_ui.visible        = true
 	press_enter_label.visible  = false
 
-	# ---- START TV VIDEO ----
-	video_player.stream = load("res://ezzel/assets/videos/news.ogv")
-	video_player.loop   = true
-	video_player.play()
-	# ------------------------
+	bakery_ambience.process_mode = Node.PROCESS_MODE_ALWAYS
+	bakery_ambience.play()
 
 	scene_tween = create_tween()
 	scene_tween.tween_property(fade_overlay, "color:a", 0.0, 1.5)
@@ -140,6 +140,27 @@ func hide_dialogue():
 	fade_tween = create_tween()
 	fade_tween.tween_property(dialogue_box, "modulate:a", 0.0, 0.4)
 
+# ---- AUDIO CONTROL ----
+func stop_bakery_ambience():
+	var tween = create_tween()
+	tween.tween_property(bakery_ambience, "volume_db", -80.0, 1.0)
+	tween.tween_callback(func():
+		bakery_ambience.stop()
+		bakery_ambience.volume_db = 0.0
+	)
+
+func play_suspense():
+	suspense.process_mode = Node.PROCESS_MODE_ALWAYS
+	suspense.play()
+
+func play_radio_static():
+	radio_static.process_mode = Node.PROCESS_MODE_ALWAYS
+	radio_static.play()
+
+func play_thud():
+	thud.process_mode = Node.PROCESS_MODE_ALWAYS
+	thud.play()
+
 # ---- SCENE END ----
 func _on_cutscene_finished(_anim_name: String):
 	if _anim_name == "panDeManila_scene":
@@ -147,9 +168,10 @@ func _on_cutscene_finished(_anim_name: String):
 		_stop_blink()
 		press_enter_label.visible = false
 
-		# ---- STOP TV VIDEO ----
-		video_player.stop()
-		# -----------------------
+		bakery_ambience.stop()
+		suspense.stop()
+		radio_static.stop()
+		thud.stop()
 
 		scene_tween = create_tween()
 		scene_tween.tween_property(fade_overlay, "color:a", 1.0, 1.5)

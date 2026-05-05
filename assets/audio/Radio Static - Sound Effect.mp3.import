@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsqsb7xv6etxb"
+path="res://.godot/imported/Radio Static - Sound Effect.mp3-5cefb1a63977f82b454475a78ee1e189.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Radio Static - Sound Effect.mp3"
+dest_files=["res://.godot/imported/Radio Static - Sound Effect.mp3-5cefb1a63977f82b454475a78ee1e189.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

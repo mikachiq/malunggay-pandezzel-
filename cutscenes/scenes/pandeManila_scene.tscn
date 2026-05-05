@@ -5,19 +5,30 @@
 [ext_resource type="PackedScene" uid="uid://cr4osraub3yxf" path="res://ezzel/assets/items/TV.fbx" id="3_nebll"]
 [ext_resource type="PackedScene" uid="uid://djhdsnvogu2lq" path="res://ezzel/assets/characters/cashier.fbx" id="4_5ygfy"]
 [ext_resource type="Texture2D" uid="uid://cbunt1f5xmh34" path="res://ezzel/assets/images/pan de manila.png" id="5_vqym7"]
-[ext_resource type="VideoStream" uid="uid://cqk0rsy3rq0yg" path="res://ezzel/assets/videos/news.ogv" id="6_pm2f6"]
+[ext_resource type="Texture2D" uid="uid://ddubjqj24it83" path="res://ezzel/assets/characters/cashier.png" id="6_0wy3t"]
+[ext_resource type="PackedScene" uid="uid://d311pl13gkdx3" path="res://jayjay/Characters/ezzeljan_3d.glb" id="8_5bx33"]
+[ext_resource type="AudioStream" uid="uid://bm6n28t58met5" path="res://assets/audio/Cafe Ambience Sound Effect.mp3" id="8_qflfb"]
+[ext_resource type="AudioStream" uid="uid://bql64vhwqcl1f" path="res://assets/audio/SuspenseAmbient.mp3" id="9_4onst"]
+[ext_resource type="PackedScene" uid="uid://bn6rpvhi404d3" path="res://ezzel/assets/characters/ps1_character_idle_animation.glb" id="9_udknk"]
+[ext_resource type="PackedScene" uid="uid://m3oq7wbylty7" path="res://ezzel/assets/items/vending_machine_psx.glb" id="10_f2q4l"]
+[ext_resource type="PackedScene" uid="uid://dsjqsk1v8g0wf" path="res://ezzel/assets/items/low_poly_radio.glb" id="10_udknk"]
+[ext_resource type="AudioStream" uid="uid://bkxhqtjh73alk" path="res://assets/audio/THUD.mp3" id="13_w3jrc"]
+[ext_resource type="AudioStream" uid="uid://dsqsb7xv6etxb" path="res://assets/audio/Radio Static - Sound Effect.mp3" id="14_85svn"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_pm2f6"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_udknk"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_l16m0"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_f2q4l"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wy3t"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qflfb"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_pm2f6")
+albedo_texture = SubResource("ViewportTexture_udknk")
 emission_energy_multiplier = 1.5
-emission_texture = SubResource("ViewportTexture_l16m0")
+emission_texture = SubResource("ViewportTexture_f2q4l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4onst"]
+albedo_texture = ExtResource("6_0wy3t")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f6w48"]
 bg_color = Color(0, 0, 0, 0.7490196)
@@ -47,6 +58,54 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0.02443461, 0.38920844, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MC/Node6/world/geometry_0:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MC/Node6/world/geometry_0:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.821377, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NPC:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5202897, -0.8469043, -1.5668486)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NPC:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.32073915, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_25s6r"]
@@ -101,10 +160,10 @@ tracks/0/path = NodePath("Camera3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 5, 5.366667, 7.9, 7.9800005, 8.366667, 9, 10.833333, 11.368081, 11.733426, 12, 14),
+"times": PackedFloat32Array(0, 5, 5.366667, 7.9, 7.9800005, 8.366667, 9, 10.833333, 11.362667, 11.733426, 12, 14),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.13599598, 0.67102396, 2.63948), Vector3(-0.13599598, 0.67102396, -2.3115175), Vector3(-0.13599598, 0.67102396, -2.3115175), Vector3(-0.13599598, 0.67102396, -2.3115175), Vector3(-2.0743914, 1.3073168, 1.6239712), Vector3(-1.2664306, 0.66299284, 1.2832383), Vector3(-1.872042, 1.2376677, 1.498145), Vector3(0.15936565, 0.647509, 0.5488367), Vector3(0.28300095, 1.0829884, 0.26802647), Vector3(0.28300095, 1.1728864, 0.26802647), Vector3(0.6107397, 0.88744974, -0.57637984), Vector3(0.9302268, 0.4092061, -1.0741589)]
+"values": [Vector3(-0.13599598, 0.67102396, 2.63948), Vector3(-0.13599598, 0.67102396, -2.3115175), Vector3(-0.13599598, 0.67102396, -2.3115175), Vector3(-0.13599598, 0.67102396, -2.3115175), Vector3(-2.0743914, 1.3073168, 1.6239712), Vector3(-1.2664306, 0.66299284, 1.2832383), Vector3(-1.872042, 1.2376677, 1.498145), Vector3(0.15936565, 0.647509, 0.5488367), Vector3(0.23207411, 0.95647717, 0.38369554), Vector3(0.28300095, 1.1728864, 0.26802647), Vector3(0.6107397, 0.88744974, -0.57637984), Vector3(0.9302268, 0.4092061, -1.0741589)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -113,10 +172,10 @@ tracks/1/path = NodePath("Camera3D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 5, 5.366667, 7.9, 7.9800005, 8.366667, 9, 10.833333, 11.368081, 11.733426, 12, 14),
+"times": PackedFloat32Array(0, 5, 5.366667, 7.9, 7.9800005, 8.366667, 9, 10.833333, 11.362667, 11.733426, 12, 14),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0.024434613, 0.76089376, 1.568929e-09), Vector3(0.024434619, 2.0676568, 2.8435811e-09), Vector3(0.024434613, -2.572528, 2.5668878e-09), Vector3(0.024434613, -2.572528, 2.5668878e-09), Vector3(0.024434632, 2.3611012, 7.95326e-11), Vector3(0.024434622, -0.7825, -1.767831e-09), Vector3(0.02443461, 2.1824827, -3.0967626e-09), Vector3(-0.70797986, 0.83531004, -0.024635365), Vector3(-0.70797986, -0.5508305, -0.0246354), Vector3(0.073592715, -2.4916518, 0.01472705), Vector3(-0.42179644, -0.72476804, -0.014136324), Vector3(-0.9634601, -0.65234286, -0.009467692)]
+"values": [Vector3(0.024434613, 0.76089376, 1.568929e-09), Vector3(0.024434619, 2.0676568, 2.8435811e-09), Vector3(0.024434613, -2.572528, 2.5668878e-09), Vector3(0.024434613, -2.572528, 2.5668878e-09), Vector3(0.024434632, 2.3611012, 7.95326e-11), Vector3(0.024434622, -0.7825, -1.767831e-09), Vector3(0.02443461, 2.1824827, -3.0967626e-09), Vector3(-0.70797986, 0.83531004, -0.024635365), Vector3(-0.24834622, -0.6359479, -0.0014868019), Vector3(0.073592715, -2.4916518, 0.01472705), Vector3(-0.42179644, -0.72476804, -0.014136324), Vector3(-0.9634601, -0.65234286, -0.009467692)]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
@@ -125,16 +184,16 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(5.366667, 6, 6.7, 7.9700003, 8.333333, 9, 10.833333, 11.366667, 11.733334, 11.733534, 12),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(5.366667, 6, 6.7, 7.9700003, 8.333333, 9, 9.0001, 10.833333, 11.366667, 11.733334, 11.733534, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
 "args": ["Cashier", "The usual, Ezzel?"],
 "method": &"show_dialogue"
 }, {
-"args": ["Ezzel", "Omsim"],
+"args": ["Ezzel", "Yesir!"],
 "method": &"show_dialogue"
 }, {
-"args": ["Cashier", "Nice ka HAHAHA"],
+"args": ["Cashier", "Nice kaa"],
 "method": &"show_dialogue"
 }, {
 "args": ["News", "⚠ EMERGENCY BROADCAST — Virus outbreak spreading rapidly across Cebu City. Infected displaying violent behavior. ⚠"],
@@ -145,6 +204,9 @@ tracks/2/keys = {
 }, {
 "args": ["News", "—PRELIMINARY DATA INDICATES A NEUTRALIZING AGENT FOUND IN MORINGA OLEIFERA EXTRACTS. REPEAT: CONSUMPTION OF MALUNGGAY-BASED PRODUCTS MAY HALT VIRAL REPLICATION—"],
 "method": &"show_dialogue"
+}, {
+"args": [],
+"method": &"play_radio_static"
 }, {
 "args": ["Ezzel", "(Malunggay pandesal?)"],
 "method": &"show_dialogue"
@@ -162,6 +224,88 @@ tracks/2/keys = {
 "method": &"show_dialogue"
 }]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MC/Node6/world/geometry_0:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(5.366667, 8.066667, 8.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.08045575, 0, 0.26257548), Vector3(0.08045575, 0, 0.26257548), Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MC/Node6/world/geometry_0:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(5.366667, 8.066667, 8.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.033265926, 0), Vector3(0, 0.033265926, 0), Vector3(0, 2.821377, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NPC:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 8.166667, 8.301666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5202897, -0.8469043, -1.5668486), Vector3(-1.5202897, -0.8469043, -1.5668486), Vector3(-1.5202897, -0.8469043, -1.5668486)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("NPC:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 8.166667, 8.301666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5351218, 0), Vector3(0, -1.5351218, 0), Vector3(0, -0.32073915, 0)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(7.9666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"stop_bakery_ambience"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(7.9666667, 7.966767, 11.666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"play_suspense"
+}, {
+"args": [],
+"method": &"play_radio_static"
+}, {
+"args": [],
+"method": &"play_thud"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q1bdk"]
 _data = {
@@ -173,15 +317,17 @@ _data = {
 [node name="OutbreakScene" type="Node3D" unique_id=499324159]
 script = ExtResource("1_t7xdt")
 
-[node name="MC" type="CSGBox3D" parent="." unique_id=759667988]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7064409, 0.016460538, -0.29930985)
-size = Vector3(0.5, 1.7516601, 0.5)
-
-[node name="Sketchfab_Scene" parent="." unique_id=439519806 instance=ExtResource("2_djg57")]
+[node name="bikiri" parent="." unique_id=439519806 instance=ExtResource("2_djg57")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7118597, -4.636236, -0.018809319)
 
 [node name="BakeryFIll" type="OmniLight3D" parent="." unique_id=1981637804]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010222554, 2.093339, -0.0027307272)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012643814, 1.7737374, -0.54620457)
+light_color = Color(1, 0.92156863, 0.7490196, 1)
+light_energy = 2.569
+omni_range = 12.0
+
+[node name="BakeryFIll2" type="OmniLight3D" parent="." unique_id=1914579210]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5746067, 1.7260735, 0.59095705)
 light_color = Color(1, 0.92156863, 0.7490196, 1)
 omni_range = 12.0
 
@@ -190,11 +336,30 @@ transform = Transform3D(0.9252097, 0.009270941, 0.37934288, 0, 0.9997015, -0.024
 current = true
 fov = 74.04496
 
+[node name="MC" parent="." unique_id=29995686 instance=ExtResource("8_5bx33")]
+transform = Transform3D(-1.8917745, 0, 1.6343772, 0, 2.5, 0, -1.6343772, 0, -1.8917745, 0.4840585, 0.19668633, -0.1617451)
+
+[node name="Node2" parent="MC" index="1" unique_id=2139523575]
+visible = false
+
+[node name="Node3" parent="MC" index="2" unique_id=1514435615]
+visible = false
+
+[node name="Node4" parent="MC" index="3" unique_id=1195797508]
+visible = false
+
+[node name="Node5" parent="MC" index="4" unique_id=1155280841]
+visible = false
+
+[node name="geometry_0" parent="MC/Node6/world" parent_id_path=PackedInt32Array(29995686, 1609394168) index="0" unique_id=221235245]
+transform = Transform3D(-0.9491672, 0, 0.31477112, 0, 0.9999994, 0, -0.31477112, 0, -0.9491672, 0, 0, 0)
+
 [node name="TV" parent="." unique_id=1797459579 instance=ExtResource("3_nebll")]
 transform = Transform3D(0.686212, 0, -0.7274015, 0, 1, 0, 0.7274015, 0, 0.686212, -4.225477, 2.0241408, 0.14184737)
+visible = false
 
-[node name="TV 49Zoll" parent="TV" index="0" unique_id=791792508]
-surface_material_override/0 = SubResource("StandardMaterial3D_0wy3t")
+[node name="TV 49Zoll" parent="TV" index="0" unique_id=1400938049]
+surface_material_override/0 = SubResource("StandardMaterial3D_qflfb")
 
 [node name="sign" type="Sprite3D" parent="." unique_id=1120480348]
 transform = Transform3D(-0.0058621503, 0.044514883, 0.9989915, 0.004736937, 0.9989986, -0.04448743, -0.99997175, 0.0044713644, -0.006067153, -2.9749384, 2.3869867, -0.19410121)
@@ -202,8 +367,39 @@ modulate = Color(0.47788018, 0.47788012, 0.47788012, 1)
 pixel_size = 0.004
 texture = ExtResource("5_vqym7")
 
-[node name="Character_Male" parent="." unique_id=1961233997 instance=ExtResource("4_5ygfy")]
+[node name="Character_Male" parent="." unique_id=1275981101 instance=ExtResource("4_5ygfy")]
 transform = Transform3D(0.84619313, 0, -0.5328763, 0, 1, 0, 0.5328763, 0, 0.84619313, 1.4263847, -0.80188835, -1.9575485)
+
+[node name="Skeleton3D" parent="Character_Male" index="0" unique_id=1453437635]
+bones/1/position = Vector3(1.6046192e-17, 0.110670626, 0.0059408094)
+bones/2/position = Vector3(8.6736174e-19, 0.12930149, 1.3877788e-17)
+bones/2/rotation = Quaternion(7.0530524e-09, -1.8923392e-27, -2.6830068e-19, 1)
+bones/3/position = Vector3(4.3368087e-19, 0.14777318, 1.3877788e-17)
+bones/3/rotation = Quaternion(0, -3.6111186e-35, -3.940257e-35, 1)
+bones/4/position = Vector3(4.3368087e-19, 0.16624486, -7.699092e-09)
+bones/8/position = Vector3(-2.7755576e-17, 0.13776182, -2.220446e-16)
+bones/9/position = Vector3(8.326673e-17, 0.2484783, 1.110223e-16)
+bones/10/position = Vector3(-2.7755576e-17, 0.24946043, 2.220446e-16)
+bones/11/position = Vector3(2.7755576e-17, 0.07481509, 5.551115e-17)
+bones/12/position = Vector3(0, 0.047763456, 5.551115e-17)
+bones/12/rotation = Quaternion(1.9179536e-16, 1.7347235e-18, 1.7347235e-18, 1)
+bones/13/rotation = Quaternion(-7.979728e-17, 1.7347235e-18, 3.469447e-18, 1)
+bones/16/position = Vector3(2.7755576e-17, 0.13776183, -4.440892e-16)
+bones/17/position = Vector3(2.7755576e-17, 0.24839081, 0)
+bones/18/position = Vector3(5.551115e-17, 0.24930143, -2.220446e-16)
+bones/19/position = Vector3(0, 0.0814219, -5.551115e-17)
+bones/20/position = Vector3(-1.3877788e-17, 0.046102837, 5.551115e-17)
+bones/20/rotation = Quaternion(1.0039712e-16, -5.2041704e-18, 3.469447e-18, 1)
+bones/21/rotation = Quaternion(3.3610267e-18, 0, 1.7347235e-18, 1)
+bones/24/position = Vector3(-2.7755576e-17, 0.48108965, 0)
+bones/25/position = Vector3(0, 0.40913323, 2.7755576e-17)
+bones/26/position = Vector3(5.551115e-17, 0.20383886, 3.469447e-17)
+bones/29/position = Vector3(-2.0816682e-16, 0.4811626, 0)
+bones/30/position = Vector3(-2.7755576e-16, 0.40876505, -1.3877788e-17)
+bones/31/position = Vector3(0, 0.20042886, -3.469447e-17)
+
+[node name="Character_Male" parent="Character_Male/Skeleton3D" index="0" unique_id=788203291]
+surface_material_override/0 = SubResource("StandardMaterial3D_4onst")
 
 [node name="DialogueUI" type="CanvasLayer" parent="." unique_id=667154989]
 visible = false
@@ -266,20 +462,27 @@ color = Color(0, 0, 0, 1)
 libraries/ = SubResource("AnimationLibrary_q1bdk")
 autoplay = &"panDeManila_scene"
 
-[node name="BGM_Ambient" type="AudioStreamPlayer" parent="." unique_id=476391035]
+[node name="NPC" parent="." unique_id=1038487775 instance=ExtResource("9_udknk")]
+transform = Transform3D(0.9490025, 0, -0.31526807, 0, 1, 0, 0.31526807, 0, 0.9490025, -1.5202897, -0.8469043, -1.5668486)
 
-[node name="BGM_Dramatic" type="AudioStreamPlayer" parent="." unique_id=418315200]
+[node name="vending" parent="." unique_id=1697784028 instance=ExtResource("10_f2q4l")]
+transform = Transform3D(-0.04131764, 0, -0.99914616, 0, 1, 0, 0.99914616, 0, -0.04131764, 3.1746206, -0.6575487, -1.7161317)
 
-[node name="SubViewport" type="SubViewport" parent="." unique_id=1907711956]
-size = Vector2i(1280, 720)
+[node name="Sketchfab_Scene" parent="." unique_id=611726399 instance=ExtResource("10_udknk")]
+transform = Transform3D(-3.5434248, 0, -3.5276265, 0, 5.0000005, 0, 3.5276265, 0, -3.5434248, -2.5662436, 0.9784945, 1.9243731)
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="SubViewport" unique_id=2106841301]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("6_pm2f6")
-autoplay = true
+[node name="BakeryAmbience" type="AudioStreamPlayer" parent="." unique_id=1200298861]
+stream = ExtResource("8_qflfb")
 
+[node name="Suspense" type="AudioStreamPlayer" parent="." unique_id=722989944]
+stream = ExtResource("9_4onst")
+
+[node name="THUD" type="AudioStreamPlayer" parent="." unique_id=2063328176]
+stream = ExtResource("13_w3jrc")
+
+[node name="RadioStatic" type="AudioStreamPlayer" parent="." unique_id=1725573047]
+stream = ExtResource("14_85svn")
+
+[editable path="MC"]
 [editable path="TV"]
+[editable path="Character_Male"]

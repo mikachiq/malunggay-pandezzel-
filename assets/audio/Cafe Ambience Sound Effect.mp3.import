@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bm6n28t58met5"
+path="res://.godot/imported/Cafe Ambience Sound Effect.mp3-20f2549fcc4d237afd11e3917e86af8d.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Cafe Ambience Sound Effect.mp3"
+dest_files=["res://.godot/imported/Cafe Ambience Sound Effect.mp3-20f2549fcc4d237afd11e3917e86af8d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
