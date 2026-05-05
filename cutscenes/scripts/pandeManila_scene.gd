@@ -8,7 +8,7 @@ extends Node3D
 @onready var fade_overlay      = $DialogueUI/FadeOverlay
 @onready var press_enter_label = $DialogueUI/DialogueBox/PressEnterLabel
 @onready var camera            = $Camera3D
-@onready var video_player      = $SubViewport/VideoStreamPlayer  # NEW
+@onready var video_player      = $SubViewport/VideoStreamPlayer
 
 var typing_tween  : Tween
 var fade_tween    : Tween
@@ -19,7 +19,6 @@ var shake_tween   : Tween
 var is_waiting    := false
 var is_typing     := false
 var _full_text    := ""
-
 var _camera_origin := Vector3.ZERO
 
 func _ready():
@@ -28,24 +27,19 @@ func _ready():
 	dialogue_ui.visible        = true
 	press_enter_label.visible  = false
 
-	# ---- START TV VIDEO ----
 	video_player.stream = load("res://ezzel/assets/videos/news.ogv")
 	video_player.loop   = true
 	video_player.play()
-	# ------------------------
 
 	scene_tween = create_tween()
 	scene_tween.tween_property(fade_overlay, "color:a", 0.0, 1.5)
 	scene_tween.tween_callback(func(): anim_player.play("panDeManila_scene"))
 	anim_player.animation_finished.connect(_on_cutscene_finished)
 
-# ---- CAMERA SHAKE ----
 func camera_shake(duration := 0.6, strength := 0.15, speed := 25.0):
 	_camera_origin = camera.position
-
 	if shake_tween: shake_tween.kill()
 	shake_tween = create_tween()
-
 	var steps = int(duration * speed)
 	for i in range(steps):
 		var t      = float(i) / float(steps)
@@ -58,23 +52,18 @@ func camera_shake(duration := 0.6, strength := 0.15, speed := 25.0):
 		shake_tween.tween_callback(
 			func(): camera.position = _camera_origin + offset
 		).set_delay(1.0 / speed)
-
 	shake_tween.tween_callback(func(): camera.position = _camera_origin)
 
-# ---- INPUT HANDLING ----
 func _input(event):
 	if not event.is_action_pressed("ui_accept"):
 		return
-
 	if is_typing:
 		if typing_tween: typing_tween.kill()
 		dialogue_label.text       = _full_text
 		is_typing                 = false
 		press_enter_label.visible = true
 		_blink_prompt()
-		print("Typing skipped. Press Enter again to continue...")
 		return
-
 	if is_waiting:
 		is_waiting = false
 		_stop_blink()
@@ -82,9 +71,7 @@ func _input(event):
 		hide_dialogue()
 		await get_tree().create_timer(0.45).timeout
 		anim_player.play()
-		print("Resuming scene...")
 
-# ---- BLINK PROMPT ----
 func _blink_prompt():
 	if blink_tween: blink_tween.kill()
 	blink_tween = create_tween().set_loops()
@@ -95,13 +82,11 @@ func _stop_blink():
 	if blink_tween: blink_tween.kill()
 	press_enter_label.modulate.a = 1.0
 
-# ---- ANIMATION TRACK FUNCTIONS ----
 func show_dialogue(speaker: String, text: String):
 	anim_player.pause()
 	is_waiting  = true
 	is_typing   = true
 	_full_text  = text
-	print("Dialogue triggered. Timeline paused.")
 
 	speaker_label.text        = speaker
 	dialogue_label.text       = ""
@@ -118,7 +103,6 @@ func show_dialogue(speaker: String, text: String):
 func _start_typing(full_text: String):
 	if typing_tween: typing_tween.kill()
 	typing_tween = create_tween()
-
 	for i in range(full_text.length()):
 		var ch         = full_text[i]
 		var captured   = full_text.left(i + 1)
@@ -126,12 +110,10 @@ func _start_typing(full_text: String):
 		typing_tween.tween_callback(
 			func(): dialogue_label.text = captured
 		).set_delay(char_delay)
-
 	typing_tween.tween_callback(func():
 		is_typing                 = false
 		press_enter_label.visible = true
 		_blink_prompt()
-		print("Typing done. Press Enter to continue...")
 	)
 
 func hide_dialogue():
@@ -140,19 +122,14 @@ func hide_dialogue():
 	fade_tween = create_tween()
 	fade_tween.tween_property(dialogue_box, "modulate:a", 0.0, 0.4)
 
-# ---- SCENE END ----
 func _on_cutscene_finished(_anim_name: String):
 	if _anim_name == "panDeManila_scene":
 		hide_dialogue()
 		_stop_blink()
 		press_enter_label.visible = false
-
-		# ---- STOP TV VIDEO ----
 		video_player.stop()
-		# -----------------------
-
 		scene_tween = create_tween()
 		scene_tween.tween_property(fade_overlay, "color:a", 1.0, 1.5)
 		scene_tween.tween_callback(func():
-			get_tree().change_scene_to_file("res://part_2_walk_to_internship.tscn")
+			get_tree().change_scene_to_file("res://scenes/level_101_street.tscn")
 		)

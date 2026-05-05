@@ -193,7 +193,7 @@ fov = 74.04496
 [node name="TV" parent="." unique_id=1797459579 instance=ExtResource("3_nebll")]
 transform = Transform3D(0.686212, 0, -0.7274015, 0, 1, 0, 0.7274015, 0, 0.686212, -4.225477, 2.0241408, 0.14184737)
 
-[node name="TV 49Zoll" parent="TV" index="0" unique_id=791792508]
+[node name="TV 49Zoll" parent="TV" index="0" unique_id=1400938049]
 surface_material_override/0 = SubResource("StandardMaterial3D_0wy3t")
 
 [node name="sign" type="Sprite3D" parent="." unique_id=1120480348]
