@@ -10,5 +10,12 @@ CanvasLayer
 ColorRect
 Node3D
 Label
+OmniLight3D
+Node3D
 PhantomCamera3D
 Camera3D
+<<<<<<< HEAD
+=======
+PhantomCameraHost
+AnimationPlayer
+>>>>>>> jayjay_branch

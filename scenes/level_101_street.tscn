@@ -717,6 +717,7 @@ shape = SubResource("WorldBoundaryShape3D_yammi")
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 script = ExtResource("4_yammi")
 zombie_scene = ExtResource("2_saax1")
+spawn_count = 5
 
 [node name="hospitalZombieSpawner2" type="Node3D" parent="ZombieSpawner" unique_id=48976998]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.419682, 0, -21.190987)
@@ -2350,16 +2351,16 @@ mesh = SubResource("ArrayMesh_0ry8d")
 transform = Transform3D(0.99693537, 0, -2.517822, 0, 6.294988, 0, 1.9105314, 0, 1.3138261, 460.68823, -2.607539, -569.44775)
 mesh = SubResource("ArrayMesh_0ry8d")
 
-[node name="keep12" type="MeshInstance3D" parent="." unique_id=1318622002]
-transform = Transform3D(-0.0064652814, 0, 1.1643748, 0, 2.580946, 0, -0.88352686, 0, -0.0072249807, 49.20486, -0.63728803, -57.68405)
-mesh = SubResource("ArrayMesh_0ry8d")
-
-[node name="keep10" type="MeshInstance3D" parent="." unique_id=1735553569]
-transform = Transform3D(-1.1642609, 0, -0.016155776, 0, 2.5809484, 0, 0.015644208, 0, -0.81274515, 62.973175, -0.6287245, -64.920166)
-mesh = SubResource("ArrayMesh_0ry8d")
-
 [node name="sidewalk (back of lifewood bldg)" type="MeshInstance3D" parent="." unique_id=1334606468]
 transform = Transform3D(-1.1642452, 0, -0.018495338, 0, 2.5809484, 0, 0.016353441, 0, -0.88340545, 62.70604, -0.6666779, -79.285446)
+mesh = SubResource("ArrayMesh_0ry8d")
+
+[node name="keep10" type="MeshInstance3D" parent="sidewalk (back of lifewood bldg)" unique_id=1735553569]
+transform = Transform3D(1.0000007, 0, -0.0007386198, 0, 1, 0, 0.00080285035, 0, 0.9200001, 0.028873444, 0.014705211, -16.260712)
+mesh = SubResource("ArrayMesh_0ry8d")
+
+[node name="keep12" type="MeshInstance3D" parent="sidewalk (back of lifewood bldg)" unique_id=1318622002]
+transform = Transform3D(-0.010332067, 0, -0.9999472, 0, 0.9999991, 0, 0.99994624, 0, -0.0103322845, 11.9814415, 0.011387236, -24.230606)
 mesh = SubResource("ArrayMesh_0ry8d")
 
 [node name="sidewalk (side of lifewood bldg)" type="MeshInstance3D" parent="." unique_id=650140820]
