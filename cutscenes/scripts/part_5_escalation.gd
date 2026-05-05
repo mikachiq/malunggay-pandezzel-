@@ -54,9 +54,6 @@ func _on_cutscene_finished(_anim_name: String):
 	scene_tween = create_tween()
 	scene_tween.tween_property(fade_overlay, "color:a", 1.0, 1.5)
 	scene_tween.tween_callback(func():
-<<<<<<< Updated upstream
-=======
 		print("Ready to load Part 2!")
->>>>>>> Stashed changes
 		get_tree().change_scene_to_file("res://cutscenes/scenes/pandeManila_scene.tscn")
 	)
