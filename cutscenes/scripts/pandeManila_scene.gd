@@ -176,5 +176,5 @@ func _on_cutscene_finished(_anim_name: String):
 		scene_tween = create_tween()
 		scene_tween.tween_property(fade_overlay, "color:a", 1.0, 1.5)
 		scene_tween.tween_callback(func():
-			get_tree().change_scene_to_file("res://part_2_walk_to_internship.tscn")
+			get_tree().change_scene_to_file("res://scenes/level_101_street.tscn")
 		)

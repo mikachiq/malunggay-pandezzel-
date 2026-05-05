@@ -15,17 +15,17 @@
 [ext_resource type="AudioStream" uid="uid://bkxhqtjh73alk" path="res://assets/audio/THUD.mp3" id="13_w3jrc"]
 [ext_resource type="AudioStream" uid="uid://dsqsb7xv6etxb" path="res://assets/audio/Radio Static - Sound Effect.mp3" id="14_85svn"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_udknk"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_w3jrc"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_f2q4l"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_85svn"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qflfb"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28l6g"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_udknk")
+albedo_texture = SubResource("ViewportTexture_w3jrc")
 emission_energy_multiplier = 1.5
-emission_texture = SubResource("ViewportTexture_f2q4l")
+emission_texture = SubResource("ViewportTexture_85svn")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4onst"]
 albedo_texture = ExtResource("6_0wy3t")
@@ -352,14 +352,14 @@ visible = false
 visible = false
 
 [node name="geometry_0" parent="MC/Node6/world" parent_id_path=PackedInt32Array(29995686, 1609394168) index="0" unique_id=221235245]
-transform = Transform3D(-0.9491672, 0, 0.31477112, 0, 0.9999994, 0, -0.31477112, 0, -0.9491672, 0, 0, 0)
+transform = Transform3D(-0.94916713, 0, 0.31477112, 0, 0.9999994, 0, -0.31477112, 0, -0.94916713, 0, 0, 0)
 
 [node name="TV" parent="." unique_id=1797459579 instance=ExtResource("3_nebll")]
 transform = Transform3D(0.686212, 0, -0.7274015, 0, 1, 0, 0.7274015, 0, 0.686212, -4.225477, 2.0241408, 0.14184737)
 visible = false
 
 [node name="TV 49Zoll" parent="TV" index="0" unique_id=1400938049]
-surface_material_override/0 = SubResource("StandardMaterial3D_qflfb")
+surface_material_override/0 = SubResource("StandardMaterial3D_28l6g")
 
 [node name="sign" type="Sprite3D" parent="." unique_id=1120480348]
 transform = Transform3D(-0.0058621503, 0.044514883, 0.9989915, 0.004736937, 0.9989986, -0.04448743, -0.99997175, 0.0044713644, -0.006067153, -2.9749384, 2.3869867, -0.19410121)
@@ -463,7 +463,7 @@ libraries/ = SubResource("AnimationLibrary_q1bdk")
 autoplay = &"panDeManila_scene"
 
 [node name="NPC" parent="." unique_id=1038487775 instance=ExtResource("9_udknk")]
-transform = Transform3D(0.9490025, 0, -0.31526807, 0, 1, 0, 0.31526807, 0, 0.9490025, -1.5202897, -0.8469043, -1.5668486)
+transform = Transform3D(0.94900244, 0, -0.31526804, 0, 1, 0, 0.31526804, 0, 0.94900244, -1.5202897, -0.8469043, -1.5668486)
 
 [node name="vending" parent="." unique_id=1697784028 instance=ExtResource("10_f2q4l")]
 transform = Transform3D(-0.04131764, 0, -0.99914616, 0, 1, 0, 0.99914616, 0, -0.04131764, 3.1746206, -0.6575487, -1.7161317)
